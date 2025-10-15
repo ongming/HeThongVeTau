@@ -61,7 +61,7 @@ namespace CNPM
 
         public DataTable LayDanhSachChuyenTau()
         {
-            string connStr = "Data Source=LAPTOP-MKNGM2HG;Initial Catalog=TestVe;Integrated Security=True;TrustServerCertificate=True";
+            string connStr = "minhchimbe";
             string query = "SELECT * FROM ChuyenTau";
 
             using (SqlConnection conn = new SqlConnection(connStr))
