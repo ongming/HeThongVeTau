@@ -48,11 +48,12 @@
             this.lb1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb1.AutoSize = true;
             this.lb1.BackColor = System.Drawing.Color.Transparent;
-            this.lb1.Font = new System.Drawing.Font("Unispace", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb1.ForeColor = System.Drawing.Color.Blue;
-            this.lb1.Location = new System.Drawing.Point(110, 91);
+            this.lb1.Location = new System.Drawing.Point(132, 109);
+            this.lb1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb1.Name = "lb1";
-            this.lb1.Size = new System.Drawing.Size(296, 40);
+            this.lb1.Size = new System.Drawing.Size(323, 46);
             this.lb1.TabIndex = 28;
             this.lb1.Text = "Quản Lý Vé Tàu";
             // 
@@ -61,9 +62,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Leelawadee UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(111, 194);
+            this.label1.Location = new System.Drawing.Point(133, 233);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 31);
+            this.label1.Size = new System.Drawing.Size(302, 38);
             this.label1.TabIndex = 29;
             this.label1.Text = "Đăng Nhập Hệ Thống";
             // 
@@ -72,9 +74,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(59, 281);
+            this.label2.Location = new System.Drawing.Point(71, 337);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 23);
+            this.label2.Size = new System.Drawing.Size(168, 28);
             this.label2.TabIndex = 30;
             this.label2.Text = "Tên đăng nhập:";
             // 
@@ -83,9 +86,10 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(59, 390);
+            this.label3.Location = new System.Drawing.Point(71, 468);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 23);
+            this.label3.Size = new System.Drawing.Size(113, 28);
             this.label3.TabIndex = 31;
             this.label3.Text = "Mật khẩu:";
             // 
@@ -101,9 +105,10 @@
             this.btn_DangNhap.FillColor = System.Drawing.Color.Blue;
             this.btn_DangNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangNhap.ForeColor = System.Drawing.Color.White;
-            this.btn_DangNhap.Location = new System.Drawing.Point(63, 513);
+            this.btn_DangNhap.Location = new System.Drawing.Point(76, 616);
+            this.btn_DangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_DangNhap.Name = "btn_DangNhap";
-            this.btn_DangNhap.Size = new System.Drawing.Size(336, 48);
+            this.btn_DangNhap.Size = new System.Drawing.Size(403, 58);
             this.btn_DangNhap.TabIndex = 34;
             this.btn_DangNhap.Text = "Đăng nhập";
             this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
@@ -115,9 +120,10 @@
             this.lb_QuenPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_QuenPass.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_QuenPass.ForeColor = System.Drawing.Color.Blue;
-            this.lb_QuenPass.Location = new System.Drawing.Point(160, 596);
+            this.lb_QuenPass.Location = new System.Drawing.Point(192, 715);
+            this.lb_QuenPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_QuenPass.Name = "lb_QuenPass";
-            this.lb_QuenPass.Size = new System.Drawing.Size(125, 20);
+            this.lb_QuenPass.Size = new System.Drawing.Size(152, 24);
             this.lb_QuenPass.TabIndex = 35;
             this.lb_QuenPass.Text = "Quên mật khẩu?";
             this.lb_QuenPass.Click += new System.EventHandler(this.lb_QuenPass_Click_1);
@@ -126,9 +132,10 @@
             // 
             this.lb_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_back.Image = global::CNPM.Properties.Resources.arrow;
-            this.lb_back.Location = new System.Drawing.Point(18, 12);
+            this.lb_back.Location = new System.Drawing.Point(22, 14);
+            this.lb_back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lb_back.Name = "lb_back";
-            this.lb_back.Size = new System.Drawing.Size(21, 22);
+            this.lb_back.Size = new System.Drawing.Size(25, 26);
             this.lb_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.lb_back.TabIndex = 36;
             this.lb_back.TabStop = false;
@@ -154,13 +161,13 @@
             this.txt_Pass.IconRight = global::CNPM.Properties.Resources.invisible_98494;
             this.txt_Pass.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txt_Pass.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.txt_Pass.Location = new System.Drawing.Point(63, 427);
-            this.txt_Pass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_Pass.Location = new System.Drawing.Point(76, 512);
+            this.txt_Pass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Pass.Name = "txt_Pass";
             this.txt_Pass.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txt_Pass.PlaceholderText = "Nhập mật khẩu";
             this.txt_Pass.SelectedText = "";
-            this.txt_Pass.Size = new System.Drawing.Size(330, 48);
+            this.txt_Pass.Size = new System.Drawing.Size(396, 58);
             this.txt_Pass.TabIndex = 33;
             this.txt_Pass.UseSystemPasswordChar = true;
             this.txt_Pass.IconRightClick += new System.EventHandler(this.pass_IconRightClick);
@@ -181,22 +188,23 @@
             this.txt_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_username.IconLeft = global::CNPM.Properties.Resources.person_13924070;
             this.txt_username.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txt_username.Location = new System.Drawing.Point(63, 318);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_username.Location = new System.Drawing.Point(76, 382);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_username.Name = "txt_username";
             this.txt_username.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txt_username.PlaceholderText = "Nhập tên đăng nhập";
             this.txt_username.SelectedText = "";
-            this.txt_username.Size = new System.Drawing.Size(330, 48);
+            this.txt_username.Size = new System.Drawing.Size(396, 58);
             this.txt_username.TabIndex = 32;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::CNPM.Properties.Resources.train_12567305;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 82);
+            this.pictureBox1.Location = new System.Drawing.Point(65, 98);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
@@ -206,15 +214,16 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Leelawadee UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(159, 163);
+            this.label4.Location = new System.Drawing.Point(191, 196);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 31);
+            this.label4.Size = new System.Drawing.Size(155, 38);
             this.label4.TabIndex = 37;
             this.label4.Text = "Nhân Viên";
             // 
             // NhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lb_back);
@@ -227,8 +236,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "NhanVien";
-            this.Size = new System.Drawing.Size(460, 685);
+            this.Size = new System.Drawing.Size(552, 822);
             ((System.ComponentModel.ISupportInitialize)(this.lb_back)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

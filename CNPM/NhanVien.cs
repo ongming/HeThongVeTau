@@ -66,10 +66,13 @@ namespace CNPM
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
+            string user = txt_username.Text.Trim();
+            string pass = txt_Pass.Text.Trim();
+            NhanVienRepository repo = new NhanVienRepository();
             // Lấy form chứa usercontrol (ở đây là FormLogin)
             Form parentForm = this.FindForm();
 
-            if (parentForm != null)
+            if (repo.CheckLogin(user, pass))
             {
                 // Ẩn form login
                 parentForm.Hide();
@@ -80,6 +83,10 @@ namespace CNPM
                 // Khi form Khách hàng đóng → hiện lại form login
                 main.FormClosed += (s2, e2) => parentForm.Show();
                 main.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
             }
         }
     }

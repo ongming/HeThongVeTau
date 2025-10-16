@@ -129,6 +129,7 @@
     <Compile Include="KhachHang.Designer.cs">
       <DependentUpon>KhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachHangRepository.cs" />
     <Compile Include="KhachHangTuongTac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +186,7 @@
     <Compile Include="NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVienRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyBanVe.cs">
