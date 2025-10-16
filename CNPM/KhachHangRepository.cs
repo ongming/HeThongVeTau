@@ -50,5 +50,38 @@ namespace CNPM
                 return false;
             }
         }
+
+        // đặt lại mật khẩu theo gmail
+        public static void DatLaiMatKhau(string gmail)
+        {
+            try
+            {
+                using (SqlConnection conn = DatabaseConnection.GetConnection())
+                {
+                    conn.Open();
+                    string sql = @"
+                UPDATE TAIKHOAN SET MatKhau = '123'
+                WHERE MaTaiKhoan IN (
+                    SELECT t.MaTaiKhoan FROM TAIKHOAN t
+                    LEFT JOIN KHACHHANG kh ON t.MaLienKet = kh.MaKhachHang AND t.VaiTro = 'KhachHang'
+                    LEFT JOIN NHANVIEN nv ON t.MaLienKet = nv.MaNhanVien AND t.VaiTro = 'NhanVien'
+                    LEFT JOIN QUANLY ql ON t.MaLienKet = ql.MaQuanLy AND t.VaiTro = 'QuanLy'
+                    WHERE kh.Gmail = @gmail OR nv.Gmail = @gmail OR ql.Gmail = @gmail
+                )";
+
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@gmail", gmail);
+                        int rows = cmd.ExecuteNonQuery();
+
+                        MessageBox.Show(rows > 0 ? "✅ Đặt lại mật khẩu thành công!" : "❌ Không tìm thấy Gmail!");
+                    }
+                }
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("❌ Lỗi khi kết nối hoặc cập nhật dữ liệu!");
+            }
+        }
     }
 }

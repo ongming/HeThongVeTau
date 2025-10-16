@@ -56,6 +56,7 @@ namespace CNPM
                 forgotForm.Owner = parentForm; // ✅ gán Login làm chủ sở hữu
                 parentForm.Hide();              // Ẩn Login
                 forgotForm.Show();              // Mở ForgotPass
+                parentForm.Show();
             }
             else
             {

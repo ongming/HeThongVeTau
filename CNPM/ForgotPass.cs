@@ -31,5 +31,15 @@ namespace CNPM
             // Đóng form quên mật khẩu
             this.Close();
         }
+
+        private void btn_GuiYeuCau_Click(object sender, EventArgs e)
+        {
+            String mail= txt_gmail.Text.Trim();
+            if (mail.Length == 0)
+            {
+                MessageBox.Show("Vui lòng nhập email vào ô");
+            }
+            KhachHangRepository.DatLaiMatKhau(mail);
+        }
     }
 }
