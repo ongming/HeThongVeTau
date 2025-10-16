@@ -110,6 +110,7 @@
     <Compile Include="DangKy.Designer.cs">
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="ForgotPass.cs">
       <SubType>Form</SubType>
     </Compile>
