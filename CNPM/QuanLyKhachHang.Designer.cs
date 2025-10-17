@@ -299,7 +299,7 @@
             // 
             this.lbKhachHangBiChan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbKhachHangBiChan.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKhachHangBiChan.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbKhachHangBiChan.Location = new System.Drawing.Point(44, 69);
             this.lbKhachHangBiChan.Name = "lbKhachHangBiChan";
             this.lbKhachHangBiChan.Size = new System.Drawing.Size(176, 41);
@@ -337,7 +337,7 @@
             // 
             this.lbKhachHangHoatDong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbKhachHangHoatDong.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKhachHangHoatDong.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbKhachHangHoatDong.Location = new System.Drawing.Point(45, 69);
             this.lbKhachHangHoatDong.Name = "lbKhachHangHoatDong";
             this.lbKhachHangHoatDong.Size = new System.Drawing.Size(175, 41);
@@ -387,7 +387,7 @@
             // 
             this.lbKhachHangHomNay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbKhachHangHomNay.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKhachHangHomNay.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbKhachHangHomNay.Location = new System.Drawing.Point(50, 69);
             this.lbKhachHangHomNay.Name = "lbKhachHangHomNay";
             this.lbKhachHangHomNay.Size = new System.Drawing.Size(170, 41);
@@ -438,7 +438,7 @@
             this.lbTongKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTongKhachHang.BackColor = System.Drawing.Color.White;
-            this.lbTongKhachHang.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongKhachHang.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTongKhachHang.Location = new System.Drawing.Point(48, 69);
             this.lbTongKhachHang.Name = "lbTongKhachHang";
             this.lbTongKhachHang.Size = new System.Drawing.Size(172, 41);

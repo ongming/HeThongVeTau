@@ -168,6 +168,7 @@
             this.comboBox_DanhGia.Size = new System.Drawing.Size(112, 36);
             this.comboBox_DanhGia.TabIndex = 7;
             this.comboBox_DanhGia.Tag = "";
+            this.comboBox_DanhGia.SelectedIndexChanged += new System.EventHandler(this.comboBox_DanhGia_SelectedIndexChanged);
             // 
             // date_NgayPhanHoi
             // 
@@ -191,6 +192,7 @@
             this.date_NgayPhanHoi.Size = new System.Drawing.Size(171, 44);
             this.date_NgayPhanHoi.TabIndex = 5;
             this.date_NgayPhanHoi.Value = new System.DateTime(2025, 10, 8, 9, 34, 12, 257);
+            this.date_NgayPhanHoi.ValueChanged += new System.EventHandler(this.date_NgayPhanHoi_ValueChanged);
             // 
             // panel3
             // 
@@ -227,6 +229,7 @@
             this.txt_Search.SelectedText = "";
             this.txt_Search.Size = new System.Drawing.Size(383, 44);
             this.txt_Search.TabIndex = 9;
+            this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
             // 
             // tableLayoutPanel4
             // 
