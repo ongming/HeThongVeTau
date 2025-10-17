@@ -51,12 +51,13 @@ namespace CNPM
         {
             string user = txt_username.Text.Trim();
             string pass = txt_Pass.Text.Trim();
-            NhanVienRepository repo = new NhanVienRepository();
+            KhachHangRepository repo = new KhachHangRepository();
             // Lấy form chứa usercontrol (ở đây là FormLogin)
             Form parentForm = this.FindForm();
 
             if (repo.CheckLogin(user, pass))
             {
+                MessageBox.Show("đăng nhập thành công");
                 // Ẩn form login
                 parentForm.Hide();
 

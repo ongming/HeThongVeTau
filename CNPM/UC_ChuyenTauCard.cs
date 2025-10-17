@@ -48,7 +48,7 @@ namespace CNPM
             isSelected = false;
             guna2Panel1.BorderColor = Color.LightGray;
             guna2Panel1.FillColor = Color.White;
-        }   
+        }
         // Hàm nạp dữ liệu từ DataRow
         public void LoadData(DataRow data)
         {
@@ -56,11 +56,10 @@ namespace CNPM
             lblTuyen.Text = $"{data["NoiDi"]} - {data["NoiDen"]}";
             lblNgay.Text = $"{Convert.ToDateTime(data["NgayDi"]):dd/MM/yyyy}";
             lblGio.Text = $"{data["GioDi"]} - {data["GioDen"]}";
-            lblGia.Text = $"{Convert.ToDecimal(data["GiaVeCung"]):#,##0} VND\n" +
-              $"{Convert.ToDecimal(data["GiaVeNem"]):#,##0} VND";
+            lblGia.Text = $"{Convert.ToDecimal(data["GiaGheCung"]):#,##0} VND\n" +
+                          $"{Convert.ToDecimal(data["GiaGheMem"]):#,##0} VND";
             lblGia.ForeColor = Color.RoyalBlue;
             lblGia.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-
         }
 
         // Hover effect

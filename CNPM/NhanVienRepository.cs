@@ -24,8 +24,8 @@ namespace CNPM
                     FROM TAIKHOAN 
                     WHERE TenDangNhap = @user 
                       AND MatKhau = @pass 
-                      AND VaiTro = 'NhanVien'
-                      OR  VaiTro = 'QuanLy'
+                      AND (VaiTro = 'NhanVien'
+                      OR  VaiTro = 'QuanLy')
                       AND TrangThai = 1";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))

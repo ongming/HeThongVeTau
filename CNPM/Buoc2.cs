@@ -44,7 +44,7 @@ namespace CNPM
             lblNgay.Text = ThongTinChuyenTau.Ngay;
             lblGio.Text = ThongTinChuyenTau.Gio;
             lblGia.Text = ThongTinChuyenTau.Gia;
-            using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-MKNGM2HG;Initial Catalog=TestVe;Integrated Security=True;TrustServerCertificate=True"))
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 // Không cần open/close thủ công
                 // Vì SqlDataAdapter và ExecuteScalar tự open khi cần

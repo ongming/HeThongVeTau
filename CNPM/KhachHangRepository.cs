@@ -83,5 +83,52 @@ namespace CNPM
                 MessageBox.Show("❌ Lỗi khi kết nối hoặc cập nhật dữ liệu!");
             }
         }
+
+        // hàm đặt vé khi nhấn nút hoàn tất
+        public static bool DatVe(int maKhachHang, int maChuyen, List<int> gheList, decimal tongTien)
+        {
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            {
+                conn.Open();
+                SqlTransaction trans = conn.BeginTransaction();
+
+                try
+                {
+                    // 1. Thêm giao dịch
+                    string sqlGD = "INSERT INTO LICHSUGIAODICH(MaKhachHang, NgayGD, TongTien) OUTPUT INSERTED.MaGiaoDich VALUES(@makh, GETDATE(), @tong)";
+                    int maGD;
+                    using (SqlCommand cmd = new SqlCommand(sqlGD, conn, trans))
+                    {
+                        cmd.Parameters.AddWithValue("@makh", maKhachHang);
+                        cmd.Parameters.AddWithValue("@tong", tongTien);
+                        maGD = (int)cmd.ExecuteScalar();
+                    }
+
+                    // 2. Thêm vé
+                    string sqlVe = "INSERT INTO VE(MaChuyen, MaKhachHang, SoGhe, MaGiaoDich) VALUES(@machuyen, @makh, @soghe, @magd)";
+                    foreach (int ghe in gheList)
+                    {
+                        using (SqlCommand cmd = new SqlCommand(sqlVe, conn, trans))
+                        {
+                            cmd.Parameters.AddWithValue("@machuyen", maChuyen);
+                            cmd.Parameters.AddWithValue("@makh", maKhachHang);
+                            cmd.Parameters.AddWithValue("@soghe", ghe);
+                            cmd.Parameters.AddWithValue("@magd", maGD);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    // 3. Commit nếu thành công
+                    trans.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    trans.Rollback();
+                    return false;
+                }
+            }
+        }
+
     }
 }

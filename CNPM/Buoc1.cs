@@ -61,10 +61,9 @@ namespace CNPM
 
         public DataTable LayDanhSachChuyenTau()
         {
-            string connStr = "minhchimbe";
-            string query = "SELECT * FROM ChuyenTau";
+            string query = "SELECT * FROM CHUYENTAU";
 
-            using (SqlConnection conn = new SqlConnection(connStr))
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 using (SqlDataAdapter da = new SqlDataAdapter(query, conn))
                 {

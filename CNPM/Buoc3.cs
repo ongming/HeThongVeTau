@@ -67,5 +67,10 @@ namespace CNPM
                 flow_GheDaChon.Controls.Add(pnl);
             }
         }
+
+        private void btn_HoanTat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
