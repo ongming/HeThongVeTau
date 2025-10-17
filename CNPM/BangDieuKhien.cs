@@ -21,13 +21,14 @@ namespace CNPM
         }
         private void LoadChart_DoanhThu()
         {
-            string connStr = "Data Source=LAPTOP-MKNGM2HG;Initial Catalog=TestVe;Integrated Security=True;TrustServerCertificate=True";
-            string query = @"SELECT MONTH(NgayMua) AS Thang, SUM(GiaVe * SoLuong) AS TongDoanhThu
-                     FROM VeMua
-                     GROUP BY MONTH(NgayMua)
-                     ORDER BY Thang";
+           
+            string query = @"SELECT MONTH(ThoiGianDat) AS Thang,
+                            SUM(TongTien) AS TongDoanhThu
+                            FROM LICHSUGIAODICH
+                            GROUP BY MONTH(ThoiGianDat)
+                            ORDER BY Thang;";
 
-            using (SqlConnection conn = new SqlConnection(connStr))
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
                 conn.Open();

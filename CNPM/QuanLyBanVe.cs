@@ -24,11 +24,9 @@ namespace CNPM
             // Apply giao diện hiện đại
             ModernGridStyle.Apply(Grid_Ve);
 
-            // Load dữ liệu test
-            string connString = "Data Source=LAPTOP-MKNGM2HG;Initial Catalog=TestVe;Integrated Security=True;TrustServerCertificate=True";
-            string query = "SELECT * FROM Ve";
+            string query = "SELECT * FROM VE";
 
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
@@ -36,7 +34,7 @@ namespace CNPM
                 Grid_Ve.DataSource = dt;
             }
 
-            ModernGridStyle.HighlightStatus(Grid_Ve);
+            //ModernGridStyle.HighlightStatus(Grid_Ve);
         }
 
         private void btn_TaoVe_Click(object sender, EventArgs e)

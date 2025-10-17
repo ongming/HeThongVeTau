@@ -20,10 +20,9 @@ namespace CNPM
         }
         private void YKien_Load(object sender, EventArgs e)
         {
-            string connString = "Data Source=LAPTOP-MKNGM2HG;Initial Catalog=TestVe;Integrated Security=True;TrustServerCertificate=True";
-            string query = "SELECT * FROM GopY";
+            string query = "SELECT * FROM YKIENPHANHOI";
             string text = "Ngày đánh giá";
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();

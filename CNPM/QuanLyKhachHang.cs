@@ -21,11 +21,10 @@ namespace CNPM
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            string connString = "Data Source=LAPTOP-MKNGM2HG;Initial Catalog=TestVe;Integrated Security=True;TrustServerCertificate=True";
             string query = "SELECT * FROM KhachHang";
             string text = "Ngày tạo";
 
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
@@ -35,7 +34,7 @@ namespace CNPM
             ModernGridStyle.ApplyPlaceholder(date_NgayTaoTK, text);
             ModernGridStyle.Apply(Grid_KhachHang);
             ModernGridStyle.AddMiniActionColumns(Grid_KhachHang); // ✅ thêm icon sau khi gán DataSource
-            ModernGridStyle.HighlightStatus(Grid_KhachHang);
+            //ModernGridStyle.HighlightStatus(Grid_KhachHang);
             ComboBox_TrangThai.Text = "Trạng thái";
         }
 
