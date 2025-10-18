@@ -69,17 +69,18 @@ namespace CNPM
         {
             string user = txt_username.Text.Trim();
             string pass = txt_Pass.Text.Trim();
-            NhanVienRepository repo = new NhanVienRepository();
+            ThongTinNhanVien nv = NhanVienRepository.CheckLogin(user, pass);
             // Lấy form chứa usercontrol (ở đây là FormLogin)
             Form parentForm = this.FindForm();
 
-            if (repo.CheckLogin(user, pass))
+            if (nv != null)
             {
+                MessageBox.Show($"Xin chào {nv.HoTen} ({nv.VaiTro})!");
                 // Ẩn form login
                 parentForm.Hide();
 
                 // Mở form khách hàng
-                Main main = new Main();
+                Main main = new Main(nv);
 
                 // Khi form Khách hàng đóng → hiện lại form login
                 main.FormClosed += (s2, e2) => parentForm.Show();
@@ -87,7 +88,7 @@ namespace CNPM
             }
             else
             {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu"  );
             }
         }
     }

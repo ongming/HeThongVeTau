@@ -14,9 +14,11 @@ namespace CNPM
 {
     public partial class QuanLyChuyenTau : Form
     {
-        public QuanLyChuyenTau()
+        ThongTinNhanVien nv;
+        public QuanLyChuyenTau(ThongTinNhanVien nv)
         {
             InitializeComponent();
+            this.nv = nv;
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
@@ -43,7 +45,7 @@ namespace CNPM
         }
         private void btn_ThemChuyen_Click(object sender, EventArgs e)
         {
-            TaoChuyenMoi taoChuyenMoi = new TaoChuyenMoi();
+            TaoChuyenMoi taoChuyenMoi = new TaoChuyenMoi(nv);
             taoChuyenMoi.ShowDialog();
         }
 

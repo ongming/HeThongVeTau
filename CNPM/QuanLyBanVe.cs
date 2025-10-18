@@ -15,9 +15,11 @@ namespace CNPM
 {
     public partial class QuanLyBanVe : Form
     {
-        public QuanLyBanVe()
+        ThongTinNhanVien nv;
+        public QuanLyBanVe(ThongTinNhanVien nv)
         {
             InitializeComponent();
+            this.nv = nv;
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
@@ -43,7 +45,7 @@ namespace CNPM
 
         private void btn_TaoVe_Click(object sender, EventArgs e)
         {
-            TaoChuyenMoi taoVe = new TaoChuyenMoi();
+            TaoChuyenMoi taoVe = new TaoChuyenMoi(nv);
             taoVe.ShowDialog();
         }
 

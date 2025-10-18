@@ -180,6 +180,7 @@
     <Compile Include="NganHang.Designer.cs">
       <DependentUpon>NganHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="NguoiDungRepository.cs" />
     <Compile Include="NhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>

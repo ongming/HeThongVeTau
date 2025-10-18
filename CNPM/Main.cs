@@ -13,9 +13,10 @@ namespace CNPM
     public partial class Main : Form
     {
         private Guna.UI2.WinForms.Guna2Panel pnThongBao;
-
-        public Main()
+        public ThongTinNhanVien nv;
+        public Main(ThongTinNhanVien nv)
         {
+            this.nv = nv;
             InitializeComponent();
             pnThongBao = new Guna.UI2.WinForms.Guna2Panel()
             {
@@ -39,6 +40,7 @@ namespace CNPM
                     btn_ThongBao.Checked = false;
                 }
             };
+            this.nv = nv;
         }
         private void Container(Form fm)
         {
@@ -54,13 +56,13 @@ namespace CNPM
         }
         private void btn_ve_Click(object sender, EventArgs e)
         {
-            QuanLyBanVe quanLyBanVe = new QuanLyBanVe();
+            QuanLyBanVe quanLyBanVe = new QuanLyBanVe(nv);
             Container(quanLyBanVe);
         }
 
         private void btn_tau_Click(object sender, EventArgs e)
         {
-            QuanLyChuyenTau quanLyChuyenTau = new QuanLyChuyenTau();
+            QuanLyChuyenTau quanLyChuyenTau = new QuanLyChuyenTau(nv);
             Container(quanLyChuyenTau);
         }
 
@@ -102,7 +104,7 @@ namespace CNPM
 
         private void pictureBox_avatar_Click(object sender, EventArgs e)
         {
-            ThongTinCaNhan thongTinCaNhan = new ThongTinCaNhan(1,"NhanVien");
+            ThongTinCaNhan thongTinCaNhan = new ThongTinCaNhan(nv.MaNhanVien, nv.VaiTro);
             Container(thongTinCaNhan);
         }
 
@@ -114,7 +116,7 @@ namespace CNPM
 
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
-            BangDieuKhien bangDieuKhien = new BangDieuKhien();
+            BangDieuKhien bangDieuKhien = new BangDieuKhien(nv);
             Container(bangDieuKhien);
         }
         private void btnThongBao_CheckedChanged(object sender, EventArgs e)

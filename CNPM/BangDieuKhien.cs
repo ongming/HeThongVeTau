@@ -14,10 +14,12 @@ namespace CNPM
 {
     public partial class BangDieuKhien : Form
     {
-        public BangDieuKhien()
+        ThongTinNhanVien nv;
+        public BangDieuKhien(ThongTinNhanVien nv)
         {
             InitializeComponent();
             LoadChart_DoanhThu();
+            this.nv = nv;
         }
         private void LoadChart_DoanhThu()
         {
@@ -77,7 +79,7 @@ namespace CNPM
 
         private void btn_TaoChuyenNhanh_Click(object sender, EventArgs e)
         {
-            TaoChuyenMoi taoChuyenMoi = new TaoChuyenMoi();
+            TaoChuyenMoi taoChuyenMoi = new TaoChuyenMoi(nv);
             taoChuyenMoi.ShowDialog();
         }
     }

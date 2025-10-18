@@ -13,7 +13,7 @@ namespace CNPM
     internal class NhanVienRepository
     {
         //kiểm tra đăng nhập
-        public bool CheckLogin(string username, string password)
+        public static ThongTinNhanVien CheckLogin(string username, string password)
         {
             try
             {
@@ -22,37 +22,72 @@ namespace CNPM
                     conn.Open();
 
                     string query = @"
-                    SELECT COUNT(*) 
-                    FROM TAIKHOAN 
-                    WHERE TenDangNhap = @user 
-                      AND MatKhau = @pass 
-                      AND (VaiTro = 'NhanVien'
-                      OR  VaiTro = 'QuanLy')
-                      AND TrangThai = 1";
+                SELECT 
+                    NV.MaNhanVien, NV.HoTen, NV.CCCD, NV.Gmail, NV.SoDienThoai, NV.DiaChi,
+                    TK.VaiTro, TK.TrangThai
+                FROM TAIKHOAN TK
+                JOIN NHANVIEN NV ON TK.MaLienKet = NV.MaNhanVien
+                WHERE TK.TenDangNhap = @user
+                  AND TK.MatKhau = @pass
+                  AND TK.VaiTro IN ('NhanVien','QuanLy')
+                  AND TK.TrangThai = 1
+            ";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@user", username);
                         cmd.Parameters.AddWithValue("@pass", password);
 
-                        int count = (int)cmd.ExecuteScalar();
-                        return count > 0;
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                var nv = new ThongTinNhanVien();
+
+                                // MaNhanVien (int)
+                                nv.MaNhanVien = reader.GetInt32(reader.GetOrdinal("MaNhanVien"));
+
+                                // HoTen
+                                nv.HoTen = reader.IsDBNull(reader.GetOrdinal("HoTen")) ? null : reader.GetString(reader.GetOrdinal("HoTen"));
+
+                                // CCCD
+                                nv.CCCD = reader.IsDBNull(reader.GetOrdinal("CCCD")) ? null : reader.GetString(reader.GetOrdinal("CCCD"));
+
+                                // Gmail
+                                nv.Gmail = reader.IsDBNull(reader.GetOrdinal("Gmail")) ? null : reader.GetString(reader.GetOrdinal("Gmail"));
+
+                                // SoDienThoai (lưu ý tên cột trong DB là SoDienThoai)
+                                nv.DienThoai = reader.IsDBNull(reader.GetOrdinal("SoDienThoai")) ? null : reader.GetString(reader.GetOrdinal("SoDienThoai"));
+
+                                // DiaChi
+                                nv.DiaChi = reader.IsDBNull(reader.GetOrdinal("DiaChi")) ? null : reader.GetString(reader.GetOrdinal("DiaChi"));
+
+                                // VaiTro lấy từ TAIKHOAN
+                                nv.VaiTro = reader.IsDBNull(reader.GetOrdinal("VaiTro")) ? null : reader.GetString(reader.GetOrdinal("VaiTro"));
+
+                                // TrangThai lấy từ TAIKHOAN (SQL BIT => bool)
+                                nv.TrangThai = !reader.IsDBNull(reader.GetOrdinal("TrangThai")) && reader.GetBoolean(reader.GetOrdinal("TrangThai"));
+
+                                return nv;
+                            }
+                        }
                     }
                 }
+
+                return null; // không tìm thấy hoặc sai thông tin
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu!\nChi tiết: " + ex.Message,
-                                "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu!\nChi tiết: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi khi đăng nhập!\nChi tiết: " + ex.Message,
-                                "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                MessageBox.Show("Đã xảy ra lỗi khi đăng nhập!\nChi tiết: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
         }
+
 
         // số vé đã bán trong tháng hiện tại 
         public static int GetSoVeBanTrongThang()
@@ -167,5 +202,51 @@ namespace CNPM
                 }
             }
         }
+        public static bool ThemTuyenTauMoi(
+           string noiDi,
+           string noiDen,
+           TimeSpan gioDi,
+           TimeSpan gioDen,
+           DateTime ngayDi,
+           int tongSoGhe,
+           decimal giaGheMem,
+           decimal giaGheCung,
+           int nguoiTao)
+        {
+            string query = @"
+                INSERT INTO CHUYENTAU 
+                (NoiDi, NoiDen, GioDi, GioDen, NgayDi, TongSoGhe, GiaGheMem, GiaGheCung, NguoiTao)
+                VALUES 
+                (@NoiDi, @NoiDen, @GioDi, @GioDen, @NgayDi, @TongSoGhe, @GiaGheMem, @GiaGheCung, @NguoiTao);
+            ";
+
+            try
+            {
+                using (SqlConnection conn = DatabaseConnection.GetConnection())
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@NoiDi", noiDi);
+                    cmd.Parameters.AddWithValue("@NoiDen", noiDen);
+                    cmd.Parameters.AddWithValue("@GioDi", gioDi);
+                    cmd.Parameters.AddWithValue("@GioDen", gioDen);
+                    cmd.Parameters.AddWithValue("@NgayDi", ngayDi);
+                    cmd.Parameters.AddWithValue("@TongSoGhe", tongSoGhe);
+                    cmd.Parameters.AddWithValue("@GiaGheMem", giaGheMem);
+                    cmd.Parameters.AddWithValue("@GiaGheCung", giaGheCung);
+                    cmd.Parameters.AddWithValue("@NguoiTao", nguoiTao);
+
+                    conn.Open();
+                    int rows = cmd.ExecuteNonQuery();
+                    return rows > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Bạn có thể log lỗi ra file hoặc bảng NHATKY_HOATDONG
+                Console.WriteLine("Lỗi khi thêm tuyến tàu mới: " + ex.Message);
+                return false;
+            }
+        }
+
     }
 }

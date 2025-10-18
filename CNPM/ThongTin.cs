@@ -28,7 +28,7 @@ namespace CNPM
         private void LoadThongTin()
         {
             // Ví dụ: gọi repository để lấy dữ liệu từ bảng tương ứng
-            DataTable dt = KhachHangRepository.LayThongTin(MaUser);
+            DataTable dt = NguoiDungRepository.LayThongTin(MaUser, Role);
 
             if (dt.Rows.Count > 0)
             {
@@ -40,7 +40,7 @@ namespace CNPM
                 date_NgaySinh.Value = row["NgaySinh"] != DBNull.Value ? Convert.ToDateTime(row["NgaySinh"]) : DateTime.Now;
                 txt_Username.Text = row["TenDangNhap"].ToString();
                 txt_CCCD.Text = row["CCCD"].ToString();
-                lb_VaiTro.Text = "Khách hàng";
+                lb_VaiTro.Text = Role;
                 lb_Email.Text = row["Gmail"].ToString();
                 lb_Ten.Text = row["HoTen"].ToString();
 
@@ -99,8 +99,9 @@ namespace CNPM
 
                 if(avatarData != null)
                 {
-                    KhachHangRepository.CapNhatThongTin(
+                    NguoiDungRepository.CapNhatThongTin(
                     MaUser,
+                    Role,
                     txt_HovaTen.Text.Trim(),
                     txt_CCCD.Text.Trim(),
                     date_NgaySinh.Value,
@@ -114,8 +115,9 @@ namespace CNPM
                 else
                 {
                     // Gọi repository để cập nhật
-                    KhachHangRepository.CapNhatThongTin(
+                    NguoiDungRepository.CapNhatThongTin(
                         MaUser,
+                        Role,
                         txt_HovaTen.Text.Trim(),
                         txt_CCCD.Text.Trim(),
                         date_NgaySinh.Value,

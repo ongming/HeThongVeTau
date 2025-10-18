@@ -31,4 +31,18 @@ namespace CNPM
             public string SoDienThoai { get; set; }
             public string CCCD { get; set; }
         }
+
+        public class ThongTinNhanVien
+        {
+            public int MaNhanVien { get; set; }
+            public string HoTen { get; set; }
+            public string CCCD { get; set; }
+            public string Gmail { get; set; }
+            public string DienThoai { get; set; }
+            public string DiaChi { get; set; }
+            public string VaiTro { get; set; }   // "NhanVien" hoặc "QuanLy"
+            public DateTime NgayTao { get; set; }
+            public bool TrangThai { get; set; }  // true = hoạt động, false = bị khóa
+        }
+
 }
