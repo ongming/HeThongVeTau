@@ -12,11 +12,14 @@ namespace CNPM
 {
     public partial class BaoMat : UserControl
     {
-        public BaoMat()
+        int MaUser;
+        string Role;
+        public BaoMat(int MaUser, string Role)
         {
+            this.MaUser = MaUser;
+            this.Role = Role;
             InitializeComponent();
         }
-        private bool isEyeOpen = false;
         private void TogglePassword(Guna.UI2.WinForms.Guna2TextBox txt)
         {
             bool isEyeOpen = txt.Tag as bool? ?? false;
@@ -53,6 +56,56 @@ namespace CNPM
         private void tip_MouseLeave(object sender, EventArgs e)
         {
             toolTip1.Hide(pictureBox_Tip);
+        }
+
+        private void btn_DoiMK_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string mkCu = txt_MKCu.Text.Trim();
+                string mkMoi = txt_MKMoi.Text.Trim();
+                string nhapLai = txt_NhapLaiMKMoi.Text.Trim();
+
+                // 1️⃣ Kiểm tra rỗng
+                if (string.IsNullOrEmpty(mkCu) || string.IsNullOrEmpty(mkMoi) || string.IsNullOrEmpty(nhapLai))
+                {
+                    MessageBox.Show("⚠️ Vui lòng nhập đầy đủ thông tin.", "Thiếu thông tin",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // 2️⃣ Kiểm tra trùng mật khẩu mới
+                if (mkMoi != nhapLai)
+                {
+                    MessageBox.Show("⚠️ Mật khẩu mới nhập lại không khớp.", "Sai xác nhận",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // 3️⃣ Kiểm tra mật khẩu cũ có đúng không
+                if (!KhachHangRepository.KiemTraMatKhauCu(MaUser, mkCu))
+                {
+                    MessageBox.Show("❌ Mật khẩu cũ không chính xác.", "Sai mật khẩu",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // 4️⃣ Cập nhật mật khẩu mới
+                KhachHangRepository.DoiMatKhau(MaUser, mkMoi);
+
+                MessageBox.Show("✅ Đổi mật khẩu thành công!", "Thành công",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // 5️⃣ Dọn dữ liệu sau khi đổi
+                txt_MKCu.Clear();
+                txt_MKMoi.Clear();
+                txt_NhapLaiMKMoi.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Lỗi khi đổi mật khẩu: " + ex.Message,
+                    "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

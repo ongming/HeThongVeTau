@@ -49,7 +49,7 @@
             this.txt_MKCu = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_MKMoi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_NhapLaiMKMoi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btn_ThongBao = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_DoiMK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -237,7 +237,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btn_ThongBao);
+            this.panel2.Controls.Add(this.btn_DoiMK);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(38, 330);
             this.panel2.Name = "panel2";
@@ -359,30 +359,31 @@
             this.txt_NhapLaiMKMoi.UseSystemPasswordChar = true;
             this.txt_NhapLaiMKMoi.IconRightClick += new System.EventHandler(this.txt_RePass_IconRightClick);
             // 
-            // btn_ThongBao
+            // btn_DoiMK
             // 
-            this.btn_ThongBao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btn_DoiMK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ThongBao.Animated = true;
-            this.btn_ThongBao.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ThongBao.BorderRadius = 5;
-            this.btn_ThongBao.BorderThickness = 1;
-            this.btn_ThongBao.CheckedState.FillColor = System.Drawing.Color.Silver;
-            this.btn_ThongBao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ThongBao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ThongBao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ThongBao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_ThongBao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_ThongBao.FillColor = System.Drawing.Color.RoyalBlue;
-            this.btn_ThongBao.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThongBao.ForeColor = System.Drawing.Color.White;
-            this.btn_ThongBao.Image = global::CNPM.Properties.Resources.icons8_save_100;
-            this.btn_ThongBao.Location = new System.Drawing.Point(38, 8);
-            this.btn_ThongBao.Name = "btn_ThongBao";
-            this.btn_ThongBao.Size = new System.Drawing.Size(201, 40);
-            this.btn_ThongBao.TabIndex = 5;
-            this.btn_ThongBao.Text = "Lưu";
+            this.btn_DoiMK.Animated = true;
+            this.btn_DoiMK.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DoiMK.BorderRadius = 5;
+            this.btn_DoiMK.BorderThickness = 1;
+            this.btn_DoiMK.CheckedState.FillColor = System.Drawing.Color.Silver;
+            this.btn_DoiMK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_DoiMK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DoiMK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DoiMK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_DoiMK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_DoiMK.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btn_DoiMK.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_DoiMK.ForeColor = System.Drawing.Color.White;
+            this.btn_DoiMK.Image = global::CNPM.Properties.Resources.Change__2_;
+            this.btn_DoiMK.Location = new System.Drawing.Point(38, 8);
+            this.btn_DoiMK.Name = "btn_DoiMK";
+            this.btn_DoiMK.Size = new System.Drawing.Size(201, 40);
+            this.btn_DoiMK.TabIndex = 5;
+            this.btn_DoiMK.Text = "Đổi";
+            this.btn_DoiMK.Click += new System.EventHandler(this.btn_DoiMK_Click);
             // 
             // BaoMat
             // 
@@ -432,7 +433,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_MKMoi;
         private Guna.UI2.WinForms.Guna2TextBox txt_NhapLaiMKMoi;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button btn_ThongBao;
+        private Guna.UI2.WinForms.Guna2Button btn_DoiMK;
         private System.Windows.Forms.ToolTip toolTip1;
     }
 }

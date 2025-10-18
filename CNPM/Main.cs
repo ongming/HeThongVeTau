@@ -102,7 +102,7 @@ namespace CNPM
 
         private void pictureBox_avatar_Click(object sender, EventArgs e)
         {
-            ThongTinCaNhan thongTinCaNhan = new ThongTinCaNhan();
+            ThongTinCaNhan thongTinCaNhan = new ThongTinCaNhan(1,"NhanVien");
             Container(thongTinCaNhan);
         }
 

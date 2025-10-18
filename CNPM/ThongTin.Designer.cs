@@ -32,41 +32,41 @@
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txt_HovaTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.date_NgaySinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.txt_Email = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.txt_Username = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.txt_CCCD = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.btn_ChinhSua = new Guna.UI2.WinForms.Guna2Button();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.btn_Luu = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pic_Avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lb_Email = new System.Windows.Forms.Label();
             this.lb_Ten = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_HovaTen = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_Email = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_Username = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_MK = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btn_ChinhSua = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Luu = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lb_VaiTro = new System.Windows.Forms.Label();
             this.tableLayoutPanel6.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -85,8 +85,8 @@
             this.guna2Panel1.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Avatar)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel6
@@ -159,6 +159,34 @@
             this.panel4.Size = new System.Drawing.Size(318, 103);
             this.panel4.TabIndex = 0;
             // 
+            // txt_HovaTen
+            // 
+            this.txt_HovaTen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_HovaTen.BorderRadius = 7;
+            this.txt_HovaTen.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_HovaTen.DefaultText = "";
+            this.txt_HovaTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_HovaTen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_HovaTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_HovaTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_HovaTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_HovaTen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_HovaTen.ForeColor = System.Drawing.Color.Black;
+            this.txt_HovaTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_HovaTen.IconLeft = global::CNPM.Properties.Resources.person_13924070;
+            this.txt_HovaTen.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txt_HovaTen.Location = new System.Drawing.Point(3, 47);
+            this.txt_HovaTen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_HovaTen.Name = "txt_HovaTen";
+            this.txt_HovaTen.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txt_HovaTen.PlaceholderText = "Nguyễn văn A";
+            this.txt_HovaTen.ReadOnly = true;
+            this.txt_HovaTen.SelectedText = "";
+            this.txt_HovaTen.Size = new System.Drawing.Size(312, 40);
+            this.txt_HovaTen.TabIndex = 7;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -178,6 +206,35 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(318, 103);
             this.panel5.TabIndex = 1;
+            // 
+            // txt_SDT
+            // 
+            this.txt_SDT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_SDT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_SDT.BorderRadius = 7;
+            this.txt_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_SDT.DefaultText = "09999999999";
+            this.txt_SDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_SDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_SDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SDT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_SDT.ForeColor = System.Drawing.Color.Black;
+            this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SDT.IconLeft = global::CNPM.Properties.Resources.phone_call_3779208;
+            this.txt_SDT.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txt_SDT.Location = new System.Drawing.Point(6, 46);
+            this.txt_SDT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txt_SDT.PlaceholderText = "";
+            this.txt_SDT.ReadOnly = true;
+            this.txt_SDT.SelectedText = "";
+            this.txt_SDT.Size = new System.Drawing.Size(309, 40);
+            this.txt_SDT.TabIndex = 9;
             // 
             // label5
             // 
@@ -211,6 +268,7 @@
             this.date_NgaySinh.BorderThickness = 1;
             this.date_NgaySinh.Checked = true;
             this.date_NgaySinh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.date_NgaySinh.Enabled = false;
             this.date_NgaySinh.FillColor = System.Drawing.Color.White;
             this.date_NgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -243,6 +301,34 @@
             this.panel7.Size = new System.Drawing.Size(318, 103);
             this.panel7.TabIndex = 3;
             // 
+            // txt_Email
+            // 
+            this.txt_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Email.BorderRadius = 7;
+            this.txt_Email.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Email.DefaultText = "admin@gmail.com";
+            this.txt_Email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Email.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Email.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Email.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_Email.ForeColor = System.Drawing.Color.Black;
+            this.txt_Email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Email.IconLeft = global::CNPM.Properties.Resources.person_13924070;
+            this.txt_Email.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txt_Email.Location = new System.Drawing.Point(6, 46);
+            this.txt_Email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txt_Email.PlaceholderText = "Nguyễn văn A";
+            this.txt_Email.ReadOnly = true;
+            this.txt_Email.SelectedText = "";
+            this.txt_Email.Size = new System.Drawing.Size(309, 40);
+            this.txt_Email.TabIndex = 9;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -262,6 +348,34 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(318, 105);
             this.panel8.TabIndex = 4;
+            // 
+            // txt_DiaChi
+            // 
+            this.txt_DiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_DiaChi.BorderRadius = 7;
+            this.txt_DiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_DiaChi.DefaultText = "448 Lê Văn Việt, Quận 9, Thành phố Thủ Đức";
+            this.txt_DiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_DiaChi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_DiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DiaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_DiaChi.ForeColor = System.Drawing.Color.Black;
+            this.txt_DiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DiaChi.IconLeft = global::CNPM.Properties.Resources.location_11549881;
+            this.txt_DiaChi.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txt_DiaChi.Location = new System.Drawing.Point(6, 47);
+            this.txt_DiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_DiaChi.Name = "txt_DiaChi";
+            this.txt_DiaChi.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txt_DiaChi.PlaceholderText = "Nguyễn văn A";
+            this.txt_DiaChi.ReadOnly = true;
+            this.txt_DiaChi.SelectedText = "";
+            this.txt_DiaChi.Size = new System.Drawing.Size(309, 40);
+            this.txt_DiaChi.TabIndex = 9;
             // 
             // label8
             // 
@@ -336,6 +450,34 @@
             this.panel9.Size = new System.Drawing.Size(335, 110);
             this.panel9.TabIndex = 0;
             // 
+            // txt_Username
+            // 
+            this.txt_Username.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Username.BorderRadius = 7;
+            this.txt_Username.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Username.DefaultText = "";
+            this.txt_Username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Username.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_Username.ForeColor = System.Drawing.Color.Black;
+            this.txt_Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Username.IconLeft = global::CNPM.Properties.Resources.person_13924070;
+            this.txt_Username.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txt_Username.Location = new System.Drawing.Point(5, 39);
+            this.txt_Username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_Username.Name = "txt_Username";
+            this.txt_Username.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txt_Username.PlaceholderText = "Nguyễn văn A";
+            this.txt_Username.ReadOnly = true;
+            this.txt_Username.SelectedText = "";
+            this.txt_Username.Size = new System.Drawing.Size(327, 40);
+            this.txt_Username.TabIndex = 13;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -349,7 +491,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Controls.Add(this.txt_MK);
+            this.panel10.Controls.Add(this.txt_CCCD);
             this.panel10.Controls.Add(this.label10);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(23, 144);
@@ -357,15 +499,43 @@
             this.panel10.Size = new System.Drawing.Size(335, 111);
             this.panel10.TabIndex = 1;
             // 
+            // txt_CCCD
+            // 
+            this.txt_CCCD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_CCCD.BorderRadius = 7;
+            this.txt_CCCD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_CCCD.DefaultText = "";
+            this.txt_CCCD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_CCCD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_CCCD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_CCCD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_CCCD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_CCCD.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_CCCD.ForeColor = System.Drawing.Color.Black;
+            this.txt_CCCD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_CCCD.IconLeft = global::CNPM.Properties.Resources.id_card_9284909;
+            this.txt_CCCD.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txt_CCCD.Location = new System.Drawing.Point(5, 38);
+            this.txt_CCCD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_CCCD.Name = "txt_CCCD";
+            this.txt_CCCD.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txt_CCCD.PlaceholderText = "";
+            this.txt_CCCD.ReadOnly = true;
+            this.txt_CCCD.SelectedText = "";
+            this.txt_CCCD.Size = new System.Drawing.Size(327, 40);
+            this.txt_CCCD.TabIndex = 11;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(-4, 1);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 23);
+            this.label10.Size = new System.Drawing.Size(60, 23);
             this.label10.TabIndex = 10;
-            this.label10.Text = "Mật khẩu:";
+            this.label10.Text = "CCCD:";
             // 
             // panel11
             // 
@@ -376,6 +546,32 @@
             this.panel11.Size = new System.Drawing.Size(222, 110);
             this.panel11.TabIndex = 2;
             // 
+            // btn_ChinhSua
+            // 
+            this.btn_ChinhSua.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ChinhSua.Animated = true;
+            this.btn_ChinhSua.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ChinhSua.BorderRadius = 5;
+            this.btn_ChinhSua.BorderThickness = 1;
+            this.btn_ChinhSua.CheckedState.FillColor = System.Drawing.Color.Silver;
+            this.btn_ChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ChinhSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ChinhSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ChinhSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_ChinhSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_ChinhSua.FillColor = System.Drawing.Color.White;
+            this.btn_ChinhSua.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ChinhSua.ForeColor = System.Drawing.Color.Black;
+            this.btn_ChinhSua.Image = global::CNPM.Properties.Resources.edit;
+            this.btn_ChinhSua.Location = new System.Drawing.Point(3, 39);
+            this.btn_ChinhSua.Name = "btn_ChinhSua";
+            this.btn_ChinhSua.Size = new System.Drawing.Size(201, 40);
+            this.btn_ChinhSua.TabIndex = 4;
+            this.btn_ChinhSua.Text = "Chỉnh sửa";
+            this.btn_ChinhSua.Click += new System.EventHandler(this.btn_ChinhSua_Click);
+            // 
             // panel12
             // 
             this.panel12.Controls.Add(this.btn_Luu);
@@ -384,6 +580,32 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(222, 111);
             this.panel12.TabIndex = 3;
+            // 
+            // btn_Luu
+            // 
+            this.btn_Luu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Luu.Animated = true;
+            this.btn_Luu.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Luu.BorderRadius = 5;
+            this.btn_Luu.BorderThickness = 1;
+            this.btn_Luu.CheckedState.FillColor = System.Drawing.Color.Silver;
+            this.btn_Luu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Luu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Luu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Luu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Luu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Luu.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btn_Luu.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Luu.ForeColor = System.Drawing.Color.White;
+            this.btn_Luu.Image = global::CNPM.Properties.Resources.icons8_save_100;
+            this.btn_Luu.Location = new System.Drawing.Point(3, 38);
+            this.btn_Luu.Name = "btn_Luu";
+            this.btn_Luu.Size = new System.Drawing.Size(201, 40);
+            this.btn_Luu.TabIndex = 4;
+            this.btn_Luu.Text = "Lưu thay đổi";
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // guna2Panel1
             // 
@@ -417,20 +639,37 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.guna2CirclePictureBox1);
+            this.panel3.Controls.Add(this.pic_Avatar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(207, 251);
             this.panel3.TabIndex = 0;
             // 
+            // pic_Avatar
+            // 
+            this.pic_Avatar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic_Avatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_Avatar.Image = global::CNPM.Properties.Resources.androgynous_avatar_non_binary_queer_person;
+            this.pic_Avatar.ImageRotate = 0F;
+            this.pic_Avatar.Location = new System.Drawing.Point(29, 25);
+            this.pic_Avatar.Name = "pic_Avatar";
+            this.pic_Avatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pic_Avatar.Size = new System.Drawing.Size(148, 199);
+            this.pic_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_Avatar.TabIndex = 2;
+            this.pic_Avatar.TabStop = false;
+            this.pic_Avatar.Click += new System.EventHandler(this.pic_Avatar_Click);
+            // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 390F));
-            this.tableLayoutPanel9.Controls.Add(this.label3, 0, 3);
+            this.tableLayoutPanel9.Controls.Add(this.lb_Email, 0, 3);
             this.tableLayoutPanel9.Controls.Add(this.lb_Ten, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel9.Controls.Add(this.lb_VaiTro, 0, 2);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(216, 3);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -442,15 +681,15 @@
             this.tableLayoutPanel9.Size = new System.Drawing.Size(390, 251);
             this.tableLayoutPanel9.TabIndex = 1;
             // 
-            // label3
+            // lb_Email
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 182);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(248, 38);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "admin@gmail.com";
+            this.lb_Email.AutoSize = true;
+            this.lb_Email.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Email.Location = new System.Drawing.Point(3, 182);
+            this.lb_Email.Name = "lb_Email";
+            this.lb_Email.Size = new System.Drawing.Size(248, 38);
+            this.lb_Email.TabIndex = 9;
+            this.lb_Email.Text = "admin@gmail.com";
             // 
             // lb_Ten
             // 
@@ -462,250 +701,15 @@
             this.lb_Ten.TabIndex = 8;
             this.lb_Ten.Text = "Nguyễn Văn A";
             // 
-            // label2
+            // lb_VaiTro
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 38);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Quản lý";
-            // 
-            // txt_HovaTen
-            // 
-            this.txt_HovaTen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_HovaTen.BorderRadius = 7;
-            this.txt_HovaTen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_HovaTen.DefaultText = "";
-            this.txt_HovaTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_HovaTen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_HovaTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_HovaTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_HovaTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_HovaTen.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_HovaTen.ForeColor = System.Drawing.Color.Black;
-            this.txt_HovaTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_HovaTen.IconLeft = global::CNPM.Properties.Resources.person_13924070;
-            this.txt_HovaTen.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txt_HovaTen.Location = new System.Drawing.Point(3, 47);
-            this.txt_HovaTen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_HovaTen.Name = "txt_HovaTen";
-            this.txt_HovaTen.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txt_HovaTen.PlaceholderText = "Nguyễn văn A";
-            this.txt_HovaTen.ReadOnly = true;
-            this.txt_HovaTen.SelectedText = "";
-            this.txt_HovaTen.Size = new System.Drawing.Size(312, 40);
-            this.txt_HovaTen.TabIndex = 7;
-            // 
-            // txt_SDT
-            // 
-            this.txt_SDT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_SDT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txt_SDT.BorderRadius = 7;
-            this.txt_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_SDT.DefaultText = "09999999999";
-            this.txt_SDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_SDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_SDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SDT.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_SDT.ForeColor = System.Drawing.Color.Black;
-            this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SDT.IconLeft = global::CNPM.Properties.Resources.phone_call_3779208;
-            this.txt_SDT.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txt_SDT.Location = new System.Drawing.Point(6, 46);
-            this.txt_SDT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txt_SDT.PlaceholderText = "";
-            this.txt_SDT.ReadOnly = true;
-            this.txt_SDT.SelectedText = "";
-            this.txt_SDT.Size = new System.Drawing.Size(309, 40);
-            this.txt_SDT.TabIndex = 9;
-            // 
-            // txt_Email
-            // 
-            this.txt_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Email.BorderRadius = 7;
-            this.txt_Email.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Email.DefaultText = "admin@gmail.com";
-            this.txt_Email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Email.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Email.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Email.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_Email.ForeColor = System.Drawing.Color.Black;
-            this.txt_Email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Email.IconLeft = global::CNPM.Properties.Resources.person_13924070;
-            this.txt_Email.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txt_Email.Location = new System.Drawing.Point(6, 46);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_Email.Name = "txt_Email";
-            this.txt_Email.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txt_Email.PlaceholderText = "Nguyễn văn A";
-            this.txt_Email.ReadOnly = true;
-            this.txt_Email.SelectedText = "";
-            this.txt_Email.Size = new System.Drawing.Size(309, 40);
-            this.txt_Email.TabIndex = 9;
-            // 
-            // txt_DiaChi
-            // 
-            this.txt_DiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DiaChi.BorderRadius = 7;
-            this.txt_DiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_DiaChi.DefaultText = "448 Lê Văn Việt, Quận 9, Thành phố Thủ Đức";
-            this.txt_DiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_DiaChi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_DiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_DiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_DiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DiaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_DiaChi.ForeColor = System.Drawing.Color.Black;
-            this.txt_DiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DiaChi.IconLeft = global::CNPM.Properties.Resources.location_11549881;
-            this.txt_DiaChi.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txt_DiaChi.Location = new System.Drawing.Point(6, 47);
-            this.txt_DiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txt_DiaChi.PlaceholderText = "Nguyễn văn A";
-            this.txt_DiaChi.ReadOnly = true;
-            this.txt_DiaChi.SelectedText = "";
-            this.txt_DiaChi.Size = new System.Drawing.Size(309, 40);
-            this.txt_DiaChi.TabIndex = 9;
-            // 
-            // txt_Username
-            // 
-            this.txt_Username.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Username.BorderRadius = 7;
-            this.txt_Username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Username.DefaultText = "";
-            this.txt_Username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Username.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_Username.ForeColor = System.Drawing.Color.Black;
-            this.txt_Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Username.IconLeft = global::CNPM.Properties.Resources.person_13924070;
-            this.txt_Username.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txt_Username.Location = new System.Drawing.Point(5, 39);
-            this.txt_Username.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_Username.Name = "txt_Username";
-            this.txt_Username.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txt_Username.PlaceholderText = "Nguyễn văn A";
-            this.txt_Username.ReadOnly = true;
-            this.txt_Username.SelectedText = "";
-            this.txt_Username.Size = new System.Drawing.Size(327, 40);
-            this.txt_Username.TabIndex = 13;
-            // 
-            // txt_MK
-            // 
-            this.txt_MK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_MK.BorderRadius = 7;
-            this.txt_MK.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_MK.DefaultText = "";
-            this.txt_MK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_MK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_MK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MK.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_MK.ForeColor = System.Drawing.Color.Black;
-            this.txt_MK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MK.IconLeft = global::CNPM.Properties.Resources.padlock_747305;
-            this.txt_MK.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txt_MK.Location = new System.Drawing.Point(5, 38);
-            this.txt_MK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_MK.Name = "txt_MK";
-            this.txt_MK.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txt_MK.PlaceholderText = "*********";
-            this.txt_MK.ReadOnly = true;
-            this.txt_MK.SelectedText = "";
-            this.txt_MK.Size = new System.Drawing.Size(327, 40);
-            this.txt_MK.TabIndex = 11;
-            this.txt_MK.UseSystemPasswordChar = true;
-            // 
-            // btn_ChinhSua
-            // 
-            this.btn_ChinhSua.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ChinhSua.Animated = true;
-            this.btn_ChinhSua.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ChinhSua.BorderRadius = 5;
-            this.btn_ChinhSua.BorderThickness = 1;
-            this.btn_ChinhSua.CheckedState.FillColor = System.Drawing.Color.Silver;
-            this.btn_ChinhSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ChinhSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ChinhSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ChinhSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_ChinhSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_ChinhSua.FillColor = System.Drawing.Color.White;
-            this.btn_ChinhSua.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ChinhSua.ForeColor = System.Drawing.Color.Black;
-            this.btn_ChinhSua.Image = global::CNPM.Properties.Resources.edit;
-            this.btn_ChinhSua.Location = new System.Drawing.Point(3, 39);
-            this.btn_ChinhSua.Name = "btn_ChinhSua";
-            this.btn_ChinhSua.Size = new System.Drawing.Size(201, 40);
-            this.btn_ChinhSua.TabIndex = 4;
-            this.btn_ChinhSua.Text = "Chỉnh sửa";
-            // 
-            // btn_Luu
-            // 
-            this.btn_Luu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Luu.Animated = true;
-            this.btn_Luu.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Luu.BorderRadius = 5;
-            this.btn_Luu.BorderThickness = 1;
-            this.btn_Luu.CheckedState.FillColor = System.Drawing.Color.Silver;
-            this.btn_Luu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Luu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Luu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Luu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Luu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Luu.FillColor = System.Drawing.Color.RoyalBlue;
-            this.btn_Luu.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Luu.ForeColor = System.Drawing.Color.White;
-            this.btn_Luu.Image = global::CNPM.Properties.Resources.icons8_save_100;
-            this.btn_Luu.Location = new System.Drawing.Point(3, 38);
-            this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(201, 40);
-            this.btn_Luu.TabIndex = 4;
-            this.btn_Luu.Text = "Lưu thay đổi";
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2CirclePictureBox1.Image = global::CNPM.Properties.Resources.androgynous_avatar_non_binary_queer_person;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(29, 25);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(148, 199);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 2;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.lb_VaiTro.AutoSize = true;
+            this.lb_VaiTro.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_VaiTro.Location = new System.Drawing.Point(3, 116);
+            this.lb_VaiTro.Name = "lb_VaiTro";
+            this.lb_VaiTro.Size = new System.Drawing.Size(113, 38);
+            this.lb_VaiTro.TabIndex = 9;
+            this.lb_VaiTro.Text = "Quản lý";
             // 
             // ThongTin
             // 
@@ -739,9 +743,9 @@
             this.guna2Panel1.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Avatar)).EndInit();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -773,7 +777,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_Username;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel10;
-        private Guna.UI2.WinForms.Guna2TextBox txt_MK;
+        private Guna.UI2.WinForms.Guna2TextBox txt_CCCD;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel11;
         private Guna.UI2.WinForms.Guna2Button btn_ChinhSua;
@@ -782,10 +786,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pic_Avatar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lb_Email;
         private System.Windows.Forms.Label lb_Ten;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_VaiTro;
     }
 }
