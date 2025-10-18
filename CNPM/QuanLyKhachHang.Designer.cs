@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,16 +42,20 @@
             this.Grid_KhachHang = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lbKhachHangBiChan = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbKhachHangHoatDong = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbKhachHangHomNay = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbTongKhachHang = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -59,10 +63,6 @@
             this.ComboBox_TrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.date_NgayTaoTK = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -72,16 +72,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.Grid_KhachHang)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.guna2GradientPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.guna2GradientPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.guna2GradientPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -188,31 +188,31 @@
             // 
             // Grid_KhachHang
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.Grid_KhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.Grid_KhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Grid_KhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Grid_KhachHang.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid_KhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid_KhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Grid_KhachHang.ColumnHeadersHeight = 4;
             this.Grid_KhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Grid_KhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid_KhachHang.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid_KhachHang.DefaultCellStyle = dataGridViewCellStyle3;
             this.Grid_KhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Grid_KhachHang.Location = new System.Drawing.Point(36, 87);
             this.Grid_KhachHang.Name = "Grid_KhachHang";
@@ -243,6 +243,7 @@
             this.Grid_KhachHang.ThemeStyle.RowsStyle.Height = 24;
             this.Grid_KhachHang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Grid_KhachHang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.Grid_KhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_KhachHang_CellContentClick);
             // 
             // tableLayoutPanel3
             // 
@@ -275,7 +276,7 @@
             this.guna2GradientPanel8.BorderRadius = 5;
             this.guna2GradientPanel8.BorderThickness = 1;
             this.guna2GradientPanel8.Controls.Add(this.pictureBox4);
-            this.guna2GradientPanel8.Controls.Add(this.label10);
+            this.guna2GradientPanel8.Controls.Add(this.lbKhachHangBiChan);
             this.guna2GradientPanel8.Controls.Add(this.label6);
             this.guna2GradientPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel8.Location = new System.Drawing.Point(850, 3);
@@ -283,16 +284,27 @@
             this.guna2GradientPanel8.Size = new System.Drawing.Size(223, 137);
             this.guna2GradientPanel8.TabIndex = 7;
             // 
-            // label10
+            // pictureBox4
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox4.Image = global::CNPM.Properties.Resources.blocked;
+            this.pictureBox4.Location = new System.Drawing.Point(99, 57);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // lbKhachHangBiChan
+            // 
+            this.lbKhachHangBiChan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(44, 69);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(176, 41);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "No data";
+            this.lbKhachHangBiChan.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKhachHangBiChan.Location = new System.Drawing.Point(44, 69);
+            this.lbKhachHangBiChan.Name = "lbKhachHangBiChan";
+            this.lbKhachHangBiChan.Size = new System.Drawing.Size(176, 41);
+            this.lbKhachHangBiChan.TabIndex = 8;
+            this.lbKhachHangBiChan.Text = "No data";
             // 
             // label6
             // 
@@ -312,7 +324,7 @@
             this.guna2GradientPanel6.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientPanel6.BorderRadius = 5;
             this.guna2GradientPanel6.BorderThickness = 1;
-            this.guna2GradientPanel6.Controls.Add(this.label9);
+            this.guna2GradientPanel6.Controls.Add(this.lbKhachHangHoatDong);
             this.guna2GradientPanel6.Controls.Add(this.pictureBox3);
             this.guna2GradientPanel6.Controls.Add(this.label5);
             this.guna2GradientPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -321,16 +333,28 @@
             this.guna2GradientPanel6.Size = new System.Drawing.Size(223, 137);
             this.guna2GradientPanel6.TabIndex = 5;
             // 
-            // label9
+            // lbKhachHangHoatDong
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbKhachHangHoatDong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(45, 69);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(175, 41);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "No data";
+            this.lbKhachHangHoatDong.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKhachHangHoatDong.Location = new System.Drawing.Point(45, 69);
+            this.lbKhachHangHoatDong.Name = "lbKhachHangHoatDong";
+            this.lbKhachHangHoatDong.Size = new System.Drawing.Size(175, 41);
+            this.lbKhachHangHoatDong.TabIndex = 7;
+            this.lbKhachHangHoatDong.Text = "No data";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox3.Image = global::CNPM.Properties.Resources.person;
+            this.pictureBox3.Location = new System.Drawing.Point(89, 49);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label5
             // 
@@ -350,7 +374,7 @@
             this.guna2GradientPanel4.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientPanel4.BorderRadius = 5;
             this.guna2GradientPanel4.BorderThickness = 1;
-            this.guna2GradientPanel4.Controls.Add(this.label8);
+            this.guna2GradientPanel4.Controls.Add(this.lbKhachHangHomNay);
             this.guna2GradientPanel4.Controls.Add(this.pictureBox2);
             this.guna2GradientPanel4.Controls.Add(this.label4);
             this.guna2GradientPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -359,16 +383,27 @@
             this.guna2GradientPanel4.Size = new System.Drawing.Size(223, 137);
             this.guna2GradientPanel4.TabIndex = 3;
             // 
-            // label8
+            // lbKhachHangHomNay
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbKhachHangHomNay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(50, 69);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(170, 41);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "No data";
+            this.lbKhachHangHomNay.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKhachHangHomNay.Location = new System.Drawing.Point(50, 69);
+            this.lbKhachHangHomNay.Name = "lbKhachHangHomNay";
+            this.lbKhachHangHomNay.Size = new System.Drawing.Size(170, 41);
+            this.lbKhachHangHomNay.TabIndex = 7;
+            this.lbKhachHangHomNay.Text = "No data";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox2.Image = global::CNPM.Properties.Resources.plus__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(103, 57);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
             // label4
             // 
@@ -387,7 +422,7 @@
             this.guna2GradientPanel1.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientPanel1.BorderRadius = 5;
             this.guna2GradientPanel1.BorderThickness = 1;
-            this.guna2GradientPanel1.Controls.Add(this.label7);
+            this.guna2GradientPanel1.Controls.Add(this.lbTongKhachHang);
             this.guna2GradientPanel1.Controls.Add(this.pictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.label3);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -398,17 +433,29 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(223, 137);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
-            // label7
+            // lbTongKhachHang
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbTongKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(48, 69);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(172, 41);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "No data";
+            this.lbTongKhachHang.BackColor = System.Drawing.Color.White;
+            this.lbTongKhachHang.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongKhachHang.Location = new System.Drawing.Point(48, 69);
+            this.lbTongKhachHang.Name = "lbTongKhachHang";
+            this.lbTongKhachHang.Size = new System.Drawing.Size(172, 41);
+            this.lbTongKhachHang.TabIndex = 6;
+            this.lbTongKhachHang.Text = "No data";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::CNPM.Properties.Resources.user_18647401;
+            this.pictureBox1.Location = new System.Drawing.Point(93, 57);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -477,13 +524,14 @@
             this.ComboBox_TrangThai.ItemHeight = 30;
             this.ComboBox_TrangThai.Items.AddRange(new object[] {
             "Trạng thái",
-            "Đang hoạt động",
+            "Hoạt động",
             "Bị chặn"});
             this.ComboBox_TrangThai.Location = new System.Drawing.Point(4, 3);
             this.ComboBox_TrangThai.Name = "ComboBox_TrangThai";
             this.ComboBox_TrangThai.Size = new System.Drawing.Size(158, 36);
             this.ComboBox_TrangThai.TabIndex = 0;
             this.ComboBox_TrangThai.Tag = "";
+            this.ComboBox_TrangThai.SelectedIndexChanged += new System.EventHandler(this.ComboBox_TrangThai_SelectedIndexChanged);
             // 
             // panel5
             // 
@@ -517,52 +565,7 @@
             this.date_NgayTaoTK.Size = new System.Drawing.Size(172, 43);
             this.date_NgayTaoTK.TabIndex = 4;
             this.date_NgayTaoTK.Value = new System.DateTime(2025, 10, 8, 9, 34, 12, 257);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox4.Image = global::CNPM.Properties.Resources.blocked;
-            this.pictureBox4.Location = new System.Drawing.Point(99, 57);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox3.Image = global::CNPM.Properties.Resources.person;
-            this.pictureBox3.Location = new System.Drawing.Point(89, 49);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.Image = global::CNPM.Properties.Resources.plus__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(103, 57);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::CNPM.Properties.Resources.user_18647401;
-            this.pictureBox1.Location = new System.Drawing.Point(93, 57);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.date_NgayTaoTK.ValueChanged += new System.EventHandler(this.date_NgayTaoTK_ValueChanged);
             // 
             // txt_Search
             // 
@@ -590,6 +593,7 @@
             this.txt_Search.SelectedText = "";
             this.txt_Search.Size = new System.Drawing.Size(339, 47);
             this.txt_Search.TabIndex = 8;
+            this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
             // 
             // QuanLyKhachHang
             // 
@@ -613,16 +617,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.Grid_KhachHang)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.guna2GradientPanel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.guna2GradientPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.guna2GradientPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -650,10 +654,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbKhachHangBiChan;
+        private System.Windows.Forms.Label lbKhachHangHoatDong;
+        private System.Windows.Forms.Label lbKhachHangHomNay;
+        private System.Windows.Forms.Label lbTongKhachHang;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
