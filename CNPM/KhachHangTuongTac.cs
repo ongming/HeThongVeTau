@@ -12,10 +12,12 @@ namespace CNPM
 {
     public partial class KhachHangTuongTac : Form
     {
+        public ThongTinKhachHang kh;
         private Guna.UI2.WinForms.Guna2Panel pnThongBao;
         private FlowLayoutPanel flowThongBao;
-        public KhachHangTuongTac()
+        public KhachHangTuongTac(ThongTinKhachHang kh)
         {
+            this.kh = kh;
             InitializeComponent();
             pnThongBao = new Guna.UI2.WinForms.Guna2Panel()
             {
@@ -91,19 +93,19 @@ namespace CNPM
 
         private void btn_TrangChu_Click(object sender, EventArgs e)
         {
-            TrangChu trangChu = new TrangChu();
+            TrangChu trangChu = new TrangChu(kh);
             Container(trangChu);
         }
 
         private void btn_DanhGia_Click(object sender, EventArgs e)
         {
-            GopYKhachHang gopYKhachHang = new GopYKhachHang();
+            GopYKhachHang gopYKhachHang = new GopYKhachHang(kh);
             Container(gopYKhachHang);
         }
 
         private void btn_LichSu_Click(object sender, EventArgs e)
         {
-            LichSuKhachHang lichSuKhachHang = new LichSuKhachHang();
+            LichSuKhachHang lichSuKhachHang = new LichSuKhachHang(kh);
             Container(lichSuKhachHang);
         }
     }

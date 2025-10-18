@@ -13,17 +13,38 @@ namespace CNPM
 {
     public partial class GopYKhachHang : Form
     {
-        public GopYKhachHang()
+        ThongTinKhachHang khachHang;
+        public GopYKhachHang(ThongTinKhachHang kh)
         {
             InitializeComponent();
+            khachHang = kh;
         }
-        private void LoadGopY()
+
+        private void btn_GuiGopY_Click(object sender, EventArgs e)
         {
-            guna2RatingStar1.ValueChanged += (s, e) =>
+            int danhGia = (int)guna2RatingStar.Value;
+            string noiDung = txt_DanhGia.Text.Trim();
+
+            if (danhGia == 0)
             {
-                int soSao = (int)guna2RatingStar1.Value;
-                
-            };
+                MessageBox.Show("Vui lòng chọn số sao đánh giá!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(noiDung))
+            {
+                MessageBox.Show("Vui lòng nhập nội dung góp ý!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int maKH = khachHang.MaKhachHang; // Lấy từ form đăng nhập
+
+            bool ketQua = KhachHangRepository.GuiYKien(maKH, danhGia, noiDung);
+            if (ketQua)
+            {
+                guna2RatingStar.Value = 0;
+                txt_DanhGia.Clear();
+            }
         }
     }
 }

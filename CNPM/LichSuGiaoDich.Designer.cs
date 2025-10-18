@@ -129,7 +129,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel3.Controls.Add(this.date_DenNgay, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.date_TuNgay, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.panel3, 0, 0);
@@ -156,7 +156,7 @@
             this.date_DenNgay.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_DenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_DenNgay.HoverState.FillColor = System.Drawing.Color.White;
-            this.date_DenNgay.Location = new System.Drawing.Point(937, 3);
+            this.date_DenNgay.Location = new System.Drawing.Point(936, 3);
             this.date_DenNgay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_DenNgay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_DenNgay.Name = "date_DenNgay";
@@ -179,7 +179,7 @@
             this.date_TuNgay.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_TuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_TuNgay.HoverState.FillColor = System.Drawing.Color.White;
-            this.date_TuNgay.Location = new System.Drawing.Point(740, 3);
+            this.date_TuNgay.Location = new System.Drawing.Point(739, 3);
             this.date_TuNgay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_TuNgay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_TuNgay.Name = "date_TuNgay";
@@ -251,9 +251,9 @@
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Grid_LichSu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.Grid_LichSu.ColumnHeadersHeight = 4;
+            this.Grid_LichSu.ColumnHeadersHeight = 18;
             this.Grid_LichSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Grid_LichSu.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -285,7 +285,7 @@
             this.Grid_LichSu.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid_LichSu.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.Grid_LichSu.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.Grid_LichSu.ThemeStyle.HeaderStyle.Height = 4;
+            this.Grid_LichSu.ThemeStyle.HeaderStyle.Height = 18;
             this.Grid_LichSu.ThemeStyle.ReadOnly = true;
             this.Grid_LichSu.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.Grid_LichSu.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -334,5 +334,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView Grid_LichSu;
         private Guna.UI2.WinForms.Guna2DateTimePicker date_DenNgay;
         private Guna.UI2.WinForms.Guna2DateTimePicker date_TuNgay;
+
     }
 }

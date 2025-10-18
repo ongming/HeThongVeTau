@@ -16,10 +16,12 @@ namespace CNPM
     {
         private ThongTinChuyenTau thongTinChuyenDuocChon = null;
         private List<int> gheDuocChon = new List<int>();
+        public ThongTinKhachHang khachHang;
         private Buoc1 buoc1;
 
-        public MuaVe()
+        public MuaVe(ThongTinKhachHang kh)
         {
+            this.khachHang = kh;
             InitializeComponent();
             btn_Buoc2.Enabled = false; // lúc đầu chưa chọn thì disable
             btn_Buoc3.Enabled = false; // lúc đầu chưa chọn thì disable
@@ -69,7 +71,7 @@ namespace CNPM
 
         private void btn_Buoc3_Click(object sender, EventArgs e)
         {
-            Buoc3 buoc3 = new Buoc3(thongTinChuyenDuocChon, gheDuocChon);
+            Buoc3 buoc3 = new Buoc3(thongTinChuyenDuocChon, gheDuocChon, khachHang);
             ShowControl(buoc3);
         }
     }

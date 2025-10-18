@@ -12,10 +12,10 @@ namespace CNPM
 {
     public partial class TrangChu : Form
     {
-        public TrangChu()
+        public TrangChu(ThongTinKhachHang kh)
         {
             InitializeComponent();
-            ShowControl(new MuaVe());
+            ShowControl(new MuaVe(kh));
         }
         private void ShowControl(UserControl control)
         {

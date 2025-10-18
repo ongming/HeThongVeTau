@@ -249,6 +249,12 @@
     <Compile Include="TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCtrl_HanhKhach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCtrl_HanhKhach.Designer.cs">
+      <DependentUpon>UCtrl_HanhKhach.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_ChuyenTauCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -357,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCtrl_HanhKhach.resx">
+      <DependentUpon>UCtrl_HanhKhach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ChuyenTauCard.resx">
       <DependentUpon>UC_ChuyenTauCard.cs</DependentUpon>

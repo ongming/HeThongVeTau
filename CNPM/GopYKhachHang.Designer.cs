@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel_main = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.guna2RatingStar = new Guna.UI2.WinForms.Guna2RatingStar();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_DanhGia = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_GuiGopY = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,17 +42,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_HoanTat = new Guna.UI2.WinForms.Guna2Button();
-            this.txt_DanhGia = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel_main.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_main
@@ -62,6 +62,103 @@
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(829, 625);
             this.panel_main.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel3.Controls.Add(this.guna2RatingStar, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label2, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txt_DanhGia, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.btn_GuiGopY, 1, 5);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 7;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(823, 619);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // guna2RatingStar
+            // 
+            this.guna2RatingStar.BorderColor = System.Drawing.Color.Black;
+            this.guna2RatingStar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2RatingStar.Location = new System.Drawing.Point(43, 88);
+            this.guna2RatingStar.Name = "guna2RatingStar";
+            this.guna2RatingStar.RatingColor = System.Drawing.Color.Yellow;
+            this.guna2RatingStar.Size = new System.Drawing.Size(335, 46);
+            this.guna2RatingStar.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(43, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(735, 55);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Chúng tôi mong muốn nhận được đánh giá, góp ý của bạn để có thể cung cấp dịch vụ " +
+    "tốt hơn.";
+            // 
+            // txt_DanhGia
+            // 
+            this.txt_DanhGia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_DanhGia.Animated = true;
+            this.txt_DanhGia.AutoSize = true;
+            this.txt_DanhGia.BorderColor = System.Drawing.Color.Silver;
+            this.txt_DanhGia.BorderRadius = 8;
+            this.txt_DanhGia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_DanhGia.DefaultText = "";
+            this.txt_DanhGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_DanhGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_DanhGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DanhGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DanhGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DanhGia.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DanhGia.ForeColor = System.Drawing.Color.Black;
+            this.txt_DanhGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DanhGia.Location = new System.Drawing.Point(43, 144);
+            this.txt_DanhGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_DanhGia.Multiline = true;
+            this.txt_DanhGia.Name = "txt_DanhGia";
+            this.txt_DanhGia.PlaceholderText = "Viết nội dung góp ý chi tiết của bạn tại đây";
+            this.txt_DanhGia.SelectedText = "";
+            this.txt_DanhGia.Size = new System.Drawing.Size(737, 383);
+            this.txt_DanhGia.TabIndex = 12;
+            // 
+            // btn_GuiGopY
+            // 
+            this.btn_GuiGopY.Animated = true;
+            this.btn_GuiGopY.BorderRadius = 10;
+            this.btn_GuiGopY.BorderThickness = 1;
+            this.btn_GuiGopY.CheckedState.FillColor = System.Drawing.Color.Silver;
+            this.btn_GuiGopY.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_GuiGopY.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_GuiGopY.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_GuiGopY.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_GuiGopY.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_GuiGopY.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_GuiGopY.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btn_GuiGopY.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_GuiGopY.ForeColor = System.Drawing.Color.White;
+            this.btn_GuiGopY.Location = new System.Drawing.Point(43, 544);
+            this.btn_GuiGopY.Name = "btn_GuiGopY";
+            this.btn_GuiGopY.Size = new System.Drawing.Size(737, 49);
+            this.btn_GuiGopY.TabIndex = 11;
+            this.btn_GuiGopY.Text = "Gửi góp ý";
+            this.btn_GuiGopY.Click += new System.EventHandler(this.btn_GuiGopY_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -138,102 +235,6 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1194, 631);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(735, 55);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Chúng tôi mong muốn nhận được đánh giá, góp ý của bạn để có thể cung cấp dịch vụ " +
-    "tốt hơn.";
-            // 
-            // guna2RatingStar1
-            // 
-            this.guna2RatingStar1.BorderColor = System.Drawing.Color.Black;
-            this.guna2RatingStar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2RatingStar1.Location = new System.Drawing.Point(43, 88);
-            this.guna2RatingStar1.Name = "guna2RatingStar1";
-            this.guna2RatingStar1.RatingColor = System.Drawing.Color.Yellow;
-            this.guna2RatingStar1.Size = new System.Drawing.Size(335, 46);
-            this.guna2RatingStar1.TabIndex = 8;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel3.Controls.Add(this.guna2RatingStar1, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label2, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.txt_DanhGia, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.btn_HoanTat, 1, 5);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 7;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(823, 619);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // btn_HoanTat
-            // 
-            this.btn_HoanTat.Animated = true;
-            this.btn_HoanTat.BorderRadius = 10;
-            this.btn_HoanTat.BorderThickness = 1;
-            this.btn_HoanTat.CheckedState.FillColor = System.Drawing.Color.Silver;
-            this.btn_HoanTat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_HoanTat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_HoanTat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_HoanTat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_HoanTat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_HoanTat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_HoanTat.FillColor = System.Drawing.Color.RoyalBlue;
-            this.btn_HoanTat.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btn_HoanTat.ForeColor = System.Drawing.Color.White;
-            this.btn_HoanTat.Location = new System.Drawing.Point(43, 544);
-            this.btn_HoanTat.Name = "btn_HoanTat";
-            this.btn_HoanTat.Size = new System.Drawing.Size(737, 49);
-            this.btn_HoanTat.TabIndex = 11;
-            this.btn_HoanTat.Text = "Gửi góp ý";
-            // 
-            // txt_DanhGia
-            // 
-            this.txt_DanhGia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DanhGia.Animated = true;
-            this.txt_DanhGia.AutoSize = true;
-            this.txt_DanhGia.BorderColor = System.Drawing.Color.Silver;
-            this.txt_DanhGia.BorderRadius = 8;
-            this.txt_DanhGia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_DanhGia.DefaultText = "";
-            this.txt_DanhGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_DanhGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_DanhGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_DanhGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_DanhGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DanhGia.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DanhGia.ForeColor = System.Drawing.Color.Black;
-            this.txt_DanhGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DanhGia.Location = new System.Drawing.Point(43, 144);
-            this.txt_DanhGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_DanhGia.Multiline = true;
-            this.txt_DanhGia.Name = "txt_DanhGia";
-            this.txt_DanhGia.PlaceholderText = "Viết nội dung góp ý chi tiết của bạn tại đây";
-            this.txt_DanhGia.SelectedText = "";
-            this.txt_DanhGia.Size = new System.Drawing.Size(737, 383);
-            this.txt_DanhGia.TabIndex = 12;
-            // 
             // GopYKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -244,14 +245,14 @@
             this.Name = "GopYKhachHang";
             this.Text = "GopYKhachHang";
             this.panel_main.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -267,9 +268,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
+        private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private Guna.UI2.WinForms.Guna2Button btn_HoanTat;
+        private Guna.UI2.WinForms.Guna2Button btn_GuiGopY;
         private Guna.UI2.WinForms.Guna2TextBox txt_DanhGia;
     }
 }

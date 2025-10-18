@@ -51,28 +51,36 @@ namespace CNPM
         {
             string user = txt_username.Text.Trim();
             string pass = txt_Pass.Text.Trim();
+
             KhachHangRepository repo = new KhachHangRepository();
-            // Lấy form chứa usercontrol (ở đây là FormLogin)
+            ThongTinKhachHang kh = repo.CheckLogin(user, pass);
+
+            // Lấy form cha chứa usercontrol hiện tại (chính là Form Login)
             Form parentForm = this.FindForm();
 
-            if (repo.CheckLogin(user, pass))
+            if (kh != null)
             {
-                MessageBox.Show("đăng nhập thành công");
-                // Ẩn form login
+                MessageBox.Show($"Đăng nhập thành công!\nXin chào {kh.HoTen}",
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // 🔹 Ẩn form Login
                 parentForm.Hide();
 
-                // Mở form khách hàng
-                KhachHangTuongTac fKhach = new KhachHangTuongTac();
+                // 🔹 Tạo form Khách hàng và truyền thông tin đăng nhập
+                KhachHangTuongTac frm = new KhachHangTuongTac(kh);
 
-                // Khi form Khách hàng đóng → hiện lại form login
-                fKhach.FormClosed += (s2, e2) => parentForm.Show();
-                fKhach.Show();
+                // 🔹 Khi form khách hàng đóng → hiện lại form Login
+                frm.FormClosed += (s2, e2) => parentForm.Show();
+
+                frm.Show();
             }
             else
             {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu!",
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
         private void lb_DangKy_Click(object sender, EventArgs e)
         {
