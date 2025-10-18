@@ -452,6 +452,7 @@
     <None Include="Resources\location_11549881.png" />
     <None Include="Resources\id-card_9284909.png" />
     <None Include="Resources\order-history_11636547.png" />
+    <None Include="Resources\Change %282%29.png" />
     <Content Include="Resources\witness_1518564.png" />
     <None Include="Resources\witness_15185641.png" />
   </ItemGroup>

@@ -134,7 +134,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel3.Controls.Add(this.date_DenNgay, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.date_TuNgay, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.panel3, 0, 0);
@@ -161,13 +161,14 @@
             this.date_DenNgay.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_DenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_DenNgay.HoverState.FillColor = System.Drawing.Color.White;
-            this.date_DenNgay.Location = new System.Drawing.Point(910, 3);
+            this.date_DenNgay.Location = new System.Drawing.Point(908, 3);
             this.date_DenNgay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_DenNgay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_DenNgay.Name = "date_DenNgay";
-            this.date_DenNgay.Size = new System.Drawing.Size(160, 44);
+            this.date_DenNgay.Size = new System.Drawing.Size(159, 44);
             this.date_DenNgay.TabIndex = 5;
             this.date_DenNgay.Value = new System.DateTime(2025, 10, 8, 9, 34, 12, 257);
+            this.date_DenNgay.ValueChanged += new System.EventHandler(this.DateFilter_Changed);
             // 
             // date_TuNgay
             // 
@@ -184,13 +185,14 @@
             this.date_TuNgay.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_TuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_TuNgay.HoverState.FillColor = System.Drawing.Color.White;
-            this.date_TuNgay.Location = new System.Drawing.Point(724, 3);
+            this.date_TuNgay.Location = new System.Drawing.Point(723, 3);
             this.date_TuNgay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_TuNgay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_TuNgay.Name = "date_TuNgay";
-            this.date_TuNgay.Size = new System.Drawing.Size(160, 44);
+            this.date_TuNgay.Size = new System.Drawing.Size(159, 44);
             this.date_TuNgay.TabIndex = 3;
             this.date_TuNgay.Value = new System.DateTime(2025, 10, 8, 9, 34, 12, 257);
+            this.date_TuNgay.ValueChanged += new System.EventHandler(this.DateFilter_Changed);
             // 
             // panel3
             // 
@@ -217,9 +219,9 @@
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel4.Controls.Add(this.guna2GradientPanel2, 1, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 131);
@@ -238,9 +240,9 @@
             this.guna2GradientPanel2.BorderThickness = 1;
             this.guna2GradientPanel2.Controls.Add(this.Grid_LichSu);
             this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(168, 46);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(113, 46);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(764, 384);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(874, 384);
             this.guna2GradientPanel2.TabIndex = 0;
             // 
             // Grid_LichSu
@@ -251,17 +253,17 @@
             this.Grid_LichSu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Grid_LichSu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.Grid_LichSu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Grid_LichSu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.Grid_LichSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid_LichSu.ColumnHeadersHeight = 39;
+            this.Grid_LichSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Grid_LichSu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaGiaoDich,
             this.PhuongThucThanhToan,
@@ -278,13 +280,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Grid_LichSu.DefaultCellStyle = dataGridViewCellStyle3;
             this.Grid_LichSu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.Grid_LichSu.Location = new System.Drawing.Point(36, 33);
+            this.Grid_LichSu.Location = new System.Drawing.Point(46, 36);
             this.Grid_LichSu.Name = "Grid_LichSu";
             this.Grid_LichSu.ReadOnly = true;
             this.Grid_LichSu.RowHeadersVisible = false;
             this.Grid_LichSu.RowHeadersWidth = 51;
             this.Grid_LichSu.RowTemplate.Height = 40;
-            this.Grid_LichSu.Size = new System.Drawing.Size(690, 312);
+            this.Grid_LichSu.Size = new System.Drawing.Size(800, 312);
             this.Grid_LichSu.TabIndex = 1;
             this.Grid_LichSu.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue;
             this.Grid_LichSu.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
@@ -298,7 +300,7 @@
             this.Grid_LichSu.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.Grid_LichSu.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid_LichSu.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.Grid_LichSu.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid_LichSu.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Grid_LichSu.ThemeStyle.HeaderStyle.Height = 39;
             this.Grid_LichSu.ThemeStyle.ReadOnly = true;
             this.Grid_LichSu.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
@@ -308,6 +310,7 @@
             this.Grid_LichSu.ThemeStyle.RowsStyle.Height = 40;
             this.Grid_LichSu.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
             this.Grid_LichSu.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.Grid_LichSu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_LichSu_CellContentClick);
             // 
             // MaGiaoDich
             // 

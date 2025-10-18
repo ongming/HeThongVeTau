@@ -12,10 +12,14 @@ namespace CNPM
 {
     public partial class ThongTinCaNhan : Form
     {
-        public ThongTinCaNhan()
+        int MaUser;
+        string Role;
+        public ThongTinCaNhan(int MaUser, string Role)
         {
+            this.MaUser = MaUser;
+            this.Role = Role;
             InitializeComponent();
-            ShowControl(new ThongTin());
+            ShowControl(new ThongTin(MaUser, Role));
             btn_ThongTin.Checked = true;
         }
         private void ShowControl(UserControl control)
@@ -26,12 +30,12 @@ namespace CNPM
         }
         private void btn_ThongTin_Click(object sender, EventArgs e)
         {
-            ShowControl(new ThongTin());
+            ShowControl(new ThongTin(MaUser,Role));
         }
 
         private void btn_BaoMat_Click(object sender, EventArgs e)
         {
-            ShowControl(new BaoMat());
+            ShowControl(new BaoMat(MaUser, Role));
         }
     }
 }

@@ -17,8 +17,10 @@ namespace CNPM
         private FlowLayoutPanel flowThongBao;
         public KhachHangTuongTac(ThongTinKhachHang kh)
         {
+            KhachHangRepository.GhiThongBaoDangNhap(kh.MaKhachHang);
             this.kh = kh;
             InitializeComponent();
+            
             pnThongBao = new Guna.UI2.WinForms.Guna2Panel()
             {
                 Size = new Size(300, 250),
@@ -28,7 +30,9 @@ namespace CNPM
                 BorderThickness = 1,
                 BorderRadius = 10,
                 ShadowDecoration = { Enabled = true },
-                Visible = false
+                Visible = false,
+                AutoScroll = true,
+                Padding = new Padding(5),
             };
             pnThongBao.ShadowDecoration.Enabled = false;
             this.Controls.Add(pnThongBao);
@@ -41,8 +45,15 @@ namespace CNPM
                     btn_ThongBao.Checked = false;
                 }
             };
-        }
 
+            CapNhatTrangThaiThongBao();
+            CanhChamDoTheoThongBao();
+        }
+        private void CapNhatTrangThaiThongBao()
+        {
+            bool coMoi = KhachHangRepository.CoThongBaoChuaXem(kh.MaKhachHang);
+            panel_DOT.Visible = coMoi;
+        }
         private void btn_DangXuat_Click(object sender, EventArgs e)
         {
             var confirm = MessageBox.Show(
@@ -84,12 +95,122 @@ namespace CNPM
                 );
 
                 pnThongBao.Visible = true;
+                HienThiThongBao();
+                KhachHangRepository.DanhDauDaXem(kh.MaKhachHang);
+                panel_DOT.Visible = false;
             }
             else
             {
                 pnThongBao.Visible = false;
             }
         }
+        private void CanhChamDoTheoThongBao()
+        {
+            // Nếu chấm đỏ không nằm cùng parent -> thêm vào nút
+            if (panel_DOT.Parent != btn_ThongBao)
+            {
+                btn_ThongBao.Controls.Add(panel_DOT);
+                panel_DOT.BringToFront();
+            }
+
+            // Canh vị trí trong phạm vi của nút
+            panel_DOT.Location = new Point(
+                btn_ThongBao.Width - panel_DOT.Width - 2, // sát mép phải
+                0     // lệch xuống một chút
+            );
+        }
+
+        private void HienThiThongBao()
+        {
+            // Xóa nội dung cũ
+            pnThongBao.Controls.Clear();
+
+            // Lấy dữ liệu từ DB
+            DataTable dt = KhachHangRepository.LayThongBaoTheoKhachHang(kh.MaKhachHang);
+
+            if (dt.Rows.Count == 0)
+            {
+                Label lbl = new Label
+                {
+                    Text = "📭 Không có thông báo nào",
+                    ForeColor = Color.Gray,
+                    Font = new Font("Segoe UI", 9, FontStyle.Italic),
+                    AutoSize = false,
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Dock = DockStyle.Fill
+                };
+                pnThongBao.Controls.Add(lbl);
+                return;
+            }
+
+            // 🧱 Tạo container Panel giữ layout ổn định
+            Panel container = new Panel
+            {
+                Dock = DockStyle.Fill,
+                AutoScroll = true,
+                Padding = new Padding(5),
+                BackColor = Color.White
+            };
+
+            // 🔹 FlowLayoutPanel để chứa từng item
+            FlowLayoutPanel flow = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Top,
+                AutoSize = true,
+                AutoSizeMode = AutoSizeMode.GrowAndShrink,
+                FlowDirection = FlowDirection.TopDown,
+                WrapContents = false,
+                BackColor = Color.White
+            };
+
+            // 🔹 Duyệt từng dòng trong DataTable
+            foreach (DataRow row in dt.Rows)
+            {
+                // 📨 Panel cho từng thông báo
+                Panel item = new Panel
+                {
+                    Width = pnThongBao.Width - 50,
+                    Height = 55,
+                    BackColor = Color.FromArgb(248, 250, 255),
+                    Margin = new Padding(5),
+                    BorderStyle = BorderStyle.FixedSingle
+                };
+
+                // Tiêu đề nội dung
+                Label lblNoiDung = new Label
+                {
+                    Text = row["NoiDung"].ToString(),
+                    Font = new Font("Segoe UI", 9, FontStyle.Regular),
+                    ForeColor = Color.Black,
+                    AutoSize = false,
+                    Size = new Size(item.Width - 10, 30),
+                    Location = new Point(5, 5)
+                };
+                item.Controls.Add(lblNoiDung);
+
+                // Thời gian
+                Label lblTime = new Label
+                {
+                    Text = row["ThoiGian"].ToString(),
+                    Font = new Font("Segoe UI", 8, FontStyle.Italic),
+                    ForeColor = Color.DimGray,
+                    AutoSize = true,
+                    Location = new Point(5, 33)
+                };
+                item.Controls.Add(lblTime);
+
+                // Nếu chưa xem → đánh dấu xanh nhạt
+                if (row["DaXem"] != DBNull.Value && !(bool)row["DaXem"])
+                    item.BackColor = Color.FromArgb(225, 240, 255);
+
+                flow.Controls.Add(item);
+            }
+
+            // ✅ Gắn flow vào container
+            container.Controls.Add(flow);
+            pnThongBao.Controls.Add(container);
+        }
+
 
         private void btn_TrangChu_Click(object sender, EventArgs e)
         {
@@ -107,6 +228,12 @@ namespace CNPM
         {
             LichSuKhachHang lichSuKhachHang = new LichSuKhachHang(kh);
             Container(lichSuKhachHang);
+        }
+
+        private void pictureBox_avatar_Click(object sender, EventArgs e)
+        {
+            ThongTinCaNhan thongTinCaNhan = new ThongTinCaNhan(kh.MaKhachHang, "KhachHang");
+            Container(thongTinCaNhan);
         }
     }
 }

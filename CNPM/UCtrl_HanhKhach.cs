@@ -31,5 +31,12 @@ namespace CNPM
                 CCCD = txt_CCCD.Text.Trim()
             };
         }
+        public bool KiemTraHopLe()
+        {
+            return !string.IsNullOrWhiteSpace(txt_HovaTen.Text)
+                && !string.IsNullOrWhiteSpace(txt_CCCD.Text)
+                && !string.IsNullOrWhiteSpace(txt_SDT.Text);
+        }
+
     }
 }

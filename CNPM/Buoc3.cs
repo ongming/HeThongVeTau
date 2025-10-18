@@ -111,8 +111,16 @@ namespace CNPM
                 // 🔹 Lấy thông tin người sử dụng từng vé
                 List<NguoiSuDungVe> danhSachNguoi = new List<NguoiSuDungVe>();
 
+                // ✅ Kiểm tra thông tin từng hành khách
                 foreach (UCtrl_HanhKhach uc in flow_HanhKhach.Controls.OfType<UCtrl_HanhKhach>())
                 {
+                    if (!uc.KiemTraHopLe())
+                    {
+                        MessageBox.Show("⚠️ Vui lòng nhập đầy đủ thông tin cho tất cả hành khách!",
+                            "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // ⛔ Dừng lại, không cho mua
+                    }
+
                     danhSachNguoi.Add(uc.LayThongTin());
                 }
 
@@ -122,12 +130,12 @@ namespace CNPM
 
                 // 🔹 Gọi repository để lưu vào DB
                 bool datThanhCong = KhachHangRepository.DatVe(
-                    khachHang.MaKhachHang,           // từ login
-                    ThongTinChuyenTau.MaChuyen,      // chuyến tàu đang đặt
-                    GheDuocChon,                     // danh sách ghế
-                    danhSachNguoi,                   // danh sách người dùng
-                    tongTien,                        // tổng tiền đã tính
-                    phuongThuc,                     // phương thức thanh toán
+                    khachHang.MaKhachHang,
+                    ThongTinChuyenTau.MaChuyen,
+                    GheDuocChon,
+                    danhSachNguoi,
+                    tongTien,
+                    phuongThuc,
                     giaGheCung,
                     giaGheMem
                 );
