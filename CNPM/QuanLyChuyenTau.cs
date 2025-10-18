@@ -20,11 +20,15 @@ namespace CNPM
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
+            grid_ve_load();
+        }
+        private void grid_ve_load()
+        {
             // Apply giao diện hiện đại
             ModernGridStyle.Apply(Grid_Ve);
 
             // Load dữ liệu test
-            
+
             string query = "SELECT * FROM CHUYENTAU";
 
             using (SqlConnection conn = DatabaseConnection.GetConnection())
@@ -37,11 +41,17 @@ namespace CNPM
 
             //ModernGridStyle.HighlightStatus(Grid_Ve);
         }
-
         private void btn_ThemChuyen_Click(object sender, EventArgs e)
         {
             TaoChuyenMoi taoChuyenMoi = new TaoChuyenMoi();
             taoChuyenMoi.ShowDialog();
+        }
+
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+            string cantim = txt_Search.Text.Trim();
+            Grid_Ve.DataSource = NhanVienRepository.TimKiemChuyenTau(cantim);
+
         }
     }
 }

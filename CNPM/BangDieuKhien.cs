@@ -21,7 +21,10 @@ namespace CNPM
         }
         private void LoadChart_DoanhThu()
         {
-           
+            label5.Text = NhanVienRepository.GetSoVeBanTrongThang().ToString(); 
+            label7.Text= NhanVienRepository.GetDoanhThuHomNay().ToString("N0") + " VNĐ";
+            label9.Text = NhanVienRepository.GetSoChuyenTauKhoiHanhHomNay().ToString();
+
             string query = @"SELECT MONTH(ThoiGianDat) AS Thang,
                             SUM(TongTien) AS TongDoanhThu
                             FROM LICHSUGIAODICH
