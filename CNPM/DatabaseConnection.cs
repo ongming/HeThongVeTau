@@ -12,7 +12,8 @@ namespace CNPM
     {
         private static string connectionString =
         //"Data Source=LAPTOP-MKNGM2HG;Initial Catalog = BanVeTau; Integrated Security = True;";
-        "Data Source=DESKTOP-G8H86K3\\SQLEXPRESS;Initial Catalog = BanVeTau; Integrated Security = True;";
+        //"Data Source=DESKTOP-G8H86K3\\SQLEXPRESS;Initial Catalog = BanVeTau; Integrated Security = True;";
+        "Data Source=localhost;Initial Catalog = BanVeTau; Integrated Security = True;";
         public static SqlConnection GetConnection()
         {
             return new SqlConnection(connectionString);

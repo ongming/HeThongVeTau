@@ -20,16 +20,57 @@ namespace CNPM
         }
         private void FormTK_Load(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM NHATKY_HOATDONG";
+           
+            QuanLyTaiKhoan_Load();
+            ModernGridStyle.ApplyActivityFeed(Grid_NhatKy);
+            ModernGridStyle.Apply(Grid_TaiKhoanNhanVien);
+        }
 
+        //load form lên
+        private void QuanLyTaiKhoan_Load()
+        {   //grid tài khoản nhân viên
+            string query = "SELECT * FROM TAIKHOAN WHERE VaiTro IN ('QuanLy', 'NhanVien');";
             using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+                Grid_TaiKhoanNhanVien.DataSource = dt;
+            }
+            //grid nhật ký hoạt động
+            string query1 = @"
+                SELECT 
+                    MaNhatKy,
+                    CASE 
+                        WHEN MaQuanLy IS NOT NULL THEN N'Quản lý - ' + CAST(MaQuanLy AS NVARCHAR(10))
+                        WHEN MaNhanVien IS NOT NULL THEN N'Nhân viên - ' + CAST(MaNhanVien AS NVARCHAR(10))
+                        ELSE N'Không xác định'
+                    END AS NguoiThucHien,
+                   
+                    HanhDong,
+                    ThoiGian
+                FROM NHATKY_HOATDONG";
+
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            {
+                SqlDataAdapter da = new SqlDataAdapter(query1, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
                 Grid_NhatKy.DataSource = dt;
             }
-            ModernGridStyle.ApplyActivityFeed(Grid_NhatKy);
+        }
+
+        private void txt_TimKiem_TextChanged(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            {
+                SqlDataAdapter da = new SqlDataAdapter(
+                    "SELECT * FROM TAIKHOAN WHERE (MaTaiKhoan LIKE @keyword OR TenDangNhap LIKE @keyword) AND (VaiTro IN ('QuanLy', 'NhanVien'))", conn);
+                da.SelectCommand.Parameters.AddWithValue("@keyword", "%" + txt_TimKiem.Text + "%");
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                Grid_TaiKhoanNhanVien.DataSource = dt;
+            }
         }
     }
 }

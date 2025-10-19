@@ -478,7 +478,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.date_DenNgayVe, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.ComboBox_ThongKeVe, 1, 0);
@@ -506,7 +506,7 @@
             this.date_DenNgayVe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_DenNgayVe.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_DenNgayVe.HoverState.FillColor = System.Drawing.Color.White;
-            this.date_DenNgayVe.Location = new System.Drawing.Point(809, 3);
+            this.date_DenNgayVe.Location = new System.Drawing.Point(808, 3);
             this.date_DenNgayVe.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_DenNgayVe.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_DenNgayVe.Name = "date_DenNgayVe";
@@ -532,7 +532,7 @@
             this.ComboBox_ThongKeVe.Items.AddRange(new object[] {
             "Tháng",
             "Tuần"});
-            this.ComboBox_ThongKeVe.Location = new System.Drawing.Point(487, 3);
+            this.ComboBox_ThongKeVe.Location = new System.Drawing.Point(486, 3);
             this.ComboBox_ThongKeVe.Name = "ComboBox_ThongKeVe";
             this.ComboBox_ThongKeVe.Size = new System.Drawing.Size(155, 36);
             this.ComboBox_ThongKeVe.TabIndex = 11;
@@ -553,7 +553,7 @@
             this.date_TuNgayVe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_TuNgayVe.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_TuNgayVe.HoverState.FillColor = System.Drawing.Color.White;
-            this.date_TuNgayVe.Location = new System.Drawing.Point(648, 3);
+            this.date_TuNgayVe.Location = new System.Drawing.Point(647, 3);
             this.date_TuNgayVe.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_TuNgayVe.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_TuNgayVe.Name = "date_TuNgayVe";
@@ -567,7 +567,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(478, 44);
+            this.panel3.Size = new System.Drawing.Size(477, 44);
             this.panel3.TabIndex = 0;
             // 
             // label4
@@ -683,7 +683,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.date_DenNgayDoanhThu, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox_DoanhThu, 1, 0);
@@ -711,7 +711,7 @@
             this.date_DenNgayDoanhThu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_DenNgayDoanhThu.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_DenNgayDoanhThu.HoverState.FillColor = System.Drawing.Color.White;
-            this.date_DenNgayDoanhThu.Location = new System.Drawing.Point(809, 3);
+            this.date_DenNgayDoanhThu.Location = new System.Drawing.Point(808, 3);
             this.date_DenNgayDoanhThu.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_DenNgayDoanhThu.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_DenNgayDoanhThu.Name = "date_DenNgayDoanhThu";
@@ -737,7 +737,7 @@
             this.comboBox_DoanhThu.Items.AddRange(new object[] {
             "Tháng",
             "Tuần"});
-            this.comboBox_DoanhThu.Location = new System.Drawing.Point(487, 3);
+            this.comboBox_DoanhThu.Location = new System.Drawing.Point(486, 3);
             this.comboBox_DoanhThu.Name = "comboBox_DoanhThu";
             this.comboBox_DoanhThu.Size = new System.Drawing.Size(155, 36);
             this.comboBox_DoanhThu.TabIndex = 11;
@@ -758,7 +758,7 @@
             this.date_TuNgayDoanhThu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_TuNgayDoanhThu.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_TuNgayDoanhThu.HoverState.FillColor = System.Drawing.Color.White;
-            this.date_TuNgayDoanhThu.Location = new System.Drawing.Point(648, 3);
+            this.date_TuNgayDoanhThu.Location = new System.Drawing.Point(647, 3);
             this.date_TuNgayDoanhThu.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_TuNgayDoanhThu.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_TuNgayDoanhThu.Name = "date_TuNgayDoanhThu";
@@ -772,7 +772,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(478, 44);
+            this.panel1.Size = new System.Drawing.Size(477, 44);
             this.panel1.TabIndex = 0;
             // 
             // label3
