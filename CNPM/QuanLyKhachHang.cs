@@ -41,7 +41,7 @@ namespace CNPM
             using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 conn.Open();
-                string sql = "SELECT COUNT(*) FROM KhachHang";
+                string sql = "SELECT MaKhachHang, HoTen, CCCD, NgaySinh, DiaChi, SoDienThoai, Gmail, NgayTao, TrangThai FROM KHACHHANG;";
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     int count = (int)cmd.ExecuteScalar();
@@ -102,7 +102,7 @@ namespace CNPM
             using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT * FROM KhachHang WHERE 1=1";
+                string query = "SELECT MaKhachHang, HoTen, CCCD, NgaySinh, DiaChi, SoDienThoai, Gmail, NgayTao, TrangThai FROM KhachHang WHERE 1=1";
                 // Tìm kiếm theo từ khóa
                 if (!string.IsNullOrEmpty(txt_Search.Text))
                 {

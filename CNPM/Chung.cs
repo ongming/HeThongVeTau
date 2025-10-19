@@ -50,8 +50,34 @@ namespace CNPM
                 SqlCommand cmd = new SqlCommand(query, conn);
                 object result = cmd.ExecuteScalar();
                 decimal totalRevenue = result != DBNull.Value ? Convert.ToDecimal(result) : 0;
-                lbTongdoanhthu.Text = totalRevenue.ToString("C0");
+                lbTongdoanhthu.Text = totalRevenue.ToString("N0");
             }
+            
+            //tuyến phổ biến
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            {
+                conn.Open();
+                string query = @"SELECT TOP 1 
+                                    CT.MaChuyen,
+                                    CT.NoiDi,
+                                    CT.NoiDen,
+                                    CT.NgayDi,
+                                    COUNT(V.MaVe) AS SoLuongDat
+                                FROM VE AS V
+                                JOIN CHUYENTAU AS CT ON V.MaChuyen = CT.MaChuyen
+                                GROUP BY CT.MaChuyen, CT.NoiDi, CT.NoiDen, CT.NgayDi
+                                ORDER BY SoLuongDat DESC;
+                                ";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    string Noidi = reader["NoiDi"].ToString();
+                    string Noiden = reader["NoiDen"].ToString();
+                    lbTuyenphobien.Text = Noidi +" - "+ Noiden;
+                }
+            }
+
             //đánh giá trung bình
             using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
@@ -64,9 +90,44 @@ namespace CNPM
             }
 
             //biểu đồ thống kê vé
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT LoaiGhe, COUNT(*) AS SoLuong FROM VE GROUP BY LoaiGhe ORDER BY LoaiGhe ";
+                SqlCommand sqlCommand = new SqlCommand(query, conn);
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+                chartLoaiVe.Series.Clear();
+                Series series = new Series("Loại Ghế");
+                series.ChartType = SeriesChartType.Pie;
+
+                while (reader.Read())
+                {
+                    string loaiGhe = reader["LoaiGhe"].ToString();
+                    int soLuong = Convert.ToInt32(reader["SoLuong"]);
+                    switch (loaiGhe.ToLower())
+                    {
+                        case "ghecung":
+                            loaiGhe = "Ghế cứng";
+                            break;
+                        case "ghemem":
+                            loaiGhe = "Ghế mềm";
+                            break;
+                        default:
+                            loaiGhe = "Khác";
+                            break;
+                    }
+
+                    series.Points.AddXY(loaiGhe, soLuong);
+                }
+
+                chartLoaiVe.Series.Add(series);
+                //chartDanhGia.Series[0].IsValueShownAsLabel = true;
+                chartLoaiVe.Series[0].Label = "#PERCENT{P0}"; // ví dụ: 45%
+                chartLoaiVe.Series[0].LegendText = "#VALX";   // hiển thị tên cột trong chú thích
+            }
 
             //biểu đồ thống kê đánh giá
-            using (SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=BanVeTau;Integrated Security=True"))
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 conn.Open();
 
