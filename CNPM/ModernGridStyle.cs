@@ -429,7 +429,7 @@ namespace YourNamespace
             // ====== CỘT & KÍCH THƯỚC ======
             grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             grid.RowTemplate.Height = 40;
-            grid.ScrollBars = ScrollBars.None;
+            //grid.ScrollBars = ScrollBars.None;
 
             // ====== ẨN CỘT ĐẦU TIÊN (ID / STT) ======
             if (grid.Columns.Count > 0)

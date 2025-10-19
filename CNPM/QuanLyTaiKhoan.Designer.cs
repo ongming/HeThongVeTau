@@ -44,8 +44,8 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_ThemNhanVien = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_ThongBao = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_TimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.Grid_NhatKy = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -137,6 +137,7 @@
             this.Grid_TaiKhoanNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Grid_TaiKhoanNhanVien.Location = new System.Drawing.Point(3, 3);
             this.Grid_TaiKhoanNhanVien.Name = "Grid_TaiKhoanNhanVien";
+            this.Grid_TaiKhoanNhanVien.ReadOnly = true;
             this.Grid_TaiKhoanNhanVien.RowHeadersVisible = false;
             this.Grid_TaiKhoanNhanVien.RowHeadersWidth = 51;
             this.Grid_TaiKhoanNhanVien.RowTemplate.Height = 24;
@@ -155,7 +156,7 @@
             this.Grid_TaiKhoanNhanVien.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.Grid_TaiKhoanNhanVien.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Grid_TaiKhoanNhanVien.ThemeStyle.HeaderStyle.Height = 4;
-            this.Grid_TaiKhoanNhanVien.ThemeStyle.ReadOnly = false;
+            this.Grid_TaiKhoanNhanVien.ThemeStyle.ReadOnly = true;
             this.Grid_TaiKhoanNhanVien.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.Grid_TaiKhoanNhanVien.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Grid_TaiKhoanNhanVien.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -193,8 +194,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.6263F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.11069F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.26301F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel3.Controls.Add(this.btn_ThemNhanVien, 2, 0);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableLayoutPanel3.Controls.Add(this.btn_ThongBao, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.guna2TextBox1, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 92);
@@ -204,58 +205,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1140, 68);
             this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // btn_ThemNhanVien
-            // 
-            this.btn_ThemNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ThemNhanVien.Animated = true;
-            this.btn_ThemNhanVien.BorderRadius = 10;
-            this.btn_ThemNhanVien.BorderThickness = 1;
-            this.btn_ThemNhanVien.CheckedState.FillColor = System.Drawing.Color.Silver;
-            this.btn_ThemNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ThemNhanVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ThemNhanVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ThemNhanVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_ThemNhanVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_ThemNhanVien.FillColor = System.Drawing.Color.RoyalBlue;
-            this.btn_ThemNhanVien.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThemNhanVien.ForeColor = System.Drawing.Color.White;
-            this.btn_ThemNhanVien.Image = global::CNPM.Properties.Resources.icons8_plus_100;
-            this.btn_ThemNhanVien.Location = new System.Drawing.Point(407, 3);
-            this.btn_ThemNhanVien.Name = "btn_ThemNhanVien";
-            this.btn_ThemNhanVien.Size = new System.Drawing.Size(189, 47);
-            this.btn_ThemNhanVien.TabIndex = 11;
-            this.btn_ThemNhanVien.Text = "Thêm nhân viên";
-            this.btn_ThemNhanVien.Click += new System.EventHandler(this.btn_ThemNhanVien_Click);
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::CNPM.Properties.Resources.magnifiying_glass_93642;
-            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox1.Location = new System.Drawing.Point(53, 4);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.PlaceholderText = "Tìm kiếm...";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(348, 45);
-            this.guna2TextBox1.TabIndex = 10;
             // 
             // Grid_NhatKy
             // 
@@ -432,7 +381,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private Guna.UI2.WinForms.Guna2Button btn_ThemNhanVien;
+        private Guna.UI2.WinForms.Guna2Button btn_ThongBao;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2DataGridView Grid_NhatKy;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;

@@ -158,5 +158,50 @@ namespace CNPM
                 cmd.ExecuteNonQuery();
             }
         }
+
+        // 🔹 Kiểm tra mật khẩu cũ có đúng không
+        public static bool KiemTraMatKhauCu(int maNguoiDung, string matKhauCu, string vaiTro)
+        {
+            string query = @"
+            SELECT COUNT(*) 
+            FROM TAIKHOAN 
+            WHERE MaLienKet = @MaLienKet 
+                  AND VaiTro = @VaiTro 
+                  AND MatKhau = @MatKhauCu";
+
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@MaLienKet", maNguoiDung);
+                cmd.Parameters.AddWithValue("@VaiTro", vaiTro);
+                cmd.Parameters.AddWithValue("@MatKhauCu", matKhauCu);
+
+                conn.Open();
+                object result = cmd.ExecuteScalar();
+                int count = (result != null && result != DBNull.Value) ? Convert.ToInt32(result) : 0;
+                return count > 0;
+            }
+        }
+
+        // 🔹 Đổi mật khẩu mới
+        public static bool DoiMatKhau(int maNguoiDung, string matKhauMoi, string vaiTro)
+        {
+            string query = @"
+            UPDATE TAIKHOAN
+            SET MatKhau = @MatKhauMoi
+            WHERE MaLienKet = @MaLienKet AND VaiTro = @VaiTro";
+
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@MaLienKet", maNguoiDung);
+                cmd.Parameters.AddWithValue("@MatKhauMoi", matKhauMoi);
+                cmd.Parameters.AddWithValue("@VaiTro", vaiTro);
+
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+                return rows > 0; // true nếu đổi thành công
+            }
+        }
     }
 }
