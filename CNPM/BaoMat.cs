@@ -83,7 +83,7 @@ namespace CNPM
                 }
 
                 // 3️⃣ Kiểm tra mật khẩu cũ có đúng không
-                if (!KhachHangRepository.KiemTraMatKhauCu(MaUser, mkCu))
+                if (!NguoiDungRepository.KiemTraMatKhauCu(MaUser, mkCu, Role))
                 {
                     MessageBox.Show("❌ Mật khẩu cũ không chính xác.", "Sai mật khẩu",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -91,7 +91,7 @@ namespace CNPM
                 }
 
                 // 4️⃣ Cập nhật mật khẩu mới
-                KhachHangRepository.DoiMatKhau(MaUser, mkMoi);
+                NguoiDungRepository.DoiMatKhau(MaUser, mkMoi, Role);
 
                 MessageBox.Show("✅ Đổi mật khẩu thành công!", "Thành công",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
