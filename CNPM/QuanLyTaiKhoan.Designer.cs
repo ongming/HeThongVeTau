@@ -113,8 +113,8 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.Grid_TaiKhoanNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.Grid_TaiKhoanNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.Grid_TaiKhoanNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -194,9 +194,9 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.6263F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.11069F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.26301F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
             this.tableLayoutPanel3.Controls.Add(this.btn_ThongBao, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.guna2TextBox1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txt_TimKiem, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 92);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -205,6 +205,58 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1140, 68);
             this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // btn_ThongBao
+            // 
+            this.btn_ThongBao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ThongBao.Animated = true;
+            this.btn_ThongBao.BorderRadius = 10;
+            this.btn_ThongBao.BorderThickness = 1;
+            this.btn_ThongBao.CheckedState.FillColor = System.Drawing.Color.Silver;
+            this.btn_ThongBao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ThongBao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ThongBao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ThongBao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_ThongBao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_ThongBao.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btn_ThongBao.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongBao.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongBao.Image = global::CNPM.Properties.Resources.icons8_plus_100;
+            this.btn_ThongBao.Location = new System.Drawing.Point(407, 3);
+            this.btn_ThongBao.Name = "btn_ThongBao";
+            this.btn_ThongBao.Size = new System.Drawing.Size(189, 47);
+            this.btn_ThongBao.TabIndex = 11;
+            this.btn_ThongBao.Text = "Thêm nhân viên";
+            // 
+            // txt_TimKiem
+            // 
+            this.txt_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_TimKiem.AutoRoundedCorners = true;
+            this.txt_TimKiem.BorderColor = System.Drawing.Color.DarkGray;
+            this.txt_TimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TimKiem.DefaultText = "";
+            this.txt_TimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_TimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_TimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_TimKiem.ForeColor = System.Drawing.Color.Black;
+            this.txt_TimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TimKiem.IconLeft = global::CNPM.Properties.Resources.magnifiying_glass_93642;
+            this.txt_TimKiem.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txt_TimKiem.Location = new System.Drawing.Point(53, 4);
+            this.txt_TimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_TimKiem.Name = "txt_TimKiem";
+            this.txt_TimKiem.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txt_TimKiem.PlaceholderText = "Tìm kiếm...";
+            this.txt_TimKiem.SelectedText = "";
+            this.txt_TimKiem.Size = new System.Drawing.Size(348, 45);
+            this.txt_TimKiem.TabIndex = 10;
+            this.txt_TimKiem.TextChanged += new System.EventHandler(this.txt_TimKiem_TextChanged);
             // 
             // Grid_NhatKy
             // 
@@ -276,8 +328,8 @@
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.ColumnCount = 5;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -296,8 +348,8 @@
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -382,7 +434,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private Guna.UI2.WinForms.Guna2Button btn_ThongBao;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txt_TimKiem;
         private Guna.UI2.WinForms.Guna2DataGridView Grid_NhatKy;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
