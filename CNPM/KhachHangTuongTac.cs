@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,24 @@ namespace CNPM
 
             CapNhatTrangThaiThongBao();
             CanhChamDoTheoThongBao();
+            DataTable table =  KhachHangRepository.LayThongTin(kh.MaKhachHang);
+            if (table.Rows.Count > 0 && table.Rows[0]["Avatar"] != DBNull.Value)
+            {
+                byte[] avatarBytes = (byte[])table.Rows[0]["Avatar"];
+
+                using (MemoryStream ms = new MemoryStream(avatarBytes))
+                {
+                    pictureBox_avatar.Image = Image.FromStream(ms);
+                    pictureBox_avatar.SizeMode = PictureBoxSizeMode.Zoom; // cho ảnh vừa khung
+                }
+            }
+            else
+            {
+                // Nếu chưa có ảnh thì hiển thị ảnh mặc định
+                pictureBox_avatar.Image = Properties.Resources.androgynous_avatar_non_binary_queer_person;
+                pictureBox_avatar.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+
         }
         private void CapNhatTrangThaiThongBao()
         {
