@@ -315,7 +315,7 @@
             this.btn_ThemChuyen.FillColor = System.Drawing.Color.RoyalBlue;
             this.btn_ThemChuyen.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThemChuyen.ForeColor = System.Drawing.Color.White;
-            this.btn_ThemChuyen.Location = new System.Drawing.Point(123, 740);
+            this.btn_ThemChuyen.Location = new System.Drawing.Point(121, 744);
             this.btn_ThemChuyen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_ThemChuyen.Name = "btn_ThemChuyen";
             this.btn_ThemChuyen.Size = new System.Drawing.Size(280, 60);
