@@ -98,6 +98,12 @@
     <Compile Include="Buoc3.Designer.cs">
       <DependentUpon>Buoc3.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChinhSuaChuyenTau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChinhSuaChuyenTau.Designer.cs">
+      <DependentUpon>ChinhSuaChuyenTau.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chung.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -226,6 +232,12 @@
     <Compile Include="TaoChuyenMoi.Designer.cs">
       <DependentUpon>TaoChuyenMoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemNhanVien.Designer.cs">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongKe&amp;BaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Buoc3.resx">
       <DependentUpon>Buoc3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChinhSuaChuyenTau.resx">
+      <DependentUpon>ChinhSuaChuyenTau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Chung.resx">
       <DependentUpon>Chung.cs</DependentUpon>
@@ -352,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaoChuyenMoi.resx">
       <DependentUpon>TaoChuyenMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemNhanVien.resx">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKe&amp;BaoCao.resx">
       <DependentUpon>ThongKe&amp;BaoCao.cs</DependentUpon>

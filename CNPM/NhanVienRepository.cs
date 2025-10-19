@@ -247,6 +247,37 @@ namespace CNPM
                 return false;
             }
         }
+        public static DataTable LayChuyenTauHomNay()
+        {
+            string query = @"
+        SELECT 
+            MaChuyen, 
+            NoiDi, 
+            NoiDen, 
+            GioDi, 
+            GioDen, 
+            NgayDi,
+            CASE 
+                WHEN GETDATE() BETWEEN CAST(NgayDi AS DATETIME) + CAST(GioDi AS DATETIME)
+                                 AND CAST(NgayDi AS DATETIME) + CAST(GioDen AS DATETIME)
+                THEN N'Đang khởi hành'
+                WHEN GETDATE() < CAST(NgayDi AS DATETIME) + CAST(GioDi AS DATETIME)
+                THEN N'Chưa khởi hành'
+                ELSE N'Đã kết thúc'
+            END AS TrangThai
+        FROM CHUYENTAU
+        WHERE CAST(NgayDi AS DATE) = CAST(GETDATE() AS DATE)
+        ORDER BY GioDi ASC";
+
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
 
     }
 }

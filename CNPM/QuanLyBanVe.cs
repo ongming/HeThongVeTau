@@ -61,5 +61,10 @@ namespace CNPM
                 grid_load();
             }
         }
+
+        private void btn_ChinhSuaVe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

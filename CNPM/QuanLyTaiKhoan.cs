@@ -31,5 +31,11 @@ namespace CNPM
             }
             ModernGridStyle.ApplyActivityFeed(Grid_NhatKy);
         }
+
+        private void btn_ThemNhanVien_Click(object sender, EventArgs e)
+        {
+            ThemNhanVien themNhanVien = new ThemNhanVien();
+            themNhanVien.ShowDialog();
+        }
     }
 }

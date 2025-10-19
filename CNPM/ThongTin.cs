@@ -77,7 +77,13 @@ namespace CNPM
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-
+            txt_Username.ReadOnly = true;
+            txt_CCCD.ReadOnly = true;
+            txt_DiaChi.ReadOnly = true;
+            date_NgaySinh.Enabled = false;
+            txt_SDT.ReadOnly = true;
+            txt_Email.ReadOnly = true;
+            txt_Username.ReadOnly = true;
             try
             {
                 // Kiểm tra thông tin hợp lệ
