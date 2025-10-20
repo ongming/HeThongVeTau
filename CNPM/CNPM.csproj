@@ -104,6 +104,12 @@
     <Compile Include="ChinhSuaChuyenTau.Designer.cs">
       <DependentUpon>ChinhSuaChuyenTau.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChiTietVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietVe.Designer.cs">
+      <DependentUpon>ChiTietVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chung.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     <EmbeddedResource Include="ChinhSuaChuyenTau.resx">
       <DependentUpon>ChinhSuaChuyenTau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietVe.resx">
+      <DependentUpon>ChiTietVe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Chung.resx">
       <DependentUpon>Chung.cs</DependentUpon>
     </EmbeddedResource>
@@ -472,6 +481,8 @@
     <None Include="Resources\id-card_9284909.png" />
     <None Include="Resources\order-history_11636547.png" />
     <None Include="Resources\Change %282%29.png" />
+    <None Include="Resources\dollar_991952.png" />
+    <None Include="Resources\ticket_15345749.png" />
     <Content Include="Resources\witness_1518564.png" />
     <None Include="Resources\witness_15185641.png" />
   </ItemGroup>

@@ -47,7 +47,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(244, 168);
+            this.guna2Panel1.Size = new System.Drawing.Size(321, 168);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Click += new System.EventHandler(this.Card_Click);
             this.guna2Panel1.MouseEnter += new System.EventHandler(this.pnlMain_MouseEnter);
@@ -139,7 +139,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UC_ChuyenTauCard";
-            this.Size = new System.Drawing.Size(244, 168);
+            this.Size = new System.Drawing.Size(321, 168);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

@@ -189,7 +189,7 @@ namespace CNPM
                 Panel item = new Panel
                 {
                     Width = pnThongBao.Width - 50,
-                    Height = 55,
+                    Height = 70,
                     BackColor = Color.FromArgb(248, 250, 255),
                     Margin = new Padding(5),
                     BorderStyle = BorderStyle.FixedSingle
@@ -202,7 +202,7 @@ namespace CNPM
                     Font = new Font("Segoe UI", 9, FontStyle.Regular),
                     ForeColor = Color.Black,
                     AutoSize = false,
-                    Size = new Size(item.Width - 10, 30),
+                    Size = new Size(item.Width - 10, 50),
                     Location = new Point(5, 5)
                 };
                 item.Controls.Add(lblNoiDung);
@@ -214,7 +214,7 @@ namespace CNPM
                     Font = new Font("Segoe UI", 8, FontStyle.Italic),
                     ForeColor = Color.DimGray,
                     AutoSize = true,
-                    Location = new Point(5, 33)
+                    Location = new Point(5, 53)
                 };
                 item.Controls.Add(lblTime);
 

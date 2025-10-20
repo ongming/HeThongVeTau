@@ -12,6 +12,7 @@ namespace YourNamespace
         public static void Apply(Guna2DataGridView grid)
         {
             // Nền trắng, viền sáng
+            grid.EnableHeadersVisualStyles = false;
             grid.BackgroundColor = Color.White;
             grid.BorderStyle = BorderStyle.None;
             grid.GridColor = Color.FromArgb(240, 240, 240);
@@ -31,6 +32,8 @@ namespace YourNamespace
             grid.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             grid.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             grid.ColumnHeadersHeight = 38;
+            grid.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(245, 247, 250); // khi chọn
+
 
             // Hàng
             grid.DefaultCellStyle.BackColor = Color.White;
@@ -55,27 +58,6 @@ namespace YourNamespace
             grid.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(248, 249, 252);
         }
 
-        /// <summary>
-        /// Đổi màu chữ của cột "Trạng thái" theo giá trị.
-        /// </summary>
-        //public static void HighlightStatus(Guna2DataGridView grid, string columnName = "TrangThai")
-        //{
-        //    foreach (DataGridViewRow row in grid.Rows)
-        //    {
-        //        if (row.Cells[columnName].Value == null) continue;
-
-        //        string status = row.Cells[columnName].Value.ToString().Trim().ToLower();
-
-        //        if (status.Contains("đã hủy"))
-        //            row.Cells[columnName].Style.ForeColor = Color.FromArgb(220, 53, 69); // đỏ
-        //        else if (status.Contains("đã hoàn") || status.Contains("đã thanh toán"))
-        //            row.Cells[columnName].Style.ForeColor = Color.FromArgb(25, 135, 84); // xanh lá
-        //        else if (status.Contains("đã xuất"))
-        //            row.Cells[columnName].Style.ForeColor = Color.FromArgb(13, 110, 253); // xanh dương
-        //        else
-        //            row.Cells[columnName].Style.ForeColor = Color.FromArgb(108, 117, 125); // xám
-        //    }
-        //}
         public static void ApplyWithMiniActions(Guna2DataGridView grid)
         {
             // 🔹 Áp dụng style gốc

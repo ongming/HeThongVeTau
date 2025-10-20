@@ -153,7 +153,7 @@ namespace CNPM
                         int ghe = gheList[i];
                         var nguoi = nguoiSuDungList[i];
 
-                        string loaiGhe = ghe > 20 ? "GheCung" : "GheMem";
+                        string loaiGhe = ghe > 20 ? "Ghế cứng" : "Ghế cứng";
                         decimal giaTien = ghe > 20 ? GheCung : GheMem;
 
 

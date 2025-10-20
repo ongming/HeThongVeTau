@@ -278,6 +278,87 @@ namespace CNPM
                 return dt;
             }
         }
+        public static DataTable LayDanhSachVe()
+        {
+            string query = @"
+        SELECT 
+            v.MaVe,
+            v.MaChuyen,
+            v.SoGhe,
+            v.LoaiGhe,
+            v.MaKhachHang,
+            v.GiaTien,
+            v.TenNguoiSoHuu,
+            v.SoDienThoai,
+            v.CCCD,
+            FORMAT(v.NgayDat, 'dd/MM/yyyy') AS NgayDat
+        FROM VE v
+        ORDER BY v.MaVe ASC";
+
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                return dt;
+            }
+        }
+        public static DataRow LayThongTinVe(int maVe)
+        {
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            {
+                string query = @"
+                SELECT 
+                    c.MaChuyen,
+                    c.NoiDi,
+                    c.NoiDen,
+                    c.GioDi,
+                    c.GioDen,
+                    c.NgayDi,
+                    l.PhuongThucThanhToan
+                FROM VE v
+                INNER JOIN CHUYENTAU c ON v.MaChuyen = c.MaChuyen
+                INNER JOIN LICHSUGIAODICH l ON v.MaKhachHang = l.MaKhachHang
+                WHERE v.MaVe = @MaVe";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaVe", maVe);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                    return dt.Rows[0];
+                else
+                    return null;
+            }
+        }
+        public static bool CapNhatThongTinKhachHang(int maVe, string tenNguoi, string soDienThoai, string cccd)
+        {
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            {
+                string query = @"
+                UPDATE VE
+                SET 
+                    TenNguoiSoHuu = @TenNguoi,
+                    SoDienThoai = @SoDienThoai,
+                    CCCD = @CCCD
+                WHERE MaVe = @MaVe";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@TenNguoi", tenNguoi);
+                cmd.Parameters.AddWithValue("@SoDienThoai", soDienThoai);
+                cmd.Parameters.AddWithValue("@CCCD", cccd);
+                cmd.Parameters.AddWithValue("@MaVe", maVe);
+
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+
+                return rows > 0;
+            }
+        }
 
     }
 }
