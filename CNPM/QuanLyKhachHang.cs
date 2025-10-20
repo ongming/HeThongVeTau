@@ -74,7 +74,7 @@ namespace CNPM
             using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 conn.Open();
-                string sql = "SELECT MaKhachHang, HoTen, CCCD, NgaySinh, DiaChi, SoDienThoai, Gmail, NgayTao, TrangThai FROM KHACHHANG;";
+                string sql = "SELECT COUNT(*) FROM KHACHHANG;";
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     int count = (int)cmd.ExecuteScalar();

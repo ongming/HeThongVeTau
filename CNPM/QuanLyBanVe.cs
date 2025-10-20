@@ -113,6 +113,72 @@ namespace CNPM
                 );
                 frm.ShowDialog();
             }
+            // Kiểm tra nhấn đúng cột Hủy vé và không phải header
+            if (columnName == "HuyVe")
+            {
+                int maVe = Convert.ToInt32(Grid_Ve.Rows[e.RowIndex].Cells["MaVe"].Value);
+                string tenKhach = Grid_Ve.Rows[e.RowIndex].Cells["TenNguoiSoHuu"].Value.ToString();;
+
+                // Xác nhận
+                DialogResult result = MessageBox.Show(
+                    $"Bạn có chắc chắn muốn hủy vé mã {maVe} của {tenKhach} không?",
+                    "Xác nhận hủy vé",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    using (SqlConnection conn = DatabaseConnection.GetConnection())
+                    {
+                        // 1️⃣ Hủy vé (có thể update trạng thái hoặc xóa)
+                        string queryHuy = "DELETE VE WHERE MaVe = @MaVe";
+                        SqlCommand cmdHuy = new SqlCommand(queryHuy, conn);
+                        cmdHuy.Parameters.AddWithValue("@MaVe", maVe);
+                        conn.Open();
+                        int affected = cmdHuy.ExecuteNonQuery();
+                        conn.Close();
+
+                        if (affected > 0)
+                        {
+                            // 2️⃣ Thêm thông báo cho khách hàng
+                            string noiDung = $"Vé của bạn đã bị nhân viên {nv.HoTen} hủy.";
+                            string queryTB = @"
+                        INSERT INTO THONGBAO_KH (NoiDung, MaKhachHang, ThoiGian, DaXem)
+                        VALUES (@NoiDung, @MaKhachHang, GETDATE(), 0)";
+                            SqlCommand cmdTB = new SqlCommand(queryTB, conn);
+                            cmdTB.Parameters.AddWithValue("@NoiDung", noiDung);
+                            cmdTB.Parameters.AddWithValue("@MaKhachHang", MaKhachHang);
+                            conn.Open();
+                            cmdTB.ExecuteNonQuery();
+                            conn.Close();
+
+                            // 3️⃣ Ghi nhật ký hoạt động
+                            string hanhDong = $"Nhân viên {nv.HoTen} đã hủy vé mã {maVe} của khách hàng mã {MaKhachHang}.";
+                            string queryNK = @"
+                        INSERT INTO NHATKY_HOATDONG (MaNhanVien, HanhDong, ThoiGian)
+                        VALUES (@MaNhanVien, @HanhDong, GETDATE())";
+                            SqlCommand cmdNK = new SqlCommand(queryNK, conn);
+                            cmdNK.Parameters.AddWithValue("@MaNhanVien", nv.MaNhanVien);
+                            cmdNK.Parameters.AddWithValue("@HanhDong", hanhDong);
+                            conn.Open();
+                            cmdNK.ExecuteNonQuery();
+                            conn.Close();
+
+                            // 4️⃣ Thông báo
+                            MessageBox.Show("✅ Vé đã được hủy .", "Thành công",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // 5️⃣ Làm mới lưới
+                            Grid_Ve.DataSource = NhanVienRepository.LayDanhSachVe();
+                        }
+                        else
+                        {
+                            MessageBox.Show("❌ Hủy vé thất bại. Vui lòng thử lại.", "Lỗi",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
         }
 
     }

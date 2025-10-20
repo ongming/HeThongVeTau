@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_XuatFile = new Guna.UI2.WinForms.Guna2Button();
             this.btn_LichTau = new Guna.UI2.WinForms.Guna2Button();
             this.btn_TaoChuyenNhanh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
@@ -481,7 +481,7 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel7.Controls.Add(this.guna2Button1, 1, 5);
+            this.tableLayoutPanel7.Controls.Add(this.btn_XuatFile, 1, 5);
             this.tableLayoutPanel7.Controls.Add(this.btn_LichTau, 1, 3);
             this.tableLayoutPanel7.Controls.Add(this.btn_TaoChuyenNhanh, 1, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -498,31 +498,32 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(315, 343);
             this.tableLayoutPanel7.TabIndex = 11;
             // 
-            // guna2Button1
+            // btn_XuatFile
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.Silver;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button1.FillColor = System.Drawing.Color.RoyalBlue;
-            this.guna2Button1.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::CNPM.Properties.Resources.icons8_export_pdf_100;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(40, -12);
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(43, 199);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(229, 60);
-            this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "Xuất file báo cáo dữ liệu";
-            this.guna2Button1.TextOffset = new System.Drawing.Point(-7, 20);
+            this.btn_XuatFile.Animated = true;
+            this.btn_XuatFile.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_XuatFile.BorderRadius = 5;
+            this.btn_XuatFile.BorderThickness = 1;
+            this.btn_XuatFile.CheckedState.FillColor = System.Drawing.Color.Silver;
+            this.btn_XuatFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_XuatFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_XuatFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_XuatFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_XuatFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_XuatFile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_XuatFile.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btn_XuatFile.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_XuatFile.ForeColor = System.Drawing.Color.White;
+            this.btn_XuatFile.Image = global::CNPM.Properties.Resources.icons8_export_pdf_100;
+            this.btn_XuatFile.ImageOffset = new System.Drawing.Point(40, -12);
+            this.btn_XuatFile.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_XuatFile.Location = new System.Drawing.Point(43, 199);
+            this.btn_XuatFile.Name = "btn_XuatFile";
+            this.btn_XuatFile.Size = new System.Drawing.Size(229, 60);
+            this.btn_XuatFile.TabIndex = 5;
+            this.btn_XuatFile.Text = "Xuất file báo cáo dữ liệu";
+            this.btn_XuatFile.TextOffset = new System.Drawing.Point(-7, 20);
+            this.btn_XuatFile.Click += new System.EventHandler(this.btn_XuatFile_Click);
             // 
             // btn_LichTau
             // 
@@ -647,18 +648,18 @@
             // 
             // chart_DoanhThu
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart_DoanhThu.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.chart_DoanhThu.ChartAreas.Add(chartArea1);
             this.chart_DoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart_DoanhThu.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.chart_DoanhThu.Legends.Add(legend1);
             this.chart_DoanhThu.Location = new System.Drawing.Point(3, 3);
             this.chart_DoanhThu.Name = "chart_DoanhThu";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart_DoanhThu.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart_DoanhThu.Series.Add(series1);
             this.chart_DoanhThu.Size = new System.Drawing.Size(731, 331);
             this.chart_DoanhThu.TabIndex = 0;
             this.chart_DoanhThu.Text = "Doanh thu theo tháng";
@@ -746,7 +747,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private Guna.UI2.WinForms.Guna2Button btn_TaoChuyenNhanh;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_XuatFile;
         private Guna.UI2.WinForms.Guna2Button btn_LichTau;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
