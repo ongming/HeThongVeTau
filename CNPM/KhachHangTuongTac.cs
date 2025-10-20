@@ -57,14 +57,14 @@ namespace CNPM
                 using (MemoryStream ms = new MemoryStream(avatarBytes))
                 {
                     pictureBox_avatar.Image = Image.FromStream(ms);
-                    pictureBox_avatar.SizeMode = PictureBoxSizeMode.Zoom; // cho ảnh vừa khung
+                    pictureBox_avatar.SizeMode = PictureBoxSizeMode.StretchImage; // cho ảnh vừa khung
                 }
             }
             else
             {
                 // Nếu chưa có ảnh thì hiển thị ảnh mặc định
                 pictureBox_avatar.Image = Properties.Resources.androgynous_avatar_non_binary_queer_person;
-                pictureBox_avatar.SizeMode = PictureBoxSizeMode.Zoom;
+                pictureBox_avatar.SizeMode = PictureBoxSizeMode.StretchImage;
             }
 
         }
@@ -253,6 +253,12 @@ namespace CNPM
         {
             ThongTinCaNhan thongTinCaNhan = new ThongTinCaNhan(kh.MaKhachHang, "KhachHang");
             Container(thongTinCaNhan);
+        }
+
+        private void btn_NhanTin_Click(object sender, EventArgs e)
+        {
+            Messenger form = new Messenger(kh.MaKhachHang);
+            form.ShowDialog();
         }
     }
 }

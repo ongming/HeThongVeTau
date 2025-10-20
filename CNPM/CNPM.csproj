@@ -172,6 +172,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Messenger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messenger.Designer.cs">
+      <DependentUpon>Messenger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model.cs" />
     <Compile Include="ModernGridStyle.cs" />
     <Compile Include="Momo.cs">
@@ -337,6 +343,9 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Messenger.resx">
+      <DependentUpon>Messenger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Momo.resx">
       <DependentUpon>Momo.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,6 +443,7 @@
     <None Include="Resources\invisible_98494.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\xoa.png" />
     <None Include="Resources\email_3894024.png" />
     <None Include="Resources\profile.png" />
     <None Include="Resources\data-analysis_12959230.png" />
@@ -481,6 +491,7 @@
     <None Include="Resources\id-card_9284909.png" />
     <None Include="Resources\order-history_11636547.png" />
     <None Include="Resources\Change %282%29.png" />
+    <None Include="Resources\nhantin.png" />
     <None Include="Resources\dollar_991952.png" />
     <None Include="Resources\ticket_15345749.png" />
     <Content Include="Resources\witness_1518564.png" />

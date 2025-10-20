@@ -278,6 +278,92 @@ namespace CNPM
                 return dt;
             }
         }
+        //ghi thông báo đăng nhập
+        public static void GhiThongBaoDangNhap(int maNguoi, string role)
+        {
+            string query = @"
+    INSERT INTO THONGBAO_NV (NoiDung, MaNguoiNhan, Role, ThoiGian, DaXem)
+    VALUES (@NoiDung, @MaNguoiNhan, @Role, @ThoiGian, 0)";
+
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                string noiDung = $"Bạn đã đăng nhập vào lúc {DateTime.Now:HH:mm:ss} ngày {DateTime.Now:dd/MM/yyyy}.";
+
+                cmd.Parameters.AddWithValue("@NoiDung", noiDung);
+                cmd.Parameters.AddWithValue("@MaNguoiNhan", maNguoi);
+                cmd.Parameters.AddWithValue("@Role", role);
+                cmd.Parameters.AddWithValue("@ThoiGian", DateTime.Now);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public static bool CoThongBaoChuaXem(int maNguoiNhan, string role)
+        {
+            string query = @"
+    SELECT COUNT(*) 
+    FROM THONGBAO_NV
+    WHERE (MaNguoiNhan = @MaNguoiNhan OR MaNguoiNhan IS NULL)
+          AND DaXem = 0
+          AND Role = @Role";
+
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@MaNguoiNhan", maNguoiNhan);
+                cmd.Parameters.AddWithValue("@Role", role);
+                conn.Open();
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
+            }
+        }
+
+        public static void DanhDauDaXem(int maNguoiNhan, string role)
+        {
+            string query = @"
+    UPDATE THONGBAO_NV
+    SET DaXem = 1
+    WHERE (MaNguoiNhan = @MaNguoiNhan OR MaNguoiNhan IS NULL)
+    AND Role = @Role";
+
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@MaNguoiNhan", maNguoiNhan);
+                cmd.Parameters.AddWithValue("@Role", role);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public static DataTable LayThongBaoTheoNguoiNhan(int maNguoiNhan, string role)
+        {
+            DataTable dt = new DataTable();
+            string query = @"
+    SELECT 
+        MaThongBao,
+        NoiDung,
+        FORMAT(ThoiGian, 'dd/MM/yyyy HH:mm') AS ThoiGian,
+        DaXem
+    FROM THONGBAO_NV
+    WHERE (MaNguoiNhan IS NULL OR MaNguoiNhan = 0 OR MaNguoiNhan = @MaNguoiNhan)
+          AND Role = @Role
+    ORDER BY ThoiGian DESC";
+
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@MaNguoiNhan", maNguoiNhan);
+                cmd.Parameters.AddWithValue("@Role", role);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+
         public static DataTable LayDanhSachVe()
         {
             string query = @"

@@ -203,5 +203,46 @@ namespace CNPM
                 return rows > 0; // true nếu đổi thành công
             }
         }
-    }
+
+        // ghi thông báo 
+        public static void GhiThongBao(string noiDung, string role, int? maNguoi = null)
+        {
+            string connectionString = "Data Source=.;Initial Catalog=BanVeTau;Integrated Security=True";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query;
+
+                if (role == "KhachHang")
+                {
+                    // 🔔 Thông báo khách hàng
+                    query = @"
+                    INSERT INTO THONGBAO_KH (NoiDung, MaKhachHang, ThoiGian, DaXem)
+                    VALUES (@NoiDung, @MaNguoi, GETDATE(), 0)";
+                }
+                else
+                {
+                    // 🔔 Thông báo nhân viên hoặc quản lý
+                    query = @"
+                    INSERT INTO THONGBAO_NV (NoiDung, MaNguoiNhan, Role, ThoiGian, DaXem)
+                    VALUES (@NoiDung, @MaNguoi, @Role, GETDATE(), 0)";
+                }
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@NoiDung", noiDung);
+                    cmd.Parameters.AddWithValue("@Role", role);
+
+                    if (maNguoi.HasValue)
+                        cmd.Parameters.AddWithValue("@MaNguoi", maNguoi.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@MaNguoi", DBNull.Value);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+    }   
 }

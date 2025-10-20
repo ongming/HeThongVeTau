@@ -14,16 +14,18 @@ namespace CNPM
 {
     public partial class QuanLyKhachHang : Form
     {
-        public QuanLyKhachHang()
+        ThongTinNhanVien nv;
+        public QuanLyKhachHang(ThongTinNhanVien nv)
         {
             InitializeComponent();
+            this.nv = nv;
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM KhachHang";
+            string query = "SELECT MaKhachHang, HoTen, CCCD, NgaySinh, DiaChi, SoDienThoai, Gmail, NgayTao, TrangThai FROM KhachHang";
             string text = "Ngày tạo";
-
+            Grid_KhachHang.Columns.Clear();
             using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -33,7 +35,38 @@ namespace CNPM
             }
             ModernGridStyle.ApplyPlaceholder(date_NgayTaoTK, text);
             ModernGridStyle.Apply(Grid_KhachHang);
-            ModernGridStyle.AddMiniActionColumns(Grid_KhachHang); // ✅ thêm icon sau khi gán DataSource
+            //ModernGridStyle.AddMiniActionColumns(Grid_KhachHang); // ✅ thêm icon sau khi gán DataSource
+            // Tắt chế độ tự giãn cột của toàn bảng (nếu đang bật)
+            Grid_KhachHang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+
+            // 🗑 Cột Xóa
+            DataGridViewImageColumn btnDelete = new DataGridViewImageColumn();
+            btnDelete.Name = "btnDelete";
+            btnDelete.HeaderText = "";
+            btnDelete.Image = Properties.Resources.xoa; // hoặc Image.FromFile("icons/delete.png")
+            btnDelete.ToolTipText = "Xóa";
+            btnDelete.Width = 30; // cố định kích thước nhỏ
+            btnDelete.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Grid_KhachHang.Columns.Add(btnDelete);
+
+            // 💬 Cột Nhắn tin
+            DataGridViewImageColumn btnMessage = new DataGridViewImageColumn();
+            btnMessage.Name = "btnMessage";
+            btnMessage.HeaderText = "";
+            btnMessage.Image = Properties.Resources.nhantin;
+            btnMessage.ToolTipText = "Nhắn tin";
+            btnMessage.Width = 30;
+            btnMessage.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Grid_KhachHang.Columns.Add(btnMessage);
+
+            btnDelete.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            btnMessage.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            Grid_KhachHang.AllowUserToAddRows = false;
+
+            // Cho phép các cột dữ liệu khác tự giãn (nếu muốn)
+            Grid_KhachHang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+
             //ModernGridStyle.HighlightStatus(Grid_KhachHang);
             ComboBox_TrangThai.Text = "Trạng thái";
 
@@ -154,18 +187,14 @@ namespace CNPM
         {
             if (e.RowIndex < 0) return;
             string columnName = Grid_KhachHang.Columns[e.ColumnIndex].Name;
-            string maKH = Grid_KhachHang.Rows[e.RowIndex].Cells["MaKhachHang"].Value.ToString();
-            if (columnName == "View")
-            {
-                // Mở form chỉnh sửa khách hàng
-                MessageBox.Show("Chức năng chỉnh sửa khách hàng đang được phát triển.");
+            int maKH = Convert.ToInt32(Grid_KhachHang.Rows[e.RowIndex].Cells["MaKhachHang"].Value);
 
-            }
-            if (columnName == "Edit")
+            if (columnName == "btnMessage")
             {
-                MessageBox.Show("Chức năng sửa khách hàng đang được phát triển.");
+                Messenger form = new Messenger(maKH, nv);
+                form.ShowDialog();
             }
-            else if (columnName == "Delete")
+            else if (columnName == "btnDelete")
             {
                 // Xác nhận xóa khách hàng
                 var result = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
