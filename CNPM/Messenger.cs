@@ -20,24 +20,24 @@ namespace CNPM
         int id_khachhang;
         bool isNhanVien; //true là khách hàng, false là nhân viên
         ThongTinNhanVien nv;
-        public Messenger(int id_khachhang, ThongTinNhanVien nv, bool ronaldo)
+        public Messenger(int id_khachhang, ThongTinNhanVien nv)
         {
             InitializeComponent();
             this.nv = nv;
             this.id_khachhang = id_khachhang;
-            this.isNhanVien = ronaldo;
+            this.isNhanVien = true;
             flowLayoutPanelMessages.AutoScroll = true;
             LoadMessages();
-            //display();
+            name_user.Text = "tên khách hàng";
+            display();
         }
-        public Messenger(int id_khachhang, bool ronaldo)
+        public Messenger(int id_khachhang)
         {
             InitializeComponent();
             this.id_khachhang = id_khachhang;
-            this.isNhanVien = ronaldo;
+            this.isNhanVien = false;
             flowLayoutPanelMessages.AutoScroll = true;
             LoadMessages();
-            //display();
         }
 
 
@@ -65,7 +65,7 @@ namespace CNPM
                             while (reader.Read())
                             {
                                 string message = reader["ThoiGian"].ToString()+reader["NoiDung"].ToString().ToLower();
-                                bool isSender = ((reader["Role"]!=null) == isNhanVien);
+                                bool isSender = ((reader["Role"]!= DBNull.Value) == isNhanVien);
 
                                 AddMessageToPanel(EditMessage(message).Item1, EditMessage(message).Item2, isSender);
                             }
@@ -234,55 +234,29 @@ namespace CNPM
             }
         }
 
-        //private void display()
-        //{
-        //    bool flag = receiver_id.Trim().StartsWith("SV");
-        //    string query = "SELECT Họ_và_Tên, Hình_Ảnh FROM Thông_Tin_Sinh_Viên WHERE Mã_Sinh_Viên = @id";
-        //    if (!flag)
-        //    {
-        //        query = "SELECT Họ_và_Tên, Hình_Ảnh FROM Thông_Tin_Giảng_Viên WHERE Mã_Giảng_Viên = @id";
-        //    }
+        private void display()
+        {
+            DataTable table = KhachHangRepository.LayThongTin(id_khachhang);
+            if (table.Rows.Count > 0 && table.Rows[0]["Avatar"] != DBNull.Value)
+            {
+                byte[] avatarBytes = (byte[])table.Rows[0]["Avatar"];
 
-        //    try
-        //    {
-        //        using (SqlConnection conn = DatabaseConnection.GetConnection())
-        //        {
-        //            conn.Open();
-                  
-        //            using (SqlCommand cmd = new SqlCommand(query, conn))
-        //            {
-        //                cmd.Parameters.AddWithValue("@id", receiver_id);
+                using (MemoryStream ms = new MemoryStream(avatarBytes))
+                {
+                    pictureBox_avatar.Image = Image.FromStream(ms);
+                    pictureBox_avatar.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                name_user.Text=table.Rows[0]["HoTen"].ToString();
+            }
+            try
+            {
+                name_user.Text = table.Rows[0]["HoTen"].ToString();
+            }
+            catch (Exception ex) {
+                MessageBox.Show("không thể load tên khách hàng");
 
-        //                using (SqlDataReader reader = cmd.ExecuteReader())
-        //                {
-        //                    if (reader.Read())
-        //                    {
-        //                        // Gán tên
-        //                        name_user.Text = reader["Họ_và_Tên"].ToString();
-
-        //                        // Gán ảnh
-        //                        if (reader["Hình_Ảnh"] != DBNull.Value)
-        //                        {
-        //                            byte[] imgBytes = (byte[])reader["Hình_Ảnh"];
-        //                            using (MemoryStream ms = new MemoryStream(imgBytes))
-        //                            {
-        //                                pictureBox3.Image = Image.FromStream(ms);
-        //                            }
-        //                        }
-        //                        else
-        //                        {
-        //                            //pictureBox3.Image = Properties.Resources.usercut; 
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Lỗi khi tải thông tin sinh viên:\n" + ex.Message);
-        //    }
-        //}
+            }
+        }
 
         private void close_Click(object sender, EventArgs e)
         {
@@ -306,6 +280,11 @@ namespace CNPM
                 e.SuppressKeyPress = true;
                 real_send_message();      
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

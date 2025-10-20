@@ -191,7 +191,7 @@ namespace CNPM
 
             if (columnName == "btnMessage")
             {
-                Messenger form = new Messenger(maKH, nv, true);
+                Messenger form = new Messenger(maKH, nv);
                 form.ShowDialog();
             }
             else if (columnName == "btnDelete")

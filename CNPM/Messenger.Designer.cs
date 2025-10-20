@@ -34,14 +34,14 @@
             this.flowLayoutPanelMessages = new System.Windows.Forms.FlowLayoutPanel();
             this.pb_reset = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.send_message = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_reset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.send_message)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // name_user
@@ -103,18 +103,6 @@
             this.close.TabStop = false;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::CNPM.Properties.Resources.profile;
-            this.pictureBox3.Location = new System.Drawing.Point(14, 11);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(91, 88);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
             // send_message
             // 
             this.send_message.Image = ((System.Drawing.Image)(resources.GetObject("send_message.Image")));
@@ -136,6 +124,19 @@
             this.pictureBox1.Size = new System.Drawing.Size(566, 115);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox_avatar
+            // 
+            this.pictureBox_avatar.Image = global::CNPM.Properties.Resources.profile;
+            this.pictureBox_avatar.ImageRotate = 0F;
+            this.pictureBox_avatar.Location = new System.Drawing.Point(14, 12);
+            this.pictureBox_avatar.Name = "pictureBox_avatar";
+            this.pictureBox_avatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureBox_avatar.Size = new System.Drawing.Size(91, 87);
+            this.pictureBox_avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_avatar.TabIndex = 7;
+            this.pictureBox_avatar.TabStop = false;
             // 
             // Messenger
             // 
@@ -143,9 +144,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(561, 688);
+            this.Controls.Add(this.pictureBox_avatar);
             this.Controls.Add(this.pb_reset);
             this.Controls.Add(this.close);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.flowLayoutPanelMessages);
             this.Controls.Add(this.send_message);
             this.Controls.Add(this.text_input);
@@ -154,12 +155,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Messenger";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Messenger";
             ((System.ComponentModel.ISupportInitialize)(this.pb_reset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.send_message)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,8 +174,8 @@
         private System.Windows.Forms.TextBox text_input;
         private System.Windows.Forms.PictureBox send_message;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMessages;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox close;
         private System.Windows.Forms.PictureBox pb_reset;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox_avatar;
     }
 }

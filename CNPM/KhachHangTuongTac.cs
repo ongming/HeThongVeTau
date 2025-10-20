@@ -257,7 +257,7 @@ namespace CNPM
 
         private void btn_NhanTin_Click(object sender, EventArgs e)
         {
-            Messenger form = new Messenger(kh.MaKhachHang, false);
+            Messenger form = new Messenger(kh.MaKhachHang);
             form.ShowDialog();
         }
     }
