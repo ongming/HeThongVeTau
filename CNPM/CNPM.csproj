@@ -160,6 +160,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Messenger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messenger.Designer.cs">
+      <DependentUpon>Messenger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model.cs" />
     <Compile Include="ModernGridStyle.cs" />
     <Compile Include="Momo.cs">
@@ -312,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messenger.resx">
+      <DependentUpon>Messenger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Momo.resx">
       <DependentUpon>Momo.cs</DependentUpon>
