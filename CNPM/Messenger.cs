@@ -17,20 +17,29 @@ namespace CNPM
 {
     public partial class Messenger : Form
     {
-        String sender_id;
-        String receiver_id;
-        bool flag= true;
-        public Messenger(String sender_id, String receiver_id)
+        int id_khachhang;
+        bool isNhanVien; //true là khách hàng, false là nhân viên
+        ThongTinNhanVien nv;
+        public Messenger(int id_khachhang, ThongTinNhanVien nv, bool ronaldo)
         {
             InitializeComponent();
-            this.sender_id=sender_id;
-            this.receiver_id=receiver_id;
+            this.nv = nv;
+            this.id_khachhang = id_khachhang;
+            this.isNhanVien = ronaldo;
             flowLayoutPanelMessages.AutoScroll = true;
             LoadMessages();
-            //MessageBox.Show(DateTime.Now.ToString());
-            display();
+            //display();
         }
-        
+        public Messenger(int id_khachhang, bool ronaldo)
+        {
+            InitializeComponent();
+            this.id_khachhang = id_khachhang;
+            this.isNhanVien = ronaldo;
+            flowLayoutPanelMessages.AutoScroll = true;
+            LoadMessages();
+            //display();
+        }
+
 
         private void LoadMessages()
         {
@@ -42,24 +51,21 @@ namespace CNPM
                 {
                     conn.Open();
                     string query = @"
-                SELECT Người_Gửi, Người_Nhận, Nội_Dung, Thời_Gian 
-                FROM Messagers
-                WHERE (Người_Gửi = @sender_id AND Người_Nhận = @receiver_id)
-                   OR (Người_Gửi = @receiver_id AND Người_Nhận = @sender_id)
-                ORDER BY Thời_Gian";
+                SELECT MaKhachHang, MaNhanVienHoacQuanLy, Role, NoiDung, ThoiGian 
+                FROM TinNhan
+                WHERE MaKhachHang = @makh
+                ORDER BY ThoiGian";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@sender_id", sender_id);
-                        cmd.Parameters.AddWithValue("@receiver_id", receiver_id);
+                        cmd.Parameters.AddWithValue("@makh", id_khachhang);
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                string sender = reader["Người_Gửi"].ToString();
-                                string message = reader["Thời_Gian"].ToString()+reader["Nội_Dung"].ToString();
-                                bool isSender = (sender == sender_id);
+                                string message = reader["ThoiGian"].ToString()+reader["NoiDung"].ToString().ToLower();
+                                bool isSender = ((reader["Role"]!=null) == isNhanVien);
 
                                 AddMessageToPanel(EditMessage(message).Item1, EditMessage(message).Item2, isSender);
                             }
@@ -165,8 +171,15 @@ namespace CNPM
 
         private void real_send_message()
         {
-            string messageText = text_input.Text.Trim();
-
+            string messageText;
+            if (isNhanVien)
+            {
+                messageText = text_input.Text.Trim()+ "-" + nv.VaiTro.ToString() + nv.MaNhanVien.ToString();
+            }
+            else
+            {
+                messageText= text_input.Text.Trim();
+            }
             if (string.IsNullOrEmpty(messageText))
             {
                 MessageBox.Show("Vui lòng nhập nội dung tin nhắn.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -175,21 +188,40 @@ namespace CNPM
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = DatabaseConnection.GetConnection())
                 {
                     conn.Open();
-                    string query = @"
-                INSERT INTO Messagers (Người_Gửi, Người_Nhận, Nội_Dung, Thời_Gian)
-                VALUES (@SenderId, @ReceiverId, @MessageText, @SentAt)";
-
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    if (isNhanVien)
                     {
-                        cmd.Parameters.AddWithValue("@SenderId", sender_id);
-                        cmd.Parameters.AddWithValue("@ReceiverId", receiver_id);
-                        cmd.Parameters.AddWithValue("@MessageText", messageText);
-                        cmd.Parameters.AddWithValue("@SentAt", DateTime.Now);
+                        string query = @"
+                        INSERT INTO TinNhan (MaKhachHang, MaNhanVienHoacQuanLy,Role , NoiDung, ThoiGian)
+                        VALUES (@makh, @manv, @role, @MessageText, @SentAt)";
 
-                        cmd.ExecuteNonQuery();
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@makh", id_khachhang);
+                            cmd.Parameters.AddWithValue("@manv", nv.MaNhanVien);
+                            cmd.Parameters.AddWithValue("@role", nv.VaiTro);
+                            cmd.Parameters.AddWithValue("@MessageText", messageText);
+                            cmd.Parameters.AddWithValue("@SentAt", DateTime.Now);
+
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    else
+                    {
+                        string query = @"
+                        INSERT INTO TinNhan (MaKhachHang , NoiDung, ThoiGian)
+                        VALUES (@makh, @MessageText, @SentAt)";
+
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@makh", id_khachhang);
+                            cmd.Parameters.AddWithValue("@MessageText", messageText);
+                            cmd.Parameters.AddWithValue("@SentAt", DateTime.Now);
+
+                            cmd.ExecuteNonQuery();
+                        }
                     }
                 }
 
@@ -202,55 +234,55 @@ namespace CNPM
             }
         }
 
-        private void display()
-        {
-            bool flag = receiver_id.Trim().StartsWith("SV");
-            string query = "SELECT Họ_và_Tên, Hình_Ảnh FROM Thông_Tin_Sinh_Viên WHERE Mã_Sinh_Viên = @id";
-            if (!flag)
-            {
-                query = "SELECT Họ_và_Tên, Hình_Ảnh FROM Thông_Tin_Giảng_Viên WHERE Mã_Giảng_Viên = @id";
-            }
+        //private void display()
+        //{
+        //    bool flag = receiver_id.Trim().StartsWith("SV");
+        //    string query = "SELECT Họ_và_Tên, Hình_Ảnh FROM Thông_Tin_Sinh_Viên WHERE Mã_Sinh_Viên = @id";
+        //    if (!flag)
+        //    {
+        //        query = "SELECT Họ_và_Tên, Hình_Ảnh FROM Thông_Tin_Giảng_Viên WHERE Mã_Giảng_Viên = @id";
+        //    }
 
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
+        //    try
+        //    {
+        //        using (SqlConnection conn = DatabaseConnection.GetConnection())
+        //        {
+        //            conn.Open();
                   
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@id", receiver_id);
+        //            using (SqlCommand cmd = new SqlCommand(query, conn))
+        //            {
+        //                cmd.Parameters.AddWithValue("@id", receiver_id);
 
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                // Gán tên
-                                name_user.Text = reader["Họ_và_Tên"].ToString();
+        //                using (SqlDataReader reader = cmd.ExecuteReader())
+        //                {
+        //                    if (reader.Read())
+        //                    {
+        //                        // Gán tên
+        //                        name_user.Text = reader["Họ_và_Tên"].ToString();
 
-                                // Gán ảnh
-                                if (reader["Hình_Ảnh"] != DBNull.Value)
-                                {
-                                    byte[] imgBytes = (byte[])reader["Hình_Ảnh"];
-                                    using (MemoryStream ms = new MemoryStream(imgBytes))
-                                    {
-                                        pictureBox3.Image = Image.FromStream(ms);
-                                    }
-                                }
-                                else
-                                {
-                                    //pictureBox3.Image = Properties.Resources.usercut; 
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi tải thông tin sinh viên:\n" + ex.Message);
-            }
-        }
+        //                        // Gán ảnh
+        //                        if (reader["Hình_Ảnh"] != DBNull.Value)
+        //                        {
+        //                            byte[] imgBytes = (byte[])reader["Hình_Ảnh"];
+        //                            using (MemoryStream ms = new MemoryStream(imgBytes))
+        //                            {
+        //                                pictureBox3.Image = Image.FromStream(ms);
+        //                            }
+        //                        }
+        //                        else
+        //                        {
+        //                            //pictureBox3.Image = Properties.Resources.usercut; 
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Lỗi khi tải thông tin sinh viên:\n" + ex.Message);
+        //    }
+        //}
 
         private void close_Click(object sender, EventArgs e)
         {

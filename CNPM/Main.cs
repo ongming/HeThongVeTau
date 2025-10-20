@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace CNPM
         public ThongTinNhanVien nv;
         public Main(ThongTinNhanVien nv)
         {
+            NhanVienRepository.GhiThongBaoDangNhap(nv.MaNhanVien,nv.VaiTro);
             this.nv = nv;
             InitializeComponent();
             pnThongBao = new Guna.UI2.WinForms.Guna2Panel()
@@ -41,6 +43,45 @@ namespace CNPM
                 }
             };
             this.nv = nv;
+            CapNhatTrangThaiThongBao();
+            CanhChamDoTheoThongBao();
+            DataTable table = NguoiDungRepository.LayThongTin(nv.MaNhanVien, nv.VaiTro);
+            if (table.Rows.Count > 0 && table.Rows[0]["Avatar"] != DBNull.Value)
+            {
+                byte[] avatarBytes = (byte[])table.Rows[0]["Avatar"];
+
+                using (MemoryStream ms = new MemoryStream(avatarBytes))
+                {
+                    pictureBox_avatar.Image = Image.FromStream(ms);
+                    pictureBox_avatar.SizeMode = PictureBoxSizeMode.StretchImage; // cho ảnh vừa khung
+                }
+            }
+            else
+            {
+                // Nếu chưa có ảnh thì hiển thị ảnh mặc định
+                pictureBox_avatar.Image = Properties.Resources.androgynous_avatar_non_binary_queer_person;
+                pictureBox_avatar.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+        private void CapNhatTrangThaiThongBao()
+        {
+            bool coMoi = NhanVienRepository.CoThongBaoChuaXem(nv.MaNhanVien, nv.VaiTro);
+            panel_DOT.Visible = coMoi;
+        }
+        private void CanhChamDoTheoThongBao()
+        {
+            // Nếu chấm đỏ không nằm cùng parent -> thêm vào nút
+            if (panel_DOT.Parent != btn_ThongBao)
+            {
+                btn_ThongBao.Controls.Add(panel_DOT);
+                panel_DOT.BringToFront();
+            }
+
+            // Canh vị trí trong phạm vi của nút
+            panel_DOT.Location = new Point(
+                btn_ThongBao.Width - panel_DOT.Width - 2, // sát mép phải
+                0     // lệch xuống một chút
+            );
         }
         private void Container(Form fm)
         {
@@ -68,7 +109,7 @@ namespace CNPM
 
         private void btn_KhachHang_Click(object sender, EventArgs e)
         {
-            QuanLyKhachHang quanLyKhachHang = new QuanLyKhachHang();
+            QuanLyKhachHang quanLyKhachHang = new QuanLyKhachHang(nv);
             Container(quanLyKhachHang);
         }
 
@@ -135,11 +176,105 @@ namespace CNPM
                 );
 
                 pnThongBao.Visible = true;
+                HienThiThongBao();
+                NhanVienRepository.DanhDauDaXem(nv.MaNhanVien, nv.VaiTro);
+                panel_DOT.Visible = false;
             }
             else
             {
                 pnThongBao.Visible = false;
             }
+        }
+
+        private void HienThiThongBao()
+        {
+            // Xóa nội dung cũ
+            pnThongBao.Controls.Clear();
+
+            // Lấy dữ liệu từ DB
+            DataTable dt = NhanVienRepository.LayThongBaoTheoNguoiNhan(nv.MaNhanVien, nv.VaiTro);
+
+            if (dt.Rows.Count == 0)
+            {
+                Label lbl = new Label
+                {
+                    Text = "📭 Không có thông báo nào",
+                    ForeColor = Color.Gray,
+                    Font = new Font("Segoe UI", 9, FontStyle.Italic),
+                    AutoSize = false,
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Dock = DockStyle.Fill
+                };
+                pnThongBao.Controls.Add(lbl);
+                return;
+            }
+
+            // 🧱 Tạo container Panel giữ layout ổn định
+            Panel container = new Panel
+            {
+                Dock = DockStyle.Fill,
+                AutoScroll = true,
+                Padding = new Padding(5),
+                BackColor = Color.White
+            };
+
+            // 🔹 FlowLayoutPanel để chứa từng item
+            FlowLayoutPanel flow = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Top,
+                AutoSize = true,
+                AutoSizeMode = AutoSizeMode.GrowAndShrink,
+                FlowDirection = FlowDirection.TopDown,
+                WrapContents = false,
+                BackColor = Color.White
+            };
+
+            // 🔹 Duyệt từng dòng trong DataTable
+            foreach (DataRow row in dt.Rows)
+            {
+                // 📨 Panel cho từng thông báo
+                Panel item = new Panel
+                {
+                    Width = pnThongBao.Width - 50,
+                    Height = 55,
+                    BackColor = Color.FromArgb(248, 250, 255),
+                    Margin = new Padding(5),
+                    BorderStyle = BorderStyle.FixedSingle
+                };
+
+                // Tiêu đề nội dung
+                Label lblNoiDung = new Label
+                {
+                    Text = row["NoiDung"].ToString(),
+                    Font = new Font("Segoe UI", 9, FontStyle.Regular),
+                    ForeColor = Color.Black,
+                    AutoSize = false,
+                    Size = new Size(item.Width - 10, 30),
+                    Location = new Point(5, 5)
+                };
+                item.Controls.Add(lblNoiDung);
+
+                // Thời gian
+                Label lblTime = new Label
+                {
+                    Text = row["ThoiGian"].ToString(),
+                    Font = new Font("Segoe UI", 8, FontStyle.Italic),
+                    ForeColor = Color.DimGray,
+                    AutoSize = true,
+                    Location = new Point(5, 33)
+                };
+                item.Controls.Add(lblTime);
+
+                // Nếu chưa xem → đánh dấu xanh nhạt
+                if (row["DaXem"] != DBNull.Value && !(bool)row["DaXem"])
+                    item.BackColor = Color.FromArgb(225, 240, 255);
+
+                flow.Controls.Add(item);
+            }
+
+            // ✅ Gắn flow vào container
+            container.Controls.Add(flow);
+            pnThongBao.Controls.Add(container);
         }
     }
 }

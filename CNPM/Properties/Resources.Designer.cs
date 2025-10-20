@@ -353,6 +353,16 @@ namespace CNPM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nhantin {
+            get {
+                object obj = ResourceManager.GetObject("nhantin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap order_history_11636547 {
             get {
                 object obj = ResourceManager.GetObject("order-history_11636547", resourceCulture);
@@ -596,6 +606,16 @@ namespace CNPM.Properties {
         internal static System.Drawing.Bitmap witness_1518564 {
             get {
                 object obj = ResourceManager.GetObject("witness_1518564", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xoa {
+            get {
+                object obj = ResourceManager.GetObject("xoa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

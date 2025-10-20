@@ -48,14 +48,14 @@
             // 
             this.name_user.AutoSize = true;
             this.name_user.BackColor = System.Drawing.Color.Transparent;
-            this.name_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_user.Font = new System.Drawing.Font("Segoe UI Black", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(164)))), ((int)(((byte)(255)))));
             this.name_user.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.name_user.Location = new System.Drawing.Point(142, 42);
+            this.name_user.Location = new System.Drawing.Point(129, 43);
             this.name_user.Name = "name_user";
-            this.name_user.Size = new System.Drawing.Size(98, 32);
+            this.name_user.Size = new System.Drawing.Size(360, 45);
             this.name_user.TabIndex = 1;
-            this.name_user.Text = "label1";
+            this.name_user.Text = "Chăm sóc khách hàng";
             // 
             // text_input
             // 
@@ -106,12 +106,12 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
-            //this.pictureBox3.Image = global::QuanLySinhVien.Properties.Resources.usercut1;
+            this.pictureBox3.Image = global::CNPM.Properties.Resources.profile;
             this.pictureBox3.Location = new System.Drawing.Point(14, 11);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 88);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.Size = new System.Drawing.Size(91, 88);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
