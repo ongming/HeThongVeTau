@@ -339,10 +339,10 @@
             // 
             this.lb_ThanhToan.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ThanhToan.ForeColor = System.Drawing.Color.Black;
-            this.lb_ThanhToan.Location = new System.Drawing.Point(385, 403);
+            this.lb_ThanhToan.Location = new System.Drawing.Point(251, 403);
             this.lb_ThanhToan.Name = "lb_ThanhToan";
             this.lb_ThanhToan.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb_ThanhToan.Size = new System.Drawing.Size(64, 17);
+            this.lb_ThanhToan.Size = new System.Drawing.Size(198, 17);
             this.lb_ThanhToan.TabIndex = 76;
             this.lb_ThanhToan.Text = "00000000";
             this.lb_ThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -351,10 +351,10 @@
             // 
             this.lb_GiaVe.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_GiaVe.ForeColor = System.Drawing.Color.Black;
-            this.lb_GiaVe.Location = new System.Drawing.Point(323, 374);
+            this.lb_GiaVe.Location = new System.Drawing.Point(304, 374);
             this.lb_GiaVe.Name = "lb_GiaVe";
             this.lb_GiaVe.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb_GiaVe.Size = new System.Drawing.Size(126, 17);
+            this.lb_GiaVe.Size = new System.Drawing.Size(145, 17);
             this.lb_GiaVe.TabIndex = 75;
             this.lb_GiaVe.Text = "Nguyễn Văn A";
             this.lb_GiaVe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
