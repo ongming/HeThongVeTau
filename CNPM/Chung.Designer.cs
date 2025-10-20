@@ -28,49 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.chartLoaiVe = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel_main = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GradientPanel11 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lbDiemtrungbinh = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.guna2GradientPanel9 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lbTuyenphobien = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.guna2GradientPanel7 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbTongdoanhthu = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbVedaban = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartDanhGia = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.date_DenNgayVe = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -79,7 +79,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartLuongVe = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.date_DenNgayDoanhThu = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -88,8 +88,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.Grid_Ve = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.chartDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLoaiVe)).BeginInit();
             this.panel_main.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -103,39 +103,39 @@
             this.guna2GradientPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDanhGia)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLuongVe)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid_Ve)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
-            // chart1
+            // chartLoaiVe
             // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.chartLoaiVe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.chart1.BackColor = System.Drawing.Color.Gray;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(86, 132);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(379, 286);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.chartLoaiVe.BackColor = System.Drawing.Color.Gray;
+            chartArea9.Name = "ChartArea1";
+            this.chartLoaiVe.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chartLoaiVe.Legends.Add(legend9);
+            this.chartLoaiVe.Location = new System.Drawing.Point(58, 132);
+            this.chartLoaiVe.Name = "chartLoaiVe";
+            this.chartLoaiVe.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.chartLoaiVe.Series.Add(series9);
+            this.chartLoaiVe.Size = new System.Drawing.Size(458, 341);
+            this.chartLoaiVe.TabIndex = 0;
+            this.chartLoaiVe.Text = "chart1";
             // 
             // panel_main
             // 
@@ -164,6 +164,7 @@
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
             this.guna2GradientPanel4.Size = new System.Drawing.Size(1148, 3497);
             this.guna2GradientPanel4.TabIndex = 1;
+            this.guna2GradientPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel4_Paint);
             // 
             // tableLayoutPanel1
             // 
@@ -195,7 +196,7 @@
             this.guna2GradientPanel11.BorderRadius = 5;
             this.guna2GradientPanel11.BorderThickness = 1;
             this.guna2GradientPanel11.Controls.Add(this.pictureBox2);
-            this.guna2GradientPanel11.Controls.Add(this.label17);
+            this.guna2GradientPanel11.Controls.Add(this.lbDiemtrungbinh);
             this.guna2GradientPanel11.Controls.Add(this.pictureBox7);
             this.guna2GradientPanel11.Controls.Add(this.label18);
             this.guna2GradientPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -207,23 +208,23 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CNPM.Properties.Resources.star;
-            this.pictureBox2.Location = new System.Drawing.Point(138, 110);
+            this.pictureBox2.Location = new System.Drawing.Point(100, 112);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
-            // label17
+            // lbDiemtrungbinh
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbDiemtrungbinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(48, 110);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(190, 41);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "No data";
+            this.lbDiemtrungbinh.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDiemtrungbinh.Location = new System.Drawing.Point(48, 110);
+            this.lbDiemtrungbinh.Name = "lbDiemtrungbinh";
+            this.lbDiemtrungbinh.Size = new System.Drawing.Size(190, 41);
+            this.lbDiemtrungbinh.TabIndex = 6;
+            this.lbDiemtrungbinh.Text = "No data";
             // 
             // pictureBox7
             // 
@@ -254,7 +255,7 @@
             this.guna2GradientPanel9.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientPanel9.BorderRadius = 5;
             this.guna2GradientPanel9.BorderThickness = 1;
-            this.guna2GradientPanel9.Controls.Add(this.label13);
+            this.guna2GradientPanel9.Controls.Add(this.lbTuyenphobien);
             this.guna2GradientPanel9.Controls.Add(this.pictureBox5);
             this.guna2GradientPanel9.Controls.Add(this.label14);
             this.guna2GradientPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -263,16 +264,17 @@
             this.guna2GradientPanel9.Size = new System.Drawing.Size(240, 178);
             this.guna2GradientPanel9.TabIndex = 5;
             // 
-            // label13
+            // lbTuyenphobien
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbTuyenphobien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(48, 110);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(189, 41);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "No data";
+            this.lbTuyenphobien.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTuyenphobien.Location = new System.Drawing.Point(21, 110);
+            this.lbTuyenphobien.Name = "lbTuyenphobien";
+            this.lbTuyenphobien.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbTuyenphobien.Size = new System.Drawing.Size(216, 41);
+            this.lbTuyenphobien.TabIndex = 6;
+            this.lbTuyenphobien.Text = "No data";
             // 
             // pictureBox5
             // 
@@ -303,7 +305,7 @@
             this.guna2GradientPanel7.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientPanel7.BorderRadius = 5;
             this.guna2GradientPanel7.BorderThickness = 1;
-            this.guna2GradientPanel7.Controls.Add(this.label9);
+            this.guna2GradientPanel7.Controls.Add(this.lbTongdoanhthu);
             this.guna2GradientPanel7.Controls.Add(this.pictureBox3);
             this.guna2GradientPanel7.Controls.Add(this.label10);
             this.guna2GradientPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -312,16 +314,16 @@
             this.guna2GradientPanel7.Size = new System.Drawing.Size(240, 178);
             this.guna2GradientPanel7.TabIndex = 3;
             // 
-            // label9
+            // lbTongdoanhthu
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbTongdoanhthu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(48, 110);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(189, 41);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "No data";
+            this.lbTongdoanhthu.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongdoanhthu.Location = new System.Drawing.Point(48, 110);
+            this.lbTongdoanhthu.Name = "lbTongdoanhthu";
+            this.lbTongdoanhthu.Size = new System.Drawing.Size(189, 41);
+            this.lbTongdoanhthu.TabIndex = 6;
+            this.lbTongdoanhthu.Text = "No data";
             // 
             // pictureBox3
             // 
@@ -352,7 +354,7 @@
             this.guna2GradientPanel5.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientPanel5.BorderRadius = 5;
             this.guna2GradientPanel5.BorderThickness = 1;
-            this.guna2GradientPanel5.Controls.Add(this.label7);
+            this.guna2GradientPanel5.Controls.Add(this.lbVedaban);
             this.guna2GradientPanel5.Controls.Add(this.pictureBox1);
             this.guna2GradientPanel5.Controls.Add(this.label5);
             this.guna2GradientPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -361,16 +363,16 @@
             this.guna2GradientPanel5.Size = new System.Drawing.Size(240, 178);
             this.guna2GradientPanel5.TabIndex = 1;
             // 
-            // label7
+            // lbVedaban
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbVedaban.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(48, 110);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(189, 41);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "No data";
+            this.lbVedaban.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVedaban.Location = new System.Drawing.Point(48, 110);
+            this.lbVedaban.Name = "lbVedaban";
+            this.lbVedaban.Size = new System.Drawing.Size(189, 41);
+            this.lbVedaban.TabIndex = 6;
+            this.lbVedaban.Text = "No data";
             // 
             // pictureBox1
             // 
@@ -405,8 +407,8 @@
             this.guna2GradientPanel1.BorderThickness = 1;
             this.guna2GradientPanel1.Controls.Add(this.label1);
             this.guna2GradientPanel1.Controls.Add(this.label2);
-            this.guna2GradientPanel1.Controls.Add(this.chart4);
-            this.guna2GradientPanel1.Controls.Add(this.chart1);
+            this.guna2GradientPanel1.Controls.Add(this.chartDanhGia);
+            this.guna2GradientPanel1.Controls.Add(this.chartLoaiVe);
             this.guna2GradientPanel1.Location = new System.Drawing.Point(35, 289);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1075, 700);
@@ -416,7 +418,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(602, 53);
+            this.label1.Location = new System.Drawing.Point(603, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(252, 38);
             this.label1.TabIndex = 8;
@@ -432,26 +434,26 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Thống kê loại vé";
             // 
-            // chart4
+            // chartDanhGia
             // 
-            this.chart4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.chartDanhGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.chart4.BackColor = System.Drawing.Color.Gray;
-            chartArea2.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart4.Legends.Add(legend2);
-            this.chart4.Location = new System.Drawing.Point(619, 132);
-            this.chart4.Name = "chart4";
-            this.chart4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart4.Series.Add(series2);
-            this.chart4.Size = new System.Drawing.Size(379, 286);
-            this.chart4.TabIndex = 1;
-            this.chart4.Text = "chart4";
+            this.chartDanhGia.BackColor = System.Drawing.Color.Gray;
+            chartArea11.Name = "ChartArea1";
+            this.chartDanhGia.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chartDanhGia.Legends.Add(legend11);
+            this.chartDanhGia.Location = new System.Drawing.Point(524, 132);
+            this.chartDanhGia.Name = "chartDanhGia";
+            this.chartDanhGia.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series11.Legend = "Legend1";
+            series11.Name = "Series1";
+            this.chartDanhGia.Series.Add(series11);
+            this.chartDanhGia.Size = new System.Drawing.Size(474, 341);
+            this.chartDanhGia.TabIndex = 1;
+            this.chartDanhGia.Text = "chart4";
             // 
             // guna2GradientPanel3
             // 
@@ -463,7 +465,7 @@
             this.guna2GradientPanel3.BorderThickness = 1;
             this.guna2GradientPanel3.Controls.Add(this.tableLayoutPanel3);
             this.guna2GradientPanel3.Controls.Add(this.guna2DataGridView1);
-            this.guna2GradientPanel3.Controls.Add(this.chart3);
+            this.guna2GradientPanel3.Controls.Add(this.chartLuongVe);
             this.guna2GradientPanel3.Location = new System.Drawing.Point(35, 2273);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(1075, 1158);
@@ -478,7 +480,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.date_DenNgayVe, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.ComboBox_ThongKeVe, 1, 0);
@@ -506,13 +508,14 @@
             this.date_DenNgayVe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_DenNgayVe.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_DenNgayVe.HoverState.FillColor = System.Drawing.Color.White;
-            this.date_DenNgayVe.Location = new System.Drawing.Point(808, 3);
+            this.date_DenNgayVe.Location = new System.Drawing.Point(804, 3);
             this.date_DenNgayVe.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_DenNgayVe.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_DenNgayVe.Name = "date_DenNgayVe";
-            this.date_DenNgayVe.Size = new System.Drawing.Size(155, 44);
+            this.date_DenNgayVe.Size = new System.Drawing.Size(154, 44);
             this.date_DenNgayVe.TabIndex = 12;
             this.date_DenNgayVe.Value = new System.DateTime(2025, 10, 8, 9, 34, 12, 257);
+            this.date_DenNgayVe.ValueChanged += new System.EventHandler(this.date_DenNgayVe_ValueChanged);
             // 
             // ComboBox_ThongKeVe
             // 
@@ -530,13 +533,16 @@
             this.ComboBox_ThongKeVe.ForeColor = System.Drawing.Color.Black;
             this.ComboBox_ThongKeVe.ItemHeight = 30;
             this.ComboBox_ThongKeVe.Items.AddRange(new object[] {
+            "Năm",
+            "Quý",
             "Tháng",
             "Tuần"});
-            this.ComboBox_ThongKeVe.Location = new System.Drawing.Point(486, 3);
+            this.ComboBox_ThongKeVe.Location = new System.Drawing.Point(484, 3);
             this.ComboBox_ThongKeVe.Name = "ComboBox_ThongKeVe";
-            this.ComboBox_ThongKeVe.Size = new System.Drawing.Size(155, 36);
+            this.ComboBox_ThongKeVe.Size = new System.Drawing.Size(154, 36);
             this.ComboBox_ThongKeVe.TabIndex = 11;
             this.ComboBox_ThongKeVe.Tag = "";
+            this.ComboBox_ThongKeVe.SelectedIndexChanged += new System.EventHandler(this.ComboBox_ThongKeVe_SelectedIndexChanged);
             // 
             // date_TuNgayVe
             // 
@@ -553,13 +559,14 @@
             this.date_TuNgayVe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_TuNgayVe.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_TuNgayVe.HoverState.FillColor = System.Drawing.Color.White;
-            this.date_TuNgayVe.Location = new System.Drawing.Point(647, 3);
+            this.date_TuNgayVe.Location = new System.Drawing.Point(644, 3);
             this.date_TuNgayVe.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_TuNgayVe.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_TuNgayVe.Name = "date_TuNgayVe";
-            this.date_TuNgayVe.Size = new System.Drawing.Size(155, 44);
+            this.date_TuNgayVe.Size = new System.Drawing.Size(154, 44);
             this.date_TuNgayVe.TabIndex = 3;
             this.date_TuNgayVe.Value = new System.DateTime(2025, 10, 8, 9, 34, 12, 257);
+            this.date_TuNgayVe.ValueChanged += new System.EventHandler(this.date_TuNgayVe_ValueChanged);
             // 
             // panel3
             // 
@@ -567,7 +574,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(477, 44);
+            this.panel3.Size = new System.Drawing.Size(475, 44);
             this.panel3.TabIndex = 0;
             // 
             // label4
@@ -582,31 +589,31 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.guna2DataGridView1.ColumnHeadersHeight = 4;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(37, 674);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
@@ -638,25 +645,25 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // chart3
+            // chartLuongVe
             // 
-            this.chart3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.chartLuongVe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.chart3.BackColor = System.Drawing.Color.Gray;
-            chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(86, 137);
-            this.chart3.Name = "chart3";
-            this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart3.Series.Add(series3);
-            this.chart3.Size = new System.Drawing.Size(912, 473);
-            this.chart3.TabIndex = 0;
-            this.chart3.Text = "chart3";
+            this.chartLuongVe.BackColor = System.Drawing.Color.Gray;
+            chartArea10.Name = "ChartArea1";
+            this.chartLuongVe.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chartLuongVe.Legends.Add(legend10);
+            this.chartLuongVe.Location = new System.Drawing.Point(86, 137);
+            this.chartLuongVe.Name = "chartLuongVe";
+            this.chartLuongVe.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series10.ChartArea = "ChartArea1";
+            series10.Legend = "Legend1";
+            series10.Name = "Series1";
+            this.chartLuongVe.Series.Add(series10);
+            this.chartLuongVe.Size = new System.Drawing.Size(912, 473);
+            this.chartLuongVe.TabIndex = 0;
+            this.chartLuongVe.Text = "chart3";
             // 
             // guna2GradientPanel2
             // 
@@ -668,7 +675,7 @@
             this.guna2GradientPanel2.BorderThickness = 1;
             this.guna2GradientPanel2.Controls.Add(this.tableLayoutPanel2);
             this.guna2GradientPanel2.Controls.Add(this.Grid_Ve);
-            this.guna2GradientPanel2.Controls.Add(this.chart2);
+            this.guna2GradientPanel2.Controls.Add(this.chartDoanhThu);
             this.guna2GradientPanel2.Location = new System.Drawing.Point(35, 1092);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1075, 1118);
@@ -683,7 +690,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.date_DenNgayDoanhThu, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox_DoanhThu, 1, 0);
@@ -711,13 +718,14 @@
             this.date_DenNgayDoanhThu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_DenNgayDoanhThu.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_DenNgayDoanhThu.HoverState.FillColor = System.Drawing.Color.White;
-            this.date_DenNgayDoanhThu.Location = new System.Drawing.Point(808, 3);
+            this.date_DenNgayDoanhThu.Location = new System.Drawing.Point(804, 3);
             this.date_DenNgayDoanhThu.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_DenNgayDoanhThu.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_DenNgayDoanhThu.Name = "date_DenNgayDoanhThu";
-            this.date_DenNgayDoanhThu.Size = new System.Drawing.Size(155, 44);
+            this.date_DenNgayDoanhThu.Size = new System.Drawing.Size(154, 44);
             this.date_DenNgayDoanhThu.TabIndex = 12;
             this.date_DenNgayDoanhThu.Value = new System.DateTime(2025, 10, 8, 9, 34, 12, 257);
+            this.date_DenNgayDoanhThu.ValueChanged += new System.EventHandler(this.date_DenNgayDoanhThu_ValueChanged);
             // 
             // comboBox_DoanhThu
             // 
@@ -735,13 +743,16 @@
             this.comboBox_DoanhThu.ForeColor = System.Drawing.Color.Black;
             this.comboBox_DoanhThu.ItemHeight = 30;
             this.comboBox_DoanhThu.Items.AddRange(new object[] {
+            "Năm",
+            "Quý",
             "Tháng",
             "Tuần"});
-            this.comboBox_DoanhThu.Location = new System.Drawing.Point(486, 3);
+            this.comboBox_DoanhThu.Location = new System.Drawing.Point(484, 3);
             this.comboBox_DoanhThu.Name = "comboBox_DoanhThu";
-            this.comboBox_DoanhThu.Size = new System.Drawing.Size(155, 36);
+            this.comboBox_DoanhThu.Size = new System.Drawing.Size(154, 36);
             this.comboBox_DoanhThu.TabIndex = 11;
             this.comboBox_DoanhThu.Tag = "";
+            this.comboBox_DoanhThu.SelectedIndexChanged += new System.EventHandler(this.comboBox_DoanhThu_SelectedIndexChanged);
             // 
             // date_TuNgayDoanhThu
             // 
@@ -758,13 +769,14 @@
             this.date_TuNgayDoanhThu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_TuNgayDoanhThu.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_TuNgayDoanhThu.HoverState.FillColor = System.Drawing.Color.White;
-            this.date_TuNgayDoanhThu.Location = new System.Drawing.Point(647, 3);
+            this.date_TuNgayDoanhThu.Location = new System.Drawing.Point(644, 3);
             this.date_TuNgayDoanhThu.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_TuNgayDoanhThu.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_TuNgayDoanhThu.Name = "date_TuNgayDoanhThu";
-            this.date_TuNgayDoanhThu.Size = new System.Drawing.Size(155, 44);
+            this.date_TuNgayDoanhThu.Size = new System.Drawing.Size(154, 44);
             this.date_TuNgayDoanhThu.TabIndex = 3;
             this.date_TuNgayDoanhThu.Value = new System.DateTime(2025, 10, 8, 9, 34, 12, 257);
+            this.date_TuNgayDoanhThu.ValueChanged += new System.EventHandler(this.date_TuNgayDoanhThu_ValueChanged);
             // 
             // panel1
             // 
@@ -772,7 +784,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(477, 44);
+            this.panel1.Size = new System.Drawing.Size(475, 44);
             this.panel1.TabIndex = 0;
             // 
             // label3
@@ -787,31 +799,31 @@
             // 
             // Grid_Ve
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.Grid_Ve.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.Grid_Ve.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.Grid_Ve.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Grid_Ve.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid_Ve.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid_Ve.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.Grid_Ve.ColumnHeadersHeight = 4;
             this.Grid_Ve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Grid_Ve.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid_Ve.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid_Ve.DefaultCellStyle = dataGridViewCellStyle18;
             this.Grid_Ve.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Grid_Ve.Location = new System.Drawing.Point(37, 671);
             this.Grid_Ve.Name = "Grid_Ve";
@@ -843,37 +855,36 @@
             this.Grid_Ve.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Grid_Ve.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // chart2
+            // chartDoanhThu
             // 
-            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.chartDoanhThu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.chart2.BackColor = System.Drawing.Color.Gray;
-            chartArea4.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart2.Legends.Add(legend4);
-            this.chart2.Location = new System.Drawing.Point(86, 136);
-            this.chart2.Name = "chart2";
-            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart2.Series.Add(series4);
-            this.chart2.Size = new System.Drawing.Size(912, 473);
-            this.chart2.TabIndex = 0;
-            this.chart2.Text = "chart2";
+            this.chartDoanhThu.BackColor = System.Drawing.Color.Gray;
+            chartArea12.Name = "ChartArea1";
+            this.chartDoanhThu.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chartDoanhThu.Legends.Add(legend12);
+            this.chartDoanhThu.Location = new System.Drawing.Point(86, 136);
+            this.chartDoanhThu.Name = "chartDoanhThu";
+            this.chartDoanhThu.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series12.Legend = "Legend1";
+            series12.Name = "Series1";
+            this.chartDoanhThu.Series.Add(series12);
+            this.chartDoanhThu.Size = new System.Drawing.Size(912, 473);
+            this.chartDoanhThu.TabIndex = 0;
+            this.chartDoanhThu.Text = "chart2";
             // 
             // Chung
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.Controls.Add(this.panel_main);
             this.Name = "Chung";
             this.Size = new System.Drawing.Size(1148, 3500);
             this.Load += new System.EventHandler(this.Chung_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLoaiVe)).EndInit();
             this.panel_main.ResumeLayout(false);
             this.guna2GradientPanel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -888,53 +899,53 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDanhGia)).EndInit();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLuongVe)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid_Ve)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartLoaiVe;
         private Guna.UI2.WinForms.Guna2GradientPanel panel_main;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartLuongVe;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDoanhThu;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDanhGia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel11;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lbDiemtrungbinh;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label18;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel9;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbTuyenphobien;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbTongdoanhthu;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbVedaban;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;

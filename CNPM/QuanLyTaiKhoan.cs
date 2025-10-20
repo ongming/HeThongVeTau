@@ -72,5 +72,11 @@ namespace CNPM
                 Grid_TaiKhoanNhanVien.DataSource = dt;
             }
         }
+
+        private void btn_ThemNhanVien_Click(object sender, EventArgs e)
+        {
+            ThemNhanVien themNhanVien = new ThemNhanVien();
+            themNhanVien.ShowDialog();
+        }
     }
 }
