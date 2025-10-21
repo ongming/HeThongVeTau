@@ -196,50 +196,89 @@ namespace CNPM
             }
             else if (columnName == "btnDelete")
             {
-                // Xác nhận xóa khách hàng
-                var result = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (result == DialogResult.Yes)
+                try
                 {
                     using (SqlConnection conn = DatabaseConnection.GetConnection())
                     {
                         conn.Open();
-                        string deleteQuery = "DELETE FROM KhachHang WHERE MaKhachHang = @maKH";
-                        using (SqlCommand cmd = new SqlCommand(deleteQuery, conn))
+
+                        //Lấy trạng thái hiện tại
+                        string getStatusQuery = "SELECT TrangThai FROM KhachHang WHERE MaKhachHang = @maKH";
+                        string trangThaiHienTai = "";
+                        using (SqlCommand cmd = new SqlCommand(getStatusQuery, conn))
                         {
+                            cmd.Parameters.AddWithValue("@maKH", maKH);
+                            object result = cmd.ExecuteScalar();
+                            trangThaiHienTai = result?.ToString() ?? "Hoạt động";
+                        }
+
+                        //Xác định trạng thái mới
+                        string trangThaiMoi = trangThaiHienTai == "Hoạt động" ? "Bị chặn" : "Hoạt động";
+                        string thongBao = trangThaiHienTai == "Hoạt động"
+                            ? "Khách hàng này đang hoạt động. Bạn có muốn CHẶN khách hàng này không?"
+                            : "Khách hàng này đang bị chặn. Bạn có muốn KÍCH HOẠT lại khách hàng này không?";
+
+                        //Hỏi xác nhận
+                        var confirm = MessageBox.Show(thongBao, "Xác nhận thay đổi trạng thái", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (confirm != DialogResult.Yes)
+                            return;
+
+                        //Cập nhật trạng thái khách hàng
+                        string updateKH = @"
+                                        UPDATE KhachHang 
+                                        SET TrangThai = @trangThaiMoi 
+                                        WHERE MaKhachHang = @maKH";
+                        using (SqlCommand cmd = new SqlCommand(updateKH, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@trangThaiMoi", trangThaiMoi);
                             cmd.Parameters.AddWithValue("@maKH", maKH);
                             cmd.ExecuteNonQuery();
                         }
+
+                        //Cập nhật trạng thái tài khoản tương ứng
+                        string updateTK = @"
+                                UPDATE TaiKhoan 
+                                SET TrangThai = @trangThaiTK
+                                WHERE MaLienKet = @maKH AND VaiTro = 'KhachHang'";
+
+                        using (SqlCommand cmd = new SqlCommand(updateTK, conn))
+                        {
+                            // Nếu khách hàng bị chặn => tài khoản bị khóa (0)
+                            // Nếu khách hàng hoạt động => tài khoản mở (1)
+                            int trangThaiTK = (trangThaiMoi == "Hoạt động") ? 1 : 0;
+
+                            cmd.Parameters.AddWithValue("@trangThaiTK", trangThaiTK);
+                            cmd.Parameters.AddWithValue("@maKH", maKH);
+                            cmd.ExecuteNonQuery();
+                        }
+                        //Ghi nhật ký hoạt động
+                        string insertLog = "";
+                        if (nv.VaiTro == "NhanVien")
+                            insertLog = "INSERT INTO NhatKy_HoatDong (MaNhanVien, HanhDong, ThoiGian) VALUES (@maNV, @hanhDong, GETDATE())";
+                        else if (nv.VaiTro == "QuanLy")
+                            insertLog = "INSERT INTO NhatKy_HoatDong (MaQuanLy, HanhDong, ThoiGian) VALUES (@maQL, @hanhDong, GETDATE())";
+
+                        if (!string.IsNullOrEmpty(insertLog))
+                        {
+                            using (SqlCommand cmd = new SqlCommand(insertLog, conn))
+                            {
+                                if (nv.VaiTro == "NhanVien")
+                                    cmd.Parameters.AddWithValue("@maNV", nv.MaNhanVien);
+                                else
+                                    cmd.Parameters.AddWithValue("@maQL", nv.MaNhanVien);
+
+                                cmd.Parameters.AddWithValue("@hanhDong", $"Thay đổi trạng thái khách hàng có mã {maKH} từ '{trangThaiHienTai}' sang '{trangThaiMoi}'");
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                        //Thông báo + Reload
+                        MessageBox.Show("✅ Thay đổi trạng thái khách hàng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.FormMain_Load(sender, e);
                     }
-                    MessageBox.Show("Xóa khách hàng thành công."); 
-                    this.FormMain_Load(sender, e);
                 }
-
-            }
-            else if (columnName == "TrangThai")
-            {
-                // Xác nhận thay đổi trạng thái khách hàng nếu đang bị chặn sang hoạt động hoặc ngược lại thay đổi trạng thái trong from taikhoan thành true hoặc false
-                var result = MessageBox.Show("Bạn có chắc chắn muốn thay đổi trạng thái khách hàng này?", "Xác nhận thay đổi trạng thái", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+                catch (Exception ex)
                 {
-                    using (SqlConnection conn = DatabaseConnection.GetConnection())
-                    {
-                        conn.Open();
-                        string updateQuery = "UPDATE KhachHang SET TrangThai = CASE WHEN TrangThai = N'Hoạt động' THEN N'Bị chặn' ELSE N'Hoạt động' END WHERE MaKhachHang = @maKH";
-                        using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@maKH", maKH);
-                            cmd.ExecuteNonQuery();
-                        }
-
-                        string updateTaiKhoanQuery = "UPDATE TaiKhoan SET TrangThai = CASE WHEN TrangThai = 1 THEN 0 ELSE 1 END WHERE MaLienKet = @maKH AND VaiTro = 'KhachHang'";
-                        using (SqlCommand cmd = new SqlCommand(updateTaiKhoanQuery, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@maKH", maKH);
-                            cmd.ExecuteNonQuery();
-                        }
-                    }
-                    MessageBox.Show("Thay đổi trạng thái khách hàng thành công.");
-                    this.FormMain_Load(sender, e);
+                    MessageBox.Show("❌ Lỗi khi thay đổi trạng thái: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

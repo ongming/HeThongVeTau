@@ -156,7 +156,7 @@ namespace CNPM
 
         private void btn_TaiKhoan_Click(object sender, EventArgs e)
         {
-            QuanLyTaiKhoan taiKhoan = new QuanLyTaiKhoan();
+            QuanLyTaiKhoan taiKhoan = new QuanLyTaiKhoan(nv);
             Container(taiKhoan);
         }
 

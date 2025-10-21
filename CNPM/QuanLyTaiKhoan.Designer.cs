@@ -44,7 +44,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_ThongBao = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_ThemNhanVien = new Guna.UI2.WinForms.Guna2Button();
             this.txt_TimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.Grid_NhatKy = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -113,8 +113,8 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.Grid_TaiKhoanNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.Grid_TaiKhoanNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.Grid_TaiKhoanNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -194,8 +194,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.6263F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.11069F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.26301F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel3.Controls.Add(this.btn_ThongBao, 2, 0);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel3.Controls.Add(this.btn_ThemNhanVien, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.txt_TimKiem, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 92);
@@ -206,33 +206,34 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1140, 68);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // btn_ThongBao
+            // btn_ThemNhanVien
             // 
-            this.btn_ThongBao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.btn_ThemNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ThongBao.Animated = true;
-            this.btn_ThongBao.BorderRadius = 10;
-            this.btn_ThongBao.BorderThickness = 1;
-            this.btn_ThongBao.CheckedState.FillColor = System.Drawing.Color.Silver;
-            this.btn_ThongBao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ThongBao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ThongBao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ThongBao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_ThongBao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_ThongBao.FillColor = System.Drawing.Color.RoyalBlue;
-            this.btn_ThongBao.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThongBao.ForeColor = System.Drawing.Color.White;
-            this.btn_ThongBao.Image = global::CNPM.Properties.Resources.icons8_plus_100;
-            this.btn_ThongBao.Location = new System.Drawing.Point(407, 3);
-            this.btn_ThongBao.Name = "btn_ThongBao";
-            this.btn_ThongBao.Size = new System.Drawing.Size(189, 47);
-            this.btn_ThongBao.TabIndex = 11;
-            this.btn_ThongBao.Text = "Thêm nhân viên";
+            this.btn_ThemNhanVien.Animated = true;
+            this.btn_ThemNhanVien.BorderRadius = 10;
+            this.btn_ThemNhanVien.BorderThickness = 1;
+            this.btn_ThemNhanVien.CheckedState.FillColor = System.Drawing.Color.Silver;
+            this.btn_ThemNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ThemNhanVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ThemNhanVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ThemNhanVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_ThemNhanVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_ThemNhanVien.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btn_ThemNhanVien.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThemNhanVien.ForeColor = System.Drawing.Color.White;
+            this.btn_ThemNhanVien.Image = global::CNPM.Properties.Resources.icons8_plus_100;
+            this.btn_ThemNhanVien.Location = new System.Drawing.Point(406, 3);
+            this.btn_ThemNhanVien.Name = "btn_ThemNhanVien";
+            this.btn_ThemNhanVien.Size = new System.Drawing.Size(188, 47);
+            this.btn_ThemNhanVien.TabIndex = 11;
+            this.btn_ThemNhanVien.Text = "Thêm nhân viên";
+            this.btn_ThemNhanVien.Click += new System.EventHandler(this.btn_ThemNhanVien_Click);
             // 
             // txt_TimKiem
             // 
-            this.txt_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txt_TimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_TimKiem.AutoRoundedCorners = true;
             this.txt_TimKiem.BorderColor = System.Drawing.Color.DarkGray;
@@ -254,7 +255,7 @@
             this.txt_TimKiem.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txt_TimKiem.PlaceholderText = "Tìm kiếm...";
             this.txt_TimKiem.SelectedText = "";
-            this.txt_TimKiem.Size = new System.Drawing.Size(348, 45);
+            this.txt_TimKiem.Size = new System.Drawing.Size(347, 45);
             this.txt_TimKiem.TabIndex = 10;
             this.txt_TimKiem.TextChanged += new System.EventHandler(this.txt_TimKiem_TextChanged);
             // 
@@ -310,6 +311,7 @@
             this.Grid_NhatKy.ThemeStyle.RowsStyle.Height = 24;
             this.Grid_NhatKy.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Grid_NhatKy.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.Grid_NhatKy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_NhatKy_CellClick);
             // 
             // tableLayoutPanel6
             // 
@@ -328,8 +330,8 @@
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.ColumnCount = 5;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -348,8 +350,8 @@
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -433,7 +435,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private Guna.UI2.WinForms.Guna2Button btn_ThongBao;
+        private Guna.UI2.WinForms.Guna2Button btn_ThemNhanVien;
         private Guna.UI2.WinForms.Guna2TextBox txt_TimKiem;
         private Guna.UI2.WinForms.Guna2DataGridView Grid_NhatKy;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;

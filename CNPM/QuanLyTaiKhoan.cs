@@ -14,9 +14,11 @@ namespace CNPM
 {
     public partial class QuanLyTaiKhoan : Form
     {
-        public QuanLyTaiKhoan()
+        private ThongTinNhanVien nv;
+        public QuanLyTaiKhoan(ThongTinNhanVien nv)
         {
             InitializeComponent();
+            this.nv = nv;
         }
         private void FormTK_Load(object sender, EventArgs e)
         {
@@ -49,7 +51,8 @@ namespace CNPM
                    
                     HanhDong,
                     ThoiGian
-                FROM NHATKY_HOATDONG";
+                FROM NHATKY_HOATDONG
+                ORDER BY ThoiGian DESC";
 
             using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
@@ -75,8 +78,37 @@ namespace CNPM
 
         private void btn_ThemNhanVien_Click(object sender, EventArgs e)
         {
-            ThemNhanVien themNhanVien = new ThemNhanVien();
+            ThemNhanVien themNhanVien = new ThemNhanVien(nv);
             themNhanVien.ShowDialog();
+            QuanLyTaiKhoan_Load();
+        }
+
+        private void Grid_NhatKy_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Kiểm tra nếu click vào header hoặc hàng trống thì bỏ qua
+            if (e.RowIndex < 0)
+                return;
+
+            // Lấy hàng được click
+            DataGridViewRow selectedRow = Grid_NhatKy.Rows[e.RowIndex];
+
+            // Lấy giá trị trong các cột
+            string maNhatKy = selectedRow.Cells["MaNhatKy"].Value?.ToString();
+            string nguoiThucHien = selectedRow.Cells["NguoiThucHien"].Value?.ToString();
+            string hanhDong = selectedRow.Cells["HanhDong"].Value?.ToString();
+            string thoiGian = selectedRow.Cells["ThoiGian"].Value?.ToString();
+
+            // Hiển thị thông tin ra MessageBox (bạn có thể thay bằng form chi tiết hoặc textbox)
+            MessageBox.Show(
+                $"📋 Chi tiết nhật ký:\n\n" +
+                $"🆔 Mã nhật ký: {maNhatKy}\n" +
+                $"👤 Người thực hiện: {nguoiThucHien}\n" +
+                $"⚙️ Hành động: {hanhDong}\n" +
+                $"⏰ Thời gian: {thoiGian}",
+                "Chi tiết nhật ký",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
         }
     }
 }
