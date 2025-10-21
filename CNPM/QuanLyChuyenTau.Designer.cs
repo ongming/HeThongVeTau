@@ -251,6 +251,7 @@
             this.btn_ChinhSuaChuyenTau.Size = new System.Drawing.Size(332, 59);
             this.btn_ChinhSuaChuyenTau.TabIndex = 3;
             this.btn_ChinhSuaChuyenTau.Text = "Chỉnh sửa chuyến tàu";
+            this.btn_ChinhSuaChuyenTau.Click += new System.EventHandler(this.btn_ChinhSuaChuyenTau_Click);
             // 
             // tableLayoutPanel4
             // 

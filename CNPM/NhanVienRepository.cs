@@ -445,6 +445,120 @@ namespace CNPM
                 return rows > 0;
             }
         }
+        // sửa chuyến tàu
+        public static bool SuaChuyenTau(
+        int maChuyen,
+        string noiDi,
+        string noiDen,
+        TimeSpan gioDi,
+        TimeSpan gioDen,
+        DateTime ngayDi,
+        int tongSoGhe,
+        decimal giaGheMem,
+        decimal giaGheCung,
+        int nguoiTao
+        )
+        {
+            string query = @"
+        UPDATE CHUYENTAU
+        SET NoiDi = @NoiDi,
+            NoiDen = @NoiDen,
+            GioDi = @GioDi,
+            GioDen = @GioDen,
+            NgayDi = @NgayDi,
+            TongSoGhe = @TongSoGhe,
+            GiaGheMem = @GiaGheMem,
+            GiaGheCung = @GiaGheCung,
+            NguoiTao = @NguoiTao
+        WHERE MaChuyen = @MaChuyen";
 
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@MaChuyen", maChuyen);
+                cmd.Parameters.AddWithValue("@NoiDi", noiDi);
+                cmd.Parameters.AddWithValue("@NoiDen", noiDen);
+                cmd.Parameters.AddWithValue("@GioDi", gioDi);
+                cmd.Parameters.AddWithValue("@GioDen", gioDen);
+                cmd.Parameters.AddWithValue("@NgayDi", ngayDi);
+                cmd.Parameters.AddWithValue("@TongSoGhe", tongSoGhe);
+                cmd.Parameters.AddWithValue("@GiaGheMem", giaGheMem);
+                cmd.Parameters.AddWithValue("@GiaGheCung", giaGheCung);
+                cmd.Parameters.AddWithValue("@NguoiTao", nguoiTao);
+
+                conn.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0; // Trả về true nếu có dòng được cập nhật
+            }
+        }
+        public static DataTable LayTatCa()
+        {
+            DataTable dt = new DataTable();
+
+            string query = @"
+            SELECT 
+                MaGiaoDich,
+                PhuongThucThanhToan,
+                FORMAT(TongTien, 'N0') AS TongTien,
+                FORMAT(ThoiGianDat, 'dd/MM/yyyy') AS ThoiGianDat
+            FROM LICHSUGIAODICH
+
+            ORDER BY ThoiGianDat DESC";
+
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+
+        public static DataTable LayLichSuTheoKhach()
+        {
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            {
+                string query = @"
+                SELECT 
+                    MaGiaoDich,
+                    PhuongThucThanhToan,
+                    TongTien,
+                    ThoiGianDat
+                FROM LICHSUGIAODICH
+
+                ORDER BY ThoiGianDat DESC";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+        public static DataTable LayLichSuTheoNgay( DateTime tuNgay, DateTime denNgay)
+        {
+            DataTable dt = new DataTable();
+            string query = @"
+            SELECT 
+                MaGiaoDich,
+                PhuongThucThanhToan,
+                FORMAT(TongTien, 'N0') AS TongTien,
+                FORMAT(ThoiGianDat, 'dd/MM/yyyy') AS ThoiGianDat
+            FROM LICHSUGIAODICH
+            WHERE ThoiGianDat BETWEEN @TuNgay AND @DenNgay
+            ORDER BY ThoiGianDat DESC";
+
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@TuNgay", tuNgay);
+                cmd.Parameters.AddWithValue("@DenNgay", denNgay.AddDays(1).AddTicks(-1)); // lấy đủ hết ngày
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
     }
+
 }

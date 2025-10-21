@@ -55,5 +55,19 @@ namespace CNPM
             Grid_Ve.DataSource = NhanVienRepository.TimKiemChuyenTau(cantim);
 
         }
+
+        private void btn_ChinhSuaChuyenTau_Click(object sender, EventArgs e)
+        {
+            if (Grid_Ve.CurrentRow != null)
+            {
+                int maChuyenTau = Convert.ToInt32(Grid_Ve.CurrentRow.Cells["MaChuyen"].Value);
+                ChinhSuaChuyenTau form = new ChinhSuaChuyenTau(maChuyenTau, nv);
+                form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn chuyến tàu cần chỉnh sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
