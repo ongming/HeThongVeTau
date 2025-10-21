@@ -62,6 +62,11 @@ namespace CNPM
                 pictureBox_avatar.Image = Properties.Resources.androgynous_avatar_non_binary_queer_person;
                 pictureBox_avatar.SizeMode = PictureBoxSizeMode.StretchImage;
             }
+            if(nv.VaiTro == "NhanVien")
+            {
+                btn_ThongKe.Visible = false;
+                btn_TaiKhoan.Visible = false;
+            }
         }
         private void CapNhatTrangThaiThongBao()
         {

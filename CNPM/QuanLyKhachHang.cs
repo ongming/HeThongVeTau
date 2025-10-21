@@ -213,6 +213,34 @@ namespace CNPM
                     MessageBox.Show("Xóa khách hàng thành công."); 
                     this.FormMain_Load(sender, e);
                 }
+
+            }
+            else if (columnName == "TrangThai")
+            {
+                // Xác nhận thay đổi trạng thái khách hàng nếu đang bị chặn sang hoạt động hoặc ngược lại thay đổi trạng thái trong from taikhoan thành true hoặc false
+                var result = MessageBox.Show("Bạn có chắc chắn muốn thay đổi trạng thái khách hàng này?", "Xác nhận thay đổi trạng thái", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    using (SqlConnection conn = DatabaseConnection.GetConnection())
+                    {
+                        conn.Open();
+                        string updateQuery = "UPDATE KhachHang SET TrangThai = CASE WHEN TrangThai = N'Hoạt động' THEN N'Bị chặn' ELSE N'Hoạt động' END WHERE MaKhachHang = @maKH";
+                        using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@maKH", maKH);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        string updateTaiKhoanQuery = "UPDATE TaiKhoan SET TrangThai = CASE WHEN TrangThai = 1 THEN 0 ELSE 1 END WHERE MaLienKet = @maKH AND VaiTro = 'KhachHang'";
+                        using (SqlCommand cmd = new SqlCommand(updateTaiKhoanQuery, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@maKH", maKH);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    MessageBox.Show("Thay đổi trạng thái khách hàng thành công.");
+                    this.FormMain_Load(sender, e);
+                }
             }
         }
     }

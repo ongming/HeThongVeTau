@@ -502,6 +502,19 @@ namespace CNPM
                 FORMAT(TongTien, 'N0') AS TongTien,
                 FORMAT(ThoiGianDat, 'dd/MM/yyyy') AS ThoiGianDat
             FROM LICHSUGIAODICH
+            ORDER BY ThoiGianDat DESC";
+
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+
+        }
+
         public static DataTable LayDoanhThuTheoNgay()
         {
             using (SqlConnection conn = DatabaseConnection.GetConnection())
@@ -539,19 +552,8 @@ namespace CNPM
                 da.Fill(dt);
                 return dt;
             }
-        }
+        
 
-
-            ORDER BY ThoiGianDat DESC";
-
-            using (SqlConnection conn = DatabaseConnection.GetConnection())
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-            }
-
-            return dt;
         }
 
         public static DataTable LayLichSuTheoKhach()

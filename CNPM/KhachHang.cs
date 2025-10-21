@@ -74,11 +74,6 @@ namespace CNPM
 
                 frm.Show();
             }
-            else
-            {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu!",
-                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
 

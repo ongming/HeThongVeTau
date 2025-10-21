@@ -14,6 +14,7 @@ namespace CNPM
     public partial class Buoc3 : UserControl
     {
         private ThongTinChuyenTau ThongTinChuyenTau;
+        public event Action VeDatThanhCong;
         private List<int> GheDuocChon;
         decimal tongTien;
         ThongTinKhachHang khachHang;
@@ -143,6 +144,7 @@ namespace CNPM
                 if (datThanhCong)
                 {
                     MessageBox.Show("✅ Đặt vé thành công!", "Thông báo");
+                    VeDatThanhCong?.Invoke(); // 🔔 Gọi sự kiện báo về form cha
                 }
                 else
                 {

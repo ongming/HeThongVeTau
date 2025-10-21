@@ -72,6 +72,16 @@ namespace CNPM
         private void btn_Buoc3_Click(object sender, EventArgs e)
         {
             Buoc3 buoc3 = new Buoc3(thongTinChuyenDuocChon, gheDuocChon, khachHang);
+
+            // 🔔 Khi Bước 3 báo "đặt vé thành công" → quay lại Bước 1
+            buoc3.VeDatThanhCong += () =>
+            {
+                MessageBox.Show("🎉 Quay lại bước 1 để chọn chuyến mới!", "Thông báo");
+                ShowBuoc1();                // Gọi lại Bước 1
+                btn_Buoc2.Enabled = false;  // reset
+                btn_Buoc3.Enabled = false;
+            };
+
             ShowControl(buoc3);
         }
     }

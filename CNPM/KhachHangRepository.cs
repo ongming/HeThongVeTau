@@ -21,13 +21,12 @@ namespace CNPM
                     conn.Open();
 
                     string query = @"
-                SELECT kh.MaKhachHang, kh.HoTen, kh.Gmail, kh.SoDienThoai, kh.DiaChi, kh.CCCD
-                FROM TAIKHOAN t
-                JOIN KHACHHANG kh ON t.MaLienKet = kh.MaKhachHang
-                WHERE t.TenDangNhap = @user 
-                  AND t.MatKhau = @pass 
-                  AND t.VaiTro = 'KhachHang'
-                  AND t.TrangThai = 1";
+                    SELECT kh.MaKhachHang, kh.HoTen, kh.Gmail, kh.SoDienThoai, kh.DiaChi, kh.CCCD, t.TrangThai
+                    FROM TAIKHOAN t
+                    JOIN KHACHHANG kh ON t.MaLienKet = kh.MaKhachHang
+                    WHERE t.TenDangNhap = @user 
+                      AND t.MatKhau = @pass 
+                      AND t.VaiTro = 'KhachHang'";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -38,14 +37,24 @@ namespace CNPM
                         {
                             if (reader.Read())
                             {
+                                bool trangThai = reader.GetBoolean(6);                                // cột 7: TrangThai
+
+                                if (!trangThai)
+                                {
+                                    MessageBox.Show("Tài khoản của bạn đã bị chặn.",
+                                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return null;
+                                }
+
+                                // Nếu hoạt động bình thường
                                 return new ThongTinKhachHang
                                 {
                                     MaKhachHang = reader.GetInt32(0),
                                     HoTen = reader.GetString(1),
                                     Gmail = reader.GetString(2),
-                                    CCCD = reader.IsDBNull(5) ? "" : reader.GetString(5),
                                     DienThoai = reader.IsDBNull(3) ? "" : reader.GetString(3),
-                                    DiaChi = reader.IsDBNull(4) ? "" : reader.GetString(4)
+                                    DiaChi = reader.IsDBNull(4) ? "" : reader.GetString(4),
+                                    CCCD = reader.IsDBNull(5) ? "" : reader.GetString(5)
                                 };
                             }
                         }
@@ -62,7 +71,8 @@ namespace CNPM
                 MessageBox.Show("Đã xảy ra lỗi khi đăng nhập!\nChi tiết: " + ex.Message,
                                 "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            MessageBox.Show("Sai tài khoản hoặc mật khẩu!",
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             // 🔹 Nếu không có kết quả nào, trả về null
             return null;
         }
@@ -153,7 +163,7 @@ namespace CNPM
                         int ghe = gheList[i];
                         var nguoi = nguoiSuDungList[i];
 
-                        string loaiGhe = ghe > 20 ? "Ghế cứng" : "Ghế cứng";
+                        string loaiGhe = ghe > 20 ? "GheCung" : "GheMem";
                         decimal giaTien = ghe > 20 ? GheCung : GheMem;
 
 
