@@ -43,7 +43,7 @@ namespace CNPM
             DataGridViewImageColumn btnDelete = new DataGridViewImageColumn();
             btnDelete.Name = "btnDelete";
             btnDelete.HeaderText = "";
-            btnDelete.Image = Properties.Resources.xoa; // hoặc Image.FromFile("icons/delete.png")
+            btnDelete.Image = Properties.Resources.delete; // hoặc Image.FromFile("icons/delete.png")
             btnDelete.ToolTipText = "Xóa";
             btnDelete.Width = 30; // cố định kích thước nhỏ
             btnDelete.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
