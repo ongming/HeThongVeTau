@@ -445,6 +445,45 @@ namespace CNPM
                 return rows > 0;
             }
         }
+        public static DataTable LayDoanhThuTheoNgay()
+        {
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            {
+                string query = @"
+                SELECT 
+                    CONVERT(date, ThoiGianDat) AS Ngay,
+                    SUM(TongTien) AS DoanhThu
+                FROM LICHSUGIAODICH
+                GROUP BY CONVERT(date, ThoiGianDat)
+                ORDER BY Ngay";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+        public static DataTable LayBaoCaoVeTheoNgay()
+        {
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
+            {
+                string query = @"
+                SELECT 
+                    CONVERT(date, v.NgayDat) AS NgayDat,
+                    COUNT(v.MaVe) AS SoLuongVe,
+                    SUM(CASE WHEN v.LoaiGhe = N'GheMem' THEN 1 ELSE 0 END) AS GheMem,
+                    SUM(CASE WHEN v.LoaiGhe = N'GheCung' THEN 1 ELSE 0 END) AS GheCung
+                FROM VE v
+                GROUP BY CONVERT(date, v.NgayDat)
+                ORDER BY NgayDat";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
 
     }
 }

@@ -31,6 +31,8 @@ namespace CNPM
             ModernGridStyle.ApplyPlaceholder(date_TuNgayDoanhThu, text);
             ModernGridStyle.ApplyPlaceholder(date_DenNgayDoanhThu, text1);
             loadData();
+            LoadDoanhThuTheoNgay();
+            LoadBaoCaoVeTheoNgay();
         }
         private void loadData()
         {
@@ -441,5 +443,42 @@ namespace CNPM
         {
             LoadChartVe();
         }
+        private void LoadDoanhThuTheoNgay()
+        {
+            DataTable dt = NhanVienRepository.LayDoanhThuTheoNgay();
+
+            Grid_DoanhThu.DataSource = dt;
+
+            // Tùy chỉnh tiêu đề cột
+            Grid_DoanhThu.Columns["Ngay"].HeaderText = "Thời gian theo ngày";
+            Grid_DoanhThu.Columns["DoanhThu"].HeaderText = "Doanh Thu (VNĐ)";
+
+            // Format cho đẹp
+            Grid_DoanhThu.Columns["DoanhThu"].DefaultCellStyle.Format = "N0";
+            Grid_DoanhThu.Columns["DoanhThu"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Grid_DoanhThu.Columns["Ngay"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Grid_DoanhThu.ColumnHeadersHeight = 50;
+        }
+        private void LoadBaoCaoVeTheoNgay()
+        {
+            DataTable dt = NhanVienRepository.LayBaoCaoVeTheoNgay();
+            Grid_VeBaoCao.DataSource = dt;
+
+            // Tùy chỉnh header
+            Grid_VeBaoCao.Columns["NgayDat"].HeaderText = "Thời gian theo ngày";
+            Grid_VeBaoCao.Columns["SoLuongVe"].HeaderText = "Số lượng vé";
+            Grid_VeBaoCao.Columns["GheMem"].HeaderText = "Ghế mềm";
+            Grid_VeBaoCao.Columns["GheCung"].HeaderText = "Ghế cứng";
+
+            // Format hiển thị
+            Grid_VeBaoCao.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            Grid_VeBaoCao.RowTemplate.Height = 38;
+            Grid_VeBaoCao.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 247, 250);
+            Grid_VeBaoCao.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Grid_VeBaoCao.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Grid_VeBaoCao.DefaultCellStyle.Font = new Font("Segoe UI", 11);
+            Grid_VeBaoCao.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 12);
+        }
+
     }
 }
