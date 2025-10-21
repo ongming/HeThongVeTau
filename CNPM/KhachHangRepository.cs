@@ -51,7 +51,7 @@ namespace CNPM
                                 {
                                     MaKhachHang = reader.GetInt32(0),
                                     HoTen = reader.GetString(1),
-                                    Gmail = reader.GetString(2),
+                                    Gmail = reader.IsDBNull(2) ? "" : reader.GetString(2),  // ✅ thêm kiểm tra
                                     DienThoai = reader.IsDBNull(3) ? "" : reader.GetString(3),
                                     DiaChi = reader.IsDBNull(4) ? "" : reader.GetString(4),
                                     CCCD = reader.IsDBNull(5) ? "" : reader.GetString(5)
