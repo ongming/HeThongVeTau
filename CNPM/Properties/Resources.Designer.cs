@@ -503,6 +503,16 @@ namespace CNPM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_10_21_152642 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-10-21 152642", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap setting_5890101 {
             get {
                 object obj = ResourceManager.GetObject("setting_5890101", resourceCulture);

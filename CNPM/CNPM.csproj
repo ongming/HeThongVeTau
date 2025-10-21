@@ -500,6 +500,7 @@
     <None Include="Resources\nhantin.png" />
     <None Include="Resources\dollar_991952.png" />
     <None Include="Resources\ticket_15345749.png" />
+    <None Include="Resources\Screenshot 2025-10-21 152642.png" />
     <Content Include="Resources\witness_1518564.png" />
     <None Include="Resources\witness_15185641.png" />
   </ItemGroup>
