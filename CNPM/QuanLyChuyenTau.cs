@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using YourNamespace;
 
 namespace CNPM
@@ -26,7 +27,7 @@ namespace CNPM
         }
         private void grid_ve_load()
         {
-            // Apply giao diện hiện đại
+            //// Apply giao diện hiện đại
             ModernGridStyle.Apply(Grid_Ve);
 
             // Load dữ liệu test
@@ -47,6 +48,7 @@ namespace CNPM
         {
             TaoChuyenMoi taoChuyenMoi = new TaoChuyenMoi(nv);
             taoChuyenMoi.ShowDialog();
+            FormMain_Load(sender, e);
         }
 
         private void txt_Search_TextChanged(object sender, EventArgs e)
@@ -63,6 +65,7 @@ namespace CNPM
                 int maChuyenTau = Convert.ToInt32(Grid_Ve.CurrentRow.Cells["MaChuyen"].Value);
                 ChinhSuaChuyenTau form = new ChinhSuaChuyenTau(maChuyenTau, nv);
                 form.ShowDialog();
+                FormMain_Load(sender, e);
             }
             else
             {

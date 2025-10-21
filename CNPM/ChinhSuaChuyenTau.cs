@@ -19,8 +19,29 @@ namespace CNPM
             InitializeComponent();
             this.machuyentau = machuyentau;
             this.nv = nv;
+            this.Load += form_load;
         }
+        private void form_load(object sender, EventArgs e)
+        {
+            DataTable table = NhanVienRepository.LayThongTinChuyenTau(machuyentau);
 
+            if (table.Rows.Count > 0)
+            {
+                DataRow row = table.Rows[0];
+
+                comboBox_Tu.Text = row["NoiDi"].ToString();
+                comboBox_Den.Text = row["NoiDen"].ToString();
+
+                date_GioDi.Value = DateTime.Today.Add(TimeSpan.Parse(row["GioDi"].ToString()));
+                date_GioDen.Value = DateTime.Today.Add(TimeSpan.Parse(row["GioDen"].ToString()));
+                date_NgayDi.Value = Convert.ToDateTime(row["NgayDi"]);
+
+                ComboBox_SoGhe.Text = row["TongSoGhe"].ToString();
+                ComboBox_GheMem.Text = Convert.ToInt32( row["GiaGheMem"]).ToString();
+                ComboBox_GheCung.Text = Convert.ToInt32(row["GiaGheCung"]).ToString();
+            }
+
+        }
         private void lb_Closed_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -43,7 +64,7 @@ namespace CNPM
             if (check)
             {
                 MessageBox.Show("Sửa chuyến tàu thành công", "Thông báo");
-
+                this.Close();
             }
             else
             {

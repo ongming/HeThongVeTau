@@ -21,17 +21,39 @@ namespace CNPM
                 {
                     conn.Open();
 
-                    string query = @"
-                SELECT 
-                    NV.MaNhanVien, NV.HoTen, NV.CCCD, NV.Gmail, NV.SoDienThoai, NV.DiaChi,
-                    TK.VaiTro, TK.TrangThai
-                FROM TAIKHOAN TK
-                JOIN NHANVIEN NV ON TK.MaLienKet = NV.MaNhanVien
-                WHERE TK.TenDangNhap = @user
-                  AND TK.MatKhau = @pass
-                  AND TK.VaiTro IN ('NhanVien','QuanLy')
-                  AND TK.TrangThai = 1
-            ";
+                    // Lấy vai trò trước
+                    string roleQuery = "SELECT VaiTro FROM TAIKHOAN WHERE TenDangNhap = @user AND MatKhau = @pass AND TrangThai = 1";
+                    string role = null;
+
+                    using (SqlCommand cmdRole = new SqlCommand(roleQuery, conn))
+                    {
+                        cmdRole.Parameters.AddWithValue("@user", username);
+                        cmdRole.Parameters.AddWithValue("@pass", password);
+                        object result = cmdRole.ExecuteScalar();
+                        role = result?.ToString();
+                    }
+
+                    if (string.IsNullOrEmpty(role)) return null;
+
+                    string query = "";
+
+                    if (role == "NhanVien")
+                    {
+                        query = @"
+                    SELECT NV.MaNhanVien AS MaNguoiDung, NV.HoTen, NV.CCCD, NV.Gmail, NV.SoDienThoai, NV.DiaChi, TK.VaiTro, TK.TrangThai
+                    FROM TAIKHOAN TK
+                    JOIN NHANVIEN NV ON TK.MaLienKet = NV.MaNhanVien
+                    WHERE TK.TenDangNhap = @user AND TK.MatKhau = @pass AND TK.TrangThai = 1";
+                    }
+                    else if (role == "QuanLy")
+                    {
+                        query = @"
+                    SELECT QL.MaQuanLy AS MaNguoiDung, QL.HoTen, QL.CCCD, QL.Gmail, QL.SoDienThoai, QL.DiaChi, TK.VaiTro, TK.TrangThai
+                    FROM TAIKHOAN TK
+                    JOIN QUANLY QL ON TK.MaLienKet = QL.MaQuanLy
+                    WHERE TK.TenDangNhap = @user AND TK.MatKhau = @pass AND TK.TrangThai = 1";
+                    }
+                    else return null;
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -44,49 +66,29 @@ namespace CNPM
                             {
                                 var nv = new ThongTinNhanVien();
 
-                                // MaNhanVien (int)
-                                nv.MaNhanVien = reader.GetInt32(reader.GetOrdinal("MaNhanVien"));
-
-                                // HoTen
-                                nv.HoTen = reader.IsDBNull(reader.GetOrdinal("HoTen")) ? null : reader.GetString(reader.GetOrdinal("HoTen"));
-
-                                // CCCD
-                                nv.CCCD = reader.IsDBNull(reader.GetOrdinal("CCCD")) ? null : reader.GetString(reader.GetOrdinal("CCCD"));
-
-                                // Gmail
-                                nv.Gmail = reader.IsDBNull(reader.GetOrdinal("Gmail")) ? null : reader.GetString(reader.GetOrdinal("Gmail"));
-
-                                // SoDienThoai (lưu ý tên cột trong DB là SoDienThoai)
-                                nv.DienThoai = reader.IsDBNull(reader.GetOrdinal("SoDienThoai")) ? null : reader.GetString(reader.GetOrdinal("SoDienThoai"));
-
-                                // DiaChi
-                                nv.DiaChi = reader.IsDBNull(reader.GetOrdinal("DiaChi")) ? null : reader.GetString(reader.GetOrdinal("DiaChi"));
-
-                                // VaiTro lấy từ TAIKHOAN
-                                nv.VaiTro = reader.IsDBNull(reader.GetOrdinal("VaiTro")) ? null : reader.GetString(reader.GetOrdinal("VaiTro"));
-
-                                // TrangThai lấy từ TAIKHOAN (SQL BIT => bool)
-                                nv.TrangThai = !reader.IsDBNull(reader.GetOrdinal("TrangThai")) && reader.GetBoolean(reader.GetOrdinal("TrangThai"));
+                                nv.MaNhanVien = reader.GetInt32(reader.GetOrdinal("MaNguoiDung"));
+                                nv.HoTen = reader["HoTen"]?.ToString();
+                                nv.CCCD = reader["CCCD"]?.ToString();
+                                nv.Gmail = reader["Gmail"]?.ToString();
+                                nv.DienThoai = reader["SoDienThoai"]?.ToString();
+                                nv.DiaChi = reader["DiaChi"]?.ToString();
+                                nv.VaiTro = reader["VaiTro"]?.ToString();
+                                nv.TrangThai = (bool)reader["TrangThai"];
 
                                 return nv;
                             }
                         }
                     }
                 }
-
-                return null; // không tìm thấy hoặc sai thông tin
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu!\nChi tiết: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi khi đăng nhập!\nChi tiết: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi khi đăng nhập: " + ex.Message);
                 return null;
             }
         }
+
 
 
         // số vé đã bán trong tháng hiện tại 
@@ -600,6 +602,39 @@ namespace CNPM
 
             return dt;
         }
+
+        // lấy thông tin chuyến tàu 
+        public static DataTable LayThongTinChuyenTau(int maChuyen)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection conn = DatabaseConnection.GetConnection())
+                {
+                    conn.Open();
+                    string query = @"SELECT MaChuyen, NoiDi, NoiDen, GioDi, GioDen, NgayDi, 
+                                    TongSoGhe, GiaGheMem, GiaGheCung, NguoiTao
+                             FROM CHUYENTAU
+                             WHERE MaChuyen = @MaChuyen";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@MaChuyen", maChuyen);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        adapter.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lấy thông tin chuyến tàu: " + ex.Message);
+            }
+
+            return dt;
+        }
+
     }
 
 }

@@ -253,9 +253,7 @@
             // 
             // btn_ThemChuyen
             // 
-            this.btn_ThemChuyen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ThemChuyen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_ThemChuyen.Animated = true;
             this.btn_ThemChuyen.BorderRadius = 5;
             this.btn_ThemChuyen.BorderThickness = 1;
@@ -273,14 +271,12 @@
             this.btn_ThemChuyen.Name = "btn_ThemChuyen";
             this.btn_ThemChuyen.Size = new System.Drawing.Size(280, 60);
             this.btn_ThemChuyen.TabIndex = 24;
-            this.btn_ThemChuyen.Text = "Thêm chuyến";
+            this.btn_ThemChuyen.Text = "Sửa chuyến";
             this.btn_ThemChuyen.Click += new System.EventHandler(this.btn_ThemChuyen_Click);
             // 
             // comboBox_Den
             // 
-            this.comboBox_Den.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_Den.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox_Den.BackColor = System.Drawing.Color.Transparent;
             this.comboBox_Den.BorderColor = System.Drawing.Color.DarkGray;
             this.comboBox_Den.BorderRadius = 10;
@@ -308,6 +304,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(45, 578);

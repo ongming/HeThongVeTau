@@ -57,6 +57,7 @@ namespace CNPM
             if (check)
             {
                 MessageBox.Show("Thêm chuyến tàu mới thành công", "Thông báo");
+                this.Close();
 
             }
             else {
