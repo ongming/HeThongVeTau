@@ -193,6 +193,16 @@ namespace CNPM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap f4d75ea1_a0af_4742_8249_db0ee7c3b906 {
+            get {
+                object obj = ResourceManager.GetObject("f4d75ea1-a0af-4742-8249-db0ee7c3b906", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home {
             get {
                 object obj = ResourceManager.GetObject("home", resourceCulture);
@@ -536,6 +546,16 @@ namespace CNPM.Properties {
         internal static System.Drawing.Bitmap statistical_3926219 {
             get {
                 object obj = ResourceManager.GetObject("statistical_3926219", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thank_you_5579256 {
+            get {
+                object obj = ResourceManager.GetObject("thank-you_5579256", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

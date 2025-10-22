@@ -101,7 +101,7 @@ namespace CNPM
                         cmd.Parameters.AddWithValue("@gmail", gmail);
                         int rows = cmd.ExecuteNonQuery();
 
-                        MessageBox.Show(rows > 0 ? "✅ Đặt lại mật khẩu thành công!" : "❌ Không tìm thấy Gmail!");
+                        MessageBox.Show(rows > 0 ? "✅ Đặt lại mật khẩu thành công\n Mật khẩu mới là 123!" : "❌ Không tìm thấy Gmail!");
                     }
                 }
             }

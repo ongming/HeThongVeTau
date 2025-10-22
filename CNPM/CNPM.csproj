@@ -501,6 +501,8 @@
     <None Include="Resources\dollar_991952.png" />
     <None Include="Resources\ticket_15345749.png" />
     <None Include="Resources\Screenshot 2025-10-21 152642.png" />
+    <None Include="Resources\thank-you_5579256.png" />
+    <None Include="Resources\f4d75ea1-a0af-4742-8249-db0ee7c3b906.jpg" />
     <Content Include="Resources\witness_1518564.png" />
     <None Include="Resources\witness_15185641.png" />
   </ItemGroup>
