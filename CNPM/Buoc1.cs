@@ -61,7 +61,16 @@ namespace CNPM
 
         public DataTable LayDanhSachChuyenTau()
         {
-            string query = "SELECT * FROM CHUYENTAU";
+            string query = @"
+            SELECT * 
+            FROM CHUYENTAU
+            WHERE 
+                DATEADD(
+                    SECOND, 
+                    DATEDIFF(SECOND, 0, GioDi), 
+                    CAST(NgayDi AS DATETIME)
+                ) >= GETDATE()
+            ORDER BY NgayDi, GioDi ASC";
 
             using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
@@ -73,5 +82,6 @@ namespace CNPM
                 }
             }
         }
+
     }
 }

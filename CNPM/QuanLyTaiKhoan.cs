@@ -31,10 +31,27 @@ namespace CNPM
         //load form lên
         private void QuanLyTaiKhoan_Load()
         {   //grid tài khoản nhân viên
-            string query = "SELECT * FROM TAIKHOAN WHERE VaiTro IN ('QuanLy', 'NhanVien');";
+            string query = @"
+            SELECT 
+                tk.MaTaiKhoan,
+                tk.TenDangNhap,
+                tk.MatKhau,
+                nv.MaNhanVien,
+                nv.HoTen AS TenNhanVien,
+                nv.Gmail,
+                nv.NgayVaoLam
+            FROM TAIKHOAN tk
+            JOIN NHANVIEN nv ON tk.MaLienKet = nv.MaNhanVien
+            JOIN QUANLY ql ON nv.MaQuanLy = ql.MaQuanLy
+            WHERE tk.VaiTro = 'NhanVien' 
+              AND ql.MaQuanLy = @MaQuanLy
+            ORDER BY nv.NgayVaoLam;";
+
             using (SqlConnection conn = DatabaseConnection.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                cmd.Parameters.AddWithValue("@MaQuanLy", nv.MaNhanVien);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 Grid_TaiKhoanNhanVien.DataSource = dt;
@@ -67,12 +84,38 @@ namespace CNPM
         {
             using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
-                SqlDataAdapter da = new SqlDataAdapter(
-                    "SELECT * FROM TAIKHOAN WHERE (MaTaiKhoan LIKE @keyword OR TenDangNhap LIKE @keyword) AND (VaiTro IN ('QuanLy', 'NhanVien'))", conn);
-                da.SelectCommand.Parameters.AddWithValue("@keyword", "%" + txt_TimKiem.Text + "%");
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                Grid_TaiKhoanNhanVien.DataSource = dt;
+                string query = @"
+                SELECT 
+                    tk.MaTaiKhoan,
+                    tk.TenDangNhap,
+                    tk.MatKhau,
+                    nv.MaNhanVien,
+                    nv.HoTen AS TenNhanVien,
+                    nv.Gmail,
+                    nv.NgayVaoLam
+                FROM TAIKHOAN tk
+                JOIN NHANVIEN nv ON tk.MaLienKet = nv.MaNhanVien
+                JOIN QUANLY ql ON nv.MaQuanLy = ql.MaQuanLy
+                WHERE tk.VaiTro = 'NhanVien' 
+                  AND ql.MaQuanLy = @MaQuanLy
+                  AND (
+                        tk.MaTaiKhoan LIKE @keyword 
+                        OR tk.TenDangNhap LIKE @keyword
+                        OR nv.HoTen LIKE @keyword
+                        OR nv.Gmail LIKE @keyword
+                    )
+                ORDER BY nv.NgayVaoLam;";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@MaQuanLy", nv.MaNhanVien);  // mã QL đăng nhập
+                    cmd.Parameters.AddWithValue("@keyword", "%" + txt_TimKiem.Text + "%");
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    Grid_TaiKhoanNhanVien.DataSource = dt;
+                }
             }
         }
 
